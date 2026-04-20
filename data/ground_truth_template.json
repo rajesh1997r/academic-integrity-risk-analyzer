@@ -1,0 +1,410 @@
+[
+  {
+    "text": "The Policy A commitment to the principles of academic integrity is essential to the mission of Northeastern University.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a general statement of values and does not contain any specific rules or definitions that could lead to enforcement issues. It serves as an introductory statement rather than a directive or rule.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "The promotion of independent and original scholarship ensures that students derive the most from their educational experience and their pursuit of knowledge.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a general statement about the value of independent and original scholarship. It does not contain any specific rules or definitions that could lead to enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Academic dishonesty violates the most fundamental values of an intellectual community and undermines the achievements of the entire University.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a general statement about the importance of academic integrity and does not contain any specific rules or definitions that could lead to enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "As members of the academic community, students must become familiar with their rights and responsibilities.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a general statement encouraging students to understand their rights and responsibilities. It does not introduce any specific enforcement or definitional issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "In each course, they are responsible for knowing the requirements and restrictions regarding research and writing, examinations of whatever kind, collaborative work, the use of study aids, the appropriateness of assistance, and other issues.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause is a standard policy statement that places responsibility on students to be aware of course-specific requirements and restrictions. It does not present any ambiguity, undefined terms, or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Students are responsible for learning the conventions of documentation and acknowledgment of sources in their fields.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a standard policy statement emphasizing student responsibility for understanding documentation conventions. It does not present any ambiguity, undefined terms, or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Northeastern University expects students to complete all examinations, tests, papers, creative projects, and assignments of any kind according to the highest ethical standards, as set forth either explicitly or implicitly in this Code or by the direction of instructors.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "Ambiguity",
+    "gpt4o_reasoning": "The clause refers to 'the highest ethical standards' which can be interpreted differently by students and instructors, leading to inconsistent enforcement. This ambiguity could affect whether a student is found guilty of a violation.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "The following is a broad overview, but not an all-encompassing definition, of what constitutes a violation of academic integrity.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is an introductory statement indicating that the following content will provide a general overview. It does not itself create any enforcement issues or ambiguities.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Cheating: The University defines cheating as using or attempting to use unauthorized materials, information, or study aids in any academic exercise.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause provides a clear definition of cheating that is standard in academic integrity policies. It does not present any ambiguity, undefined terms, or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "When completing any academic assignment, a student shall rely on their own mastery of the subject.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause is a standard policy statement emphasizing the expectation of individual work and understanding. It does not present any ambiguity, undefined terms, or enforcement issues that would affect its application.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Examples include, but are not limited to: Unauthorized use of aids such as but not limited to notes, text, the Internet, artificial intelligence, chatbots, cell phones, etc. to complete any academic assignment.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "AIUsageLoophole",
+    "gpt4o_reasoning": "The clause mentions 'artificial intelligence' and 'chatbots' but does not specify what constitutes unauthorized use, leaving room for interpretation about what AI tools or functions are permissible. This could lead to inconsistent enforcement regarding AI-assisted tasks.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Copying from another student\u2019s current or past academic work.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly prohibits copying from another student's work, whether current or past, and does not present any ambiguity or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Handing in the same academic material, in part or in total, for more than one course without explicit permission from the instructor(s) .",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly prohibits submitting the same work for multiple courses without permission, and it specifies that permission must be obtained from the instructor(s), which is a standard academic integrity policy. There is no ambiguity or enforcement issue present.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Intentionally viewing a test before it is administered.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "EnforcementGap",
+    "gpt4o_reasoning": "The clause prohibits viewing a test before it is administered, but it does not specify how such an action would be detected or proven, creating a gap in enforcement. Without a clear mechanism for identifying when a student has viewed a test prematurely, this rule is difficult to enforce.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Storing notes on paper, or in a portable electronic device for use during an examination.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "EnforcementGap",
+    "gpt4o_reasoning": "The clause prohibits storing notes on paper or electronic devices for use during an examination, but it does not specify how such storage will be detected or monitored, especially for electronic devices that can be easily concealed.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Fabrication: The University defines fabrication as falsification, misrepresentation, or invention of any information, data, or citation in an academic exercise.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause provides a clear definition of fabrication in the context of academic integrity, using commonly understood terms. There is no ambiguity or enforcement issue present.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Examples include, but are not limited to: Inventing data, facts, or sources for an academic assignment.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly prohibits the fabrication of data, facts, or sources, which is a commonly understood violation of academic integrity. There is no ambiguity or enforcement issue present in this statement.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Altering the results of a lab experiment or survey.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly prohibits altering the results of a lab experiment or survey, which is a straightforward academic integrity violation. There is no ambiguity, undefined term, or enforcement issue present in this clause.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Citing a source in a bibliography that was not used.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "EnforcementGap",
+    "gpt4o_reasoning": "The clause prohibits citing unused sources, but there is no clear mechanism to verify whether a source was genuinely used in the preparation of a student's work. Without a method to trace the use of each source, enforcement is impractical.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Stating an opinion as a scientifically proven fact.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "Ambiguity",
+    "gpt4o_reasoning": "The clause is ambiguous because it does not clearly define what constitutes an 'opinion' versus a 'scientifically proven fact.' This could lead to inconsistent enforcement, as different interpretations might arise about what qualifies as a scientifically proven fact in various academic disciplines.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Plagiarism: The University defines plagiarism as using as one\u2019s own the words, ideas, data, code, or other original academic material of another without providing proper citation or attribution.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause provides a clear definition of plagiarism that aligns with standard academic integrity policies. It specifies the types of materials that can be plagiarized and the requirement for proper citation or attribution, leaving little room for misinterpretation.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Plagiarism can apply to any assignment, either final or drafted copies, and it can occur either accidentally or deliberately.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly states that plagiarism can occur in any form of assignment and can be either accidental or deliberate. This is a standard policy statement that does not present any ambiguity or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Claiming that one has \u201cforgotten\u201d to document ideas or material taken from another source does not exempt one from plagiarizing.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly states that forgetting to document sources is not an acceptable excuse for plagiarism. It does not present any ambiguity or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "The following sources require citation: Word-for-word quotations from a source, including another student\u2019s work.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly specifies that word-for-word quotations from any source, including another student's work, require citation. This is a standard policy statement with no ambiguity or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Paraphrasing (using the ideas of others in your own words).",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause is a standard definition of paraphrasing, which is a commonly understood academic term. It does not present any ambiguity or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Audio, video, digital, or live exchanges of ideas, dialogue, or information.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "Ambiguity",
+    "gpt4o_reasoning": "The clause is ambiguous because it does not specify the context or conditions under which these exchanges are prohibited or allowed. This could lead to contradictory interpretations about whether certain exchanges are permissible, affecting enforcement decisions.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "When recycling or reusing one\u2019s own specific words from previously published texts.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "UndefinedTerm",
+    "gpt4o_reasoning": "The clause uses the term 'specific words' without defining what constitutes 'specific words' in this context. This lack of definition could lead to confusion about whether reusing phrases, sentences, or larger text blocks is permissible, affecting enforcement consistency.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Students unclear as to whether or not a source requires citation should speak with their professor or consult the Writing Center in 412 Holmes Hall.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause provides clear guidance for students who are uncertain about citation requirements, directing them to seek clarification from their professor or the Writing Center. It does not present any ambiguity, enforcement gap, or other risk categories.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Unauthorized Collaboration: The University defines unauthorized collaboration as instances when students submit individual academic works that are substantially similar to one another.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "Ambiguity",
+    "gpt4o_reasoning": "The phrase 'substantially similar' is open to interpretation, leading to potential inconsistencies in enforcement. Different evaluators might have varying thresholds for what constitutes substantial similarity, affecting whether students are found guilty.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "While several students may have the same source material, any analysis, interpretation, or reporting of data required by an assignment must be each individual\u2019s independent work unless the instructor has explicitly granted permission for group work.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly states that analysis, interpretation, or reporting of data must be independent unless group work is explicitly permitted by the instructor. There is no ambiguity or enforcement issue present in this clause.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Examples include, but are not limited to: Submitting work that closely matches that of another student, even when the work is to be original to the student handing in the assignment.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly states that submitting work that closely matches another student's work is prohibited, even if the assignment is supposed to be original. There is no ambiguity or enforcement issue present in this clause.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Sharing a take-home examination, case write-up, lab report, or any other assignment with a peer or on any non-personal portfolio website, such as but not exclusive to Chegg, CourseHero, Quizlet, etc., without express permission from the instructor.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "EnforcementGap",
+    "gpt4o_reasoning": "The clause prohibits sharing assignments on non-personal portfolio websites, but it does not specify how the university will monitor or detect such sharing, especially on external platforms that may not cooperate with the institution.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Participation in Academically Dishonest Activities: The University defines participation in academically dishonest activities as any action taken by a student with the intention of gaining an unfair advantage over other students.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "CircularDefinition",
+    "gpt4o_reasoning": "The clause defines 'academically dishonest activities' using the concept of 'unfair advantage,' which is itself a subjective and potentially circular concept without further clarification. This could lead to inconsistent interpretations of what constitutes an 'unfair advantage.'",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Misrepresenting oneself or one\u2019s circumstances to an instructor.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause is a standard policy statement that clearly prohibits misrepresentation to an instructor. It does not contain ambiguous language, undefined terms, or enforcement issues that would affect its application.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Selling, loaning, or otherwise distributing materials intended for the purpose of cheating, plagiarism, or other academically dishonest acts.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "EnforcementGap",
+    "gpt4o_reasoning": "The clause prohibits the distribution of materials for dishonest acts but does not specify how such distribution would be detected or monitored, creating a gap in enforcement capability.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Destroying, altering, stealing, or forging another student\u2019s work, library materials, laboratory materials, academic records, course syllabi, or examination/course grades.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly lists prohibited actions related to academic materials and records. Each action is straightforward and commonly understood, leaving little room for genuine ambiguity or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Intentionally missing an examination or assignment deadline to gain an unfair advantage.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "EnforcementGap",
+    "gpt4o_reasoning": "The clause prohibits intentionally missing deadlines for unfair advantage, but it lacks a mechanism to detect or prove the intent behind missing a deadline, making enforcement challenging.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Forging information or signatures on official University documents such as but not limited to attendance logs, resumes, cover letters, honesty statements, etc.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly prohibits the act of forging information or signatures on official documents, and it provides examples of such documents. There is no ambiguity or enforcement issue present in this clause.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Facilitating Academic Dishonesty: The University defines facilitating academic dishonesty as intentionally or knowingly helping or contributing to the violation of any provision of this policy.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly defines facilitating academic dishonesty in terms of intentional or knowing assistance in policy violations. It does not present ambiguity or enforcement issues, as the terms used are standard and widely understood in academic contexts.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Examples include, but are not limited to: Doing academic work for another student.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause is a straightforward example of academic misconduct and does not present any ambiguity or enforcement issues. It clearly prohibits doing academic work for another student.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Making available previously used academic work for another individual who intends to resubmit the work for credit.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "EnforcementGap",
+    "gpt4o_reasoning": "The clause prohibits making available previously used academic work, but it does not specify how the university would detect or investigate such actions, especially if the sharing occurs privately or outside university systems.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Obligation to Uphold Academic Integrity: All members of the Northeastern University community have a role in upholding the Academic Integrity Policy.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a general statement about the collective responsibility of the university community to uphold academic integrity. It does not specify enforcement mechanisms or define terms that would create ambiguity or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Any member of the community who witnesses a violation of this policy should report it to the appropriate faculty member or the Office of Student Conduct & Conflict Resolution (OSCCR).",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "AuthorityConflict",
+    "gpt4o_reasoning": "The clause gives authority to both faculty members and the Office of Student Conduct & Conflict Resolution (OSCCR) to receive reports of violations, which could lead to confusion or conflict over who should handle the report and how it should be processed.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "All instructors are required to refer to Northeastern\u2019s Academic Integrity Policy in their course syllabi.",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a straightforward procedural requirement for instructors to include a reference to the Academic Integrity Policy in their syllabi. It does not present any ambiguity, enforcement issues, or definitional problems.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "The Director of OSCCR will review all complaints submitted against a student to determine whether sufficient evidence for a violation of the Academic Integrity Policy exists .",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause clearly assigns the responsibility of reviewing complaints to the Director of OSCCR, with no conflicting authority or ambiguity in the process described.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "If the Director determines that the evidence of a potential violation is sufficient, the case will be assigned to a staff member within OSCCR .",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "AuthorityConflict",
+    "gpt4o_reasoning": "The clause specifies that the Director determines the sufficiency of evidence, but it does not clarify who within OSCCR has the authority to handle the case once assigned. This could lead to conflicts or confusion about who is responsible for the next steps in the process.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "An instructor who believes that a student made an unintentional mistake should note that belief in an Academic Integrity report .",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "The clause is a straightforward procedural statement instructing instructors on how to document their belief about a student's unintentional mistake. It does not present any ambiguity, undefined terms, or enforcement issues.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "The Director of OSCCR, or designee, will review the report along with supplemental documents provided and any prior student conduct history to determine if an administrative hearing is necessary or if an \u201cInformation Only\u201d educational reminder notice is appropriate to increase learning and awareness of campus resources .",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "AuthorityConflict",
+    "gpt4o_reasoning": "The clause gives authority to both the Director of OSCCR and an unspecified 'designee' to make decisions about administrative hearings and educational notices. This could lead to conflicting decisions if both parties interpret the situation differently, without a clear hierarchy or decision-making process.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "The faculty member is advised to speak with any student they intend to report for an alleged violation of the Code Student of Conduct .",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause is a standard procedural recommendation for faculty members to communicate with students before reporting them for violations. It does not present any ambiguity, enforcement gap, or other risk categories.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "Sanctions: Hearing Officers and the Student Conduct Board have discretion to impose sanctions for a Responsible",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "AuthorityConflict",
+    "gpt4o_reasoning": "The clause gives both Hearing Officers and the Student Conduct Board discretion to impose sanctions, which could lead to conflicting decisions if both entities attempt to impose different sanctions for the same violation.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  },
+  {
+    "text": "osccr@northeastern.edu Location 204 Ell Hall Microsoft Teams or Zoom appointments available Recent Posts Be a #smarthusky Request a Classroom Presentation Protect Your Information Arlington Boston Burlington Charlotte London Miami Nahant Oakland Portland Seattle Silicon Valley Toronto Vancouver Emergency Information | Privacy Policy | Accessibility | \u00a9 2026 Northeastern University Cookie Preferences",
+    "source_doc": "neu_academic_integrity.pdf",
+    "page_num": 0,
+    "gpt4o_label": "None",
+    "gpt4o_reasoning": "This clause appears to be a contact and informational section rather than a policy statement. It does not contain any enforceable rules or guidelines related to academic integrity.",
+    "risk_category": "__YOUR_LABEL_HERE__"
+  }
+]

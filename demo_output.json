@@ -1,0 +1,529 @@
+{
+  "source_doc": "neu_academic_integrity.pdf.pdf",
+  "total_clauses": 51,
+  "flagged_count": 21,
+  "annotations": [
+    {
+      "clause_id": "ab368d69-4a06-4ee4-bbdc-114051115563",
+      "clause_text": "The Policy A commitment to the principles of academic integrity is essential to the mission of Northeastern University.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement of values and does not contain any specific rules or definitions that could lead to enforcement issues. It serves as an introductory statement rather than a directive.",
+      "cited_text": "A commitment to the principles of academic integrity is essential to the mission of Northeastern University.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c57a7f34-6298-4d54-b717-2dfaf6cf43e4",
+      "clause_text": "The promotion of independent and original scholarship ensures that students derive the most from their educational experience and their pursuit of knowledge.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement about the value of independent and original scholarship. It does not contain any specific rules or terms that could lead to enforcement issues.",
+      "cited_text": "The promotion of independent and original scholarship ensures that students derive the most from their educational experience and their pursuit of knowledge.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a2139baf-a523-478b-a113-aca5bd6e69ab",
+      "clause_text": "Academic dishonesty violates the most fundamental values of an intellectual community and undermines the achievements of the entire University.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement about the importance of academic integrity and does not contain any specific rules or definitions that could lead to enforcement issues.",
+      "cited_text": "Academic dishonesty violates the most fundamental values of an intellectual community and undermines the achievements of the entire University.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "b47f31e7-4051-4ec4-8319-f31ecd3c1264",
+      "clause_text": "As members of the academic community, students must become familiar with their rights and responsibilities.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement encouraging students to understand their rights and responsibilities. It does not introduce any specific enforcement or definitional issues.",
+      "cited_text": "students must become familiar with their rights and responsibilities",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "0e8a1776-05fa-4521-8fbb-62f21c6d7ebd",
+      "clause_text": "In each course, they are responsible for knowing the requirements and restrictions regarding research and writing, examinations of whatever kind, collaborative work, the use of study aids, the appropriateness of assistance, and other issues.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a general statement about student responsibility to understand course requirements. It does not introduce any specific enforcement or definitional issues that would affect academic integrity policy enforcement.",
+      "cited_text": "they are responsible for knowing the requirements and restrictions",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "dce02fd5-2988-46c0-a644-1a5f8966a3c4",
+      "clause_text": "Students are responsible for learning the conventions of documentation and acknowledgment of sources in their fields.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard policy statement emphasizing student responsibility for understanding documentation conventions. It does not present any ambiguity, undefined terms, or enforcement issues.",
+      "cited_text": "Students are responsible for learning the conventions of documentation and acknowledgment of sources in their fields.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "773207ae-04ed-4337-82ca-490b05b78939",
+      "clause_text": "Northeastern University expects students to complete all examinations, tests, papers, creative projects, and assignments of any kind according to the highest ethical standards, as set forth either explicitly or implicitly in this Code or by the direction of instructors.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The clause refers to 'the highest ethical standards' which can be interpreted differently by students and instructors, leading to inconsistent enforcement. This ambiguity affects whether a student is found guilty of a violation.",
+      "cited_text": "highest ethical standards",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "2ebee228-6922-4808-8e09-62ef6cc69cf3",
+      "clause_text": "The following is a broad overview, but not an all-encompassing definition, of what constitutes a violation of academic integrity.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is an introductory statement indicating that the following content is not exhaustive. It does not create an enforcement problem as it merely sets the context for the detailed definitions that presumably follow.",
+      "cited_text": "broad overview, but not an all-encompassing definition",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "55b346de-bcf9-46fe-8fa3-45268688cbb2",
+      "clause_text": "Cheating: The University defines cheating as using or attempting to use unauthorized materials, information, or study aids in any academic exercise.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a clear definition of cheating that is standard in academic integrity policies. It does not present any ambiguity, undefined terms, or enforcement issues.",
+      "cited_text": "using or attempting to use unauthorized materials, information, or study aids",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a86f1a8b-0db4-476c-9959-ce55bd962823",
+      "clause_text": "When completing any academic assignment, a student shall rely on their own mastery of the subject.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a standard policy statement emphasizing the expectation of individual effort and understanding in academic work. It does not present any ambiguity, undefined terms, or enforcement issues that would affect its application.",
+      "cited_text": "rely on their own mastery of the subject",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3f23c439-70cc-46a6-8742-b38af9f17ddd",
+      "clause_text": "Examples include, but are not limited to: Unauthorized use of aids such as but not limited to notes, text, the Internet, artificial intelligence, chatbots, cell phones, etc. to complete any academic assignment.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause mentions 'artificial intelligence' and 'chatbots' but does not specify what constitutes unauthorized use, leaving a gap where students might use AI tools for outlining or brainstorming without clear guidance on whether this is prohibited.",
+      "cited_text": "Unauthorized use of aids such as but not limited to notes, text, the Internet, artificial intelligence, chatbots, cell phones, etc.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a07d3bbe-03fd-4ee2-a4e1-3b1b0e5bfd67",
+      "clause_text": "Copying from another student\u2019s current or past academic work.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly prohibits copying from another student's work, whether current or past, and does not present any ambiguity or enforcement issues. It is a straightforward statement of academic misconduct.",
+      "cited_text": "Copying from another student\u2019s current or past academic work.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3cbcf096-d056-4e06-9c95-a431e1f59fd5",
+      "clause_text": "Handing in the same academic material, in part or in total, for more than one course without explicit permission from the instructor(s) .",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits submitting the same material for multiple courses without permission, but it lacks a mechanism for detecting when a student has done so. Without a system to track submissions across courses, enforcement is impractical.",
+      "cited_text": "Handing in the same academic material, in part or in total, for more than one course without explicit permission",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "97df9410-cde6-46e4-a2d2-6cc655994abd",
+      "clause_text": "Intentionally viewing a test before it is administered.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits viewing a test before it is administered, but it does not specify how such an action could be detected or proven. Without a clear mechanism for identifying when a student has viewed a test prematurely, enforcement is impractical.",
+      "cited_text": "Intentionally viewing a test before it is administered.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6832ce74-9ab0-40ce-8dc2-03c07346b18e",
+      "clause_text": "Storing notes on paper, or in a portable electronic device for use during an examination.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits storing notes on paper or electronic devices for use during an examination, but it does not specify how such storage will be detected or monitored, especially for electronic devices that can be easily concealed.",
+      "cited_text": "Storing notes on paper, or in a portable electronic device for use during an examination.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "66e9a6b3-2470-4cf7-b8ac-e8f35bf352ba",
+      "clause_text": "Fabrication: The University defines fabrication as falsification, misrepresentation, or invention of any information, data, or citation in an academic exercise.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a clear definition of fabrication in the context of academic integrity, covering falsification, misrepresentation, and invention of information, data, or citation. There is no ambiguity or enforcement issue present.",
+      "cited_text": "The University defines fabrication as falsification, misrepresentation, or invention of any information, data, or citation in an academic exercise.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3bdc1430-b618-4a56-a5b4-5bdcb1c1060e",
+      "clause_text": "Examples include, but are not limited to: Inventing data, facts, or sources for an academic assignment.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly prohibits the fabrication of data, facts, or sources in academic assignments. It provides examples without limiting the scope, which is a standard approach in policy language to cover a broad range of potential violations.",
+      "cited_text": "Examples include, but are not limited to: Inventing data, facts, or sources for an academic assignment.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c1f09d3c-a0cc-47e1-8f0a-14e8c7f8c0fc",
+      "clause_text": "Altering the results of a lab experiment or survey.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly prohibits altering the results of a lab experiment or survey, which is a straightforward academic integrity violation. There is no ambiguity or enforcement issue present in this statement.",
+      "cited_text": "Altering the results of a lab experiment or survey.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f173af9b-4610-47cb-b971-f76936c82803",
+      "clause_text": "Citing a source in a bibliography that was not used.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits citing unused sources, but there is no clear mechanism to detect whether a source listed in a bibliography was actually used in the work. Without a method to verify the use of each source, enforcement is impractical.",
+      "cited_text": "Citing a source in a bibliography that was not used.",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "b5092bdf-4563-4da4-a24d-7d770bae0f40",
+      "clause_text": "Stating an opinion as a scientifically proven fact.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The clause is ambiguous because it is not clear what constitutes an 'opinion' versus a 'scientifically proven fact.' This could lead to inconsistent enforcement, as different interpretations might arise about what evidence is required to classify a statement as scientifically proven.",
+      "cited_text": "Stating an opinion as a scientifically proven fact.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "55fb0f58-72c4-42d7-9a9b-7990dd3d1664",
+      "clause_text": "Plagiarism: The University defines plagiarism as using as one\u2019s own the words, ideas, data, code, or other original academic material of another without providing proper citation or attribution.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a clear definition of plagiarism that aligns with standard academic integrity policies. It specifies the types of materials that can be plagiarized and the requirement for proper citation or attribution, leaving little room for misinterpretation.",
+      "cited_text": "using as one\u2019s own the words, ideas, data, code, or other original academic material of another without providing proper citation or attribution",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c7ac519f-2d01-4e27-9cd0-0b606eaf8956",
+      "clause_text": "Plagiarism can apply to any assignment, either final or drafted copies, and it can occur either accidentally or deliberately.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that plagiarism can occur in any form of assignment and can be either accidental or deliberate. This is a standard policy statement that does not present any ambiguity or enforcement issues.",
+      "cited_text": "Plagiarism can apply to any assignment, either final or drafted copies, and it can occur either accidentally or deliberately.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "d4cfda73-fc2e-4255-b491-5cc409eca356",
+      "clause_text": "Claiming that one has \u201cforgotten\u201d to document ideas or material taken from another source does not exempt one from plagiarizing.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that forgetting to document sources is not an acceptable excuse for plagiarism. It is a straightforward policy statement with no ambiguity or enforcement issues.",
+      "cited_text": "Claiming that one has \u201cforgotten\u201d to document ideas or material taken from another source does not exempt one from plagiarizing.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6697f81a-d180-4e7a-bcac-6594685115d9",
+      "clause_text": "The following sources require citation: Word-for-word quotations from a source, including another student\u2019s work.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly specifies that word-for-word quotations from any source, including another student's work, require citation. This is a standard policy statement with no ambiguity or enforcement issues.",
+      "cited_text": "Word-for-word quotations from a source, including another student\u2019s work.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "1b859a49-a24a-4112-b3b5-0c9e55892ef7",
+      "clause_text": "Paraphrasing (using the ideas of others in your own words).",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a standard definition of paraphrasing, which is a commonly understood academic term. It does not present any ambiguity or enforcement issues as it stands.",
+      "cited_text": "Paraphrasing (using the ideas of others in your own words).",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "e4713874-601d-4e53-b222-bd0e933a7942",
+      "clause_text": "Audio, video, digital, or live exchanges of ideas, dialogue, or information.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The clause is ambiguous because it does not specify the context or conditions under which these exchanges are prohibited or allowed. This could lead to contradictory interpretations about whether a particular exchange violates the policy.",
+      "cited_text": "Audio, video, digital, or live exchanges of ideas, dialogue, or information.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "fb64f294-4c61-4aa3-99da-27fb133cff05",
+      "clause_text": "When recycling or reusing one\u2019s own specific words from previously published texts.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause uses the term 'specific words' without defining what constitutes 'specific words' in this context. This lack of definition could lead to confusion about whether reusing phrases, sentences, or larger text segments is permissible, affecting enforcement consistency.",
+      "cited_text": "specific words",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "fe788945-6cdb-4cd6-a97b-aeb25e97de18",
+      "clause_text": "Students unclear as to whether or not a source requires citation should speak with their professor or consult the Writing Center in 412 Holmes Hall.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause provides clear guidance for students who are uncertain about citation requirements, directing them to seek clarification from their professor or the Writing Center. It does not present any ambiguity, undefined terms, or enforcement issues.",
+      "cited_text": "Students unclear as to whether or not a source requires citation should speak with their professor or consult the Writing Center in 412 Holmes Hall.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a737f1b8-1f1a-4478-bb68-e966c400ee1a",
+      "clause_text": "Unauthorized Collaboration: The University defines unauthorized collaboration as instances when students submit individual academic works that are substantially similar to one another.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The phrase 'substantially similar' is open to interpretation, leading to potential inconsistencies in enforcement. Different evaluators might have varying thresholds for what constitutes substantial similarity, affecting whether students are found guilty.",
+      "cited_text": "substantially similar",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "51ee25b3-177b-4be8-bae2-0137d12b9d79",
+      "clause_text": "While several students may have the same source material, any analysis, interpretation, or reporting of data required by an assignment must be each individual\u2019s independent work unless the instructor has explicitly granted permission for group work.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that analysis, interpretation, or reporting must be independent unless group work is explicitly permitted by the instructor. There is no ambiguity or enforcement issue present in this clause.",
+      "cited_text": "any analysis, interpretation, or reporting of data required by an assignment must be each individual\u2019s independent work unless the instructor has explicitly granted permission for group work.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "16e1d2d4-3049-4e60-b3ca-eaf2ef2152c4",
+      "clause_text": "Examples include, but are not limited to: Submitting work that closely matches that of another student, even when the work is to be original to the student handing in the assignment.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly prohibits submitting work that closely matches another student's work, emphasizing originality. It does not present ambiguity or enforcement issues as it aligns with standard academic integrity expectations.",
+      "cited_text": "Submitting work that closely matches that of another student, even when the work is to be original to the student handing in the assignment.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c96516ff-b874-4757-a481-41001f631c14",
+      "clause_text": "Sharing a take-home examination, case write-up, lab report, or any other assignment with a peer or on any non-personal portfolio website, such as but not exclusive to Chegg, CourseHero, Quizlet, etc., without express permission from the instructor.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits sharing assignments on non-personal portfolio websites, but it does not specify how the university will monitor or detect such sharing, especially on external platforms that may not cooperate with the institution.",
+      "cited_text": "Sharing a take-home examination, case write-up, lab report, or any other assignment with a peer or on any non-personal portfolio website",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "8a1e5f93-f7a3-4b2a-95bc-d41126252996",
+      "clause_text": "Participation in Academically Dishonest Activities: The University defines participation in academically dishonest activities as any action taken by a student with the intention of gaining an unfair advantage over other students.",
+      "risk_category": "CircularDefinition",
+      "secondary_category": null,
+      "reasoning": "The clause defines 'academically dishonest activities' using the concept of 'unfair advantage,' which is essentially a restatement of dishonesty in an academic context. This circular definition does not provide a clear, independent standard for what constitutes dishonest activities.",
+      "cited_text": "academically dishonest activities as any action taken by a student with the intention of gaining an unfair advantage",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "fd534509-705e-47f9-ade7-ca095d2a9943",
+      "clause_text": "Misrepresenting oneself or one\u2019s circumstances to an instructor.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a standard policy statement that clearly prohibits students from providing false information about themselves or their situations to instructors. It does not present any ambiguity or enforcement issues.",
+      "cited_text": "Misrepresenting oneself or one\u2019s circumstances to an instructor.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "631817bd-aa2c-48b7-9a1b-f144b0479b12",
+      "clause_text": "Selling, loaning, or otherwise distributing materials intended for the purpose of cheating, plagiarism, or other academically dishonest acts.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits the distribution of materials for dishonest acts but does not specify how such actions would be detected or investigated, creating a gap in enforcement. Without a mechanism to identify or track these transactions, the rule is difficult to enforce.",
+      "cited_text": "Selling, loaning, or otherwise distributing materials intended for the purpose of cheating, plagiarism, or other academically dishonest acts.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "503f3c1f-535c-4d8c-8821-9543c5f426be",
+      "clause_text": "Destroying, altering, stealing, or forging another student\u2019s work, library materials, laboratory materials, academic records, course syllabi, or examination/course grades.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly lists prohibited actions related to academic materials and records. Each action is straightforward and commonly understood, leaving little room for genuine ambiguity or enforcement issues.",
+      "cited_text": "Destroying, altering, stealing, or forging another student\u2019s work, library materials, laboratory materials, academic records, course syllabi, or examination/course grades.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "1244dc08-d0c0-4510-890a-9c7fbca9e037",
+      "clause_text": "Intentionally missing an examination or assignment deadline to gain an unfair advantage.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits intentionally missing deadlines for unfair advantage, but it lacks a mechanism to detect or prove the intent behind missing a deadline, making enforcement challenging.",
+      "cited_text": "Intentionally missing an examination or assignment deadline to gain an unfair advantage.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "71c8bba0-f9fe-46fa-8021-9a3c0dde2a0a",
+      "clause_text": "Forging information or signatures on official University documents such as but not limited to attendance logs, resumes, cover letters, honesty statements, etc.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly prohibits the act of forging information or signatures on official documents, and it provides examples of such documents. There is no ambiguity or enforcement issue present in this clause.",
+      "cited_text": "Forging information or signatures on official University documents",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "ff9a9599-3a48-4815-aa97-0c7b112a84d3",
+      "clause_text": "Facilitating Academic Dishonesty: The University defines facilitating academic dishonesty as intentionally or knowingly helping or contributing to the violation of any provision of this policy.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly defines facilitating academic dishonesty in terms of intentional or knowing assistance in policy violations. It does not present ambiguity or enforcement issues, as the terms used are standard and widely understood in academic contexts.",
+      "cited_text": "intentionally or knowingly helping or contributing to the violation of any provision of this policy",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "39eed010-14f2-44bf-810f-a9ad5e9d71b3",
+      "clause_text": "Examples include, but are not limited to: Doing academic work for another student.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a straightforward example of academic misconduct and does not present any ambiguity or enforcement issues. It clearly prohibits doing academic work for another student.",
+      "cited_text": "Doing academic work for another student.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "12d36b45-91e7-4250-818b-703d3d4a8b8f",
+      "clause_text": "Making available previously used academic work for another individual who intends to resubmit the work for credit.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits making available previously used academic work, but it does not specify how the university would detect or investigate such actions, especially if the sharing occurs privately or outside university systems.",
+      "cited_text": "Making available previously used academic work",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "4fb0e8bf-d3ca-41a6-aa18-f931ae7f4964",
+      "clause_text": "Obligation to Uphold Academic Integrity: All members of the Northeastern University community have a role in upholding the Academic Integrity Policy.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement about the collective responsibility of the university community to uphold academic integrity. It does not introduce any specific enforcement or definitional issues.",
+      "cited_text": "All members of the Northeastern University community have a role in upholding the Academic Integrity Policy.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f7029050-f299-46c1-bdae-2d563790efa8",
+      "clause_text": "Any member of the community who witnesses a violation of this policy should report it to the appropriate faculty member or the Office of Student Conduct & Conflict Resolution (OSCCR).",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause gives authority to both faculty members and the Office of Student Conduct & Conflict Resolution (OSCCR) to receive reports of violations, which could lead to confusion or conflict over who should handle the report and how it should be processed.",
+      "cited_text": "appropriate faculty member or the Office of Student Conduct & Conflict Resolution (OSCCR)",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "7274c60b-3372-469d-b248-a97729fda1b5",
+      "clause_text": "All instructors are required to refer to Northeastern\u2019s Academic Integrity Policy in their course syllabi.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard procedural requirement for instructors to include a reference to the Academic Integrity Policy in their syllabi. It does not present any ambiguity, enforcement gap, or other risk categories.",
+      "cited_text": "All instructors are required to refer to Northeastern\u2019s Academic Integrity Policy in their course syllabi.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "16e6e849-e5e5-4abb-8f43-c5b3ea86e345",
+      "clause_text": "The Director of OSCCR will review all complaints submitted against a student to determine whether sufficient evidence for a violation of the Academic Integrity Policy exists .",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly assigns the responsibility of reviewing complaints to the Director of OSCCR, with no conflicting authority or ambiguity in the process described.",
+      "cited_text": "The Director of OSCCR will review all complaints submitted against a student",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6a76f72b-d176-4b19-90b6-2d2024f1d1be",
+      "clause_text": "If the Director determines that the evidence of a potential violation is sufficient, the case will be assigned to a staff member within OSCCR .",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause specifies that the Director determines the sufficiency of evidence, but it does not clarify who within OSCCR has the authority to handle the case once assigned. This could lead to confusion or conflict over who is responsible for the next steps in the process.",
+      "cited_text": "the case will be assigned to a staff member within OSCCR",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "64180778-eb19-4b29-af5f-f991a88c7b62",
+      "clause_text": "An instructor who believes that a student made an unintentional mistake should note that belief in an Academic Integrity report .",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause implies that the instructor has the authority to determine intent, but it does not clarify whether this belief affects the outcome or if another authority reviews the report. This could lead to conflicting decisions if another office or person has the final say on intent.",
+      "cited_text": "An instructor who believes that a student made an unintentional mistake",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c3431165-1e36-4055-8440-3802f4338fb4",
+      "clause_text": "The Director of OSCCR, or designee, will review the report along with supplemental documents provided and any prior student conduct history to determine if an administrative hearing is necessary or if an \u201cInformation Only\u201d educational reminder notice is appropriate to increase learning and awareness of campus resources .",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause gives authority to both the Director of OSCCR and a designee to make decisions about whether an administrative hearing is necessary. This could lead to conflicting decisions if both parties have differing opinions on the same case.",
+      "cited_text": "The Director of OSCCR, or designee, will review",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "4415b835-c12f-4bb4-a74f-2b0e49f29207",
+      "clause_text": "The faculty member is advised to speak with any student they intend to report for an alleged violation of the Code Student of Conduct .",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause advises faculty to speak with students before reporting them, but it does not clarify whether this conversation is mandatory or what happens if the faculty member chooses not to engage in it. This could lead to inconsistent enforcement and confusion about the faculty's obligations.",
+      "cited_text": "The faculty member is advised to speak with any student they intend to report",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "04094ee0-845f-474c-92c3-43ec013b8131",
+      "clause_text": "Sanctions: Hearing Officers and the Student Conduct Board have discretion to impose sanctions for a Responsible",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause gives both Hearing Officers and the Student Conduct Board discretion to impose sanctions, which could lead to conflicting decisions or confusion about who has the final authority in a given case.",
+      "cited_text": "Hearing Officers and the Student Conduct Board have discretion to impose sanctions",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3f186792-4fea-48f8-9ea6-86333ec5e7f6",
+      "clause_text": "osccr@northeastern.edu Location 204 Ell Hall Microsoft Teams or Zoom appointments available Recent Posts Be a #smarthusky Request a Classroom Presentation Protect Your Information Arlington Boston Burlington Charlotte London Miami Nahant Oakland Portland Seattle Silicon Valley Toronto Vancouver Emergency Information | Privacy Policy | Accessibility | \u00a9 2026 Northeastern University Cookie Preferences",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause appears to be a contact and informational section rather than a policy statement. It does not contain any enforceable rules or definitions related to academic integrity.",
+      "cited_text": "osccr@northeastern.edu Location 204 Ell Hall Microsoft Teams or Zoom appointments available",
+      "confidence": 1.0,
+      "low_confidence_flag": false
+    }
+  ],
+  "contradictions": [],
+  "faithfulness_score": 1.0,
+  "overall_risk_rating": "High",
+  "risk_distribution": {
+    "None": 30,
+    "Ambiguity": 4,
+    "AIUsageLoophole": 1,
+    "EnforcementGap": 8,
+    "UndefinedTerm": 1,
+    "CircularDefinition": 1,
+    "AuthorityConflict": 6
+  }
+}

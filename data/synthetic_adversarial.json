@@ -1,0 +1,128 @@
+[
+  {
+    "text": "Students are encouraged to collaborate on projects where permitted, provided all contributions are duly acknowledged as per the instructor\u2019s discretion.",
+    "category": "Ambiguity",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "All submitted work must be original, except in cases where prior permission has been granted or if the instructor deems it appropriate.",
+    "category": "Ambiguity",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Assignments should reflect individual effort unless explicitly stated otherwise by the course guidelines or inferred from class discussions.",
+    "category": "Ambiguity",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "All students are expected to maintain the highest level of decorum in all interactions, and any deviation from this standard will be addressed accordingly.",
+    "category": "UndefinedTerm",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Students must submit all assignments in a timely manner, ensuring alignment with the principles outlined in the academic guidelines.",
+    "category": "UndefinedTerm",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Collaboration is encouraged within the parameters set by the instructor, ensuring all work adheres to the standards of academic originality.",
+    "category": "UndefinedTerm",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Faculty members are encouraged to report any suspected cases of academic misconduct to the academic integrity office, but they are not required to do so if they believe alternative resolutions would be more appropriate.",
+    "category": "EnforcementGap",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Students found violating the academic integrity policy may face disciplinary actions, contingent on the availability of the academic integrity committee to review such cases within the academic year.",
+    "category": "EnforcementGap",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "All allegations of academic dishonesty will be reviewed by the designated committee, which convenes monthly, provided there is quorum to proceed with the evaluation.",
+    "category": "EnforcementGap",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "All members of the academic community must adhere to the institution's research guidelines, while also considering any external affiliations or commitments they may have.",
+    "category": "ScopeConflict",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Faculty members are encouraged to pursue external consulting opportunities, provided they maintain the integrity and primary allegiance to their institutional responsibilities.",
+    "category": "ScopeConflict",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Students involved in research projects are permitted to use institutional resources for personal projects, as long as they ensure that their primary academic obligations are not compromised.",
+    "category": "ScopeConflict",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Students are encouraged to seek clarification on assignment guidelines directly from any faculty member, as their interpretations may vary and offer a broader understanding.",
+    "category": "AuthorityConflict",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "In the event of a disagreement regarding a grade, students may choose to consult with a faculty member of their choice for an independent review, ensuring diverse perspectives are considered.",
+    "category": "AuthorityConflict",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "For the purpose of fostering open communication, students may address their concerns about course content with any available academic staff, promoting a diverse range of viewpoints.",
+    "category": "AuthorityConflict",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Students are encouraged to use AI tools to assist with their studies as long as the final work submitted is predominantly their own effort, which can include AI-generated content.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "It is permissible to utilize AI-generated suggestions for improving the quality of academic papers, provided that the student reviews and approves these suggestions before submission.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "AI tools may be used to generate initial drafts of assignments, as long as students ensure the final version is edited for accuracy and coherence.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Academic dishonesty is defined as any act that is considered to be academically dishonest by the academic integrity policy.",
+    "category": "CircularDefinition",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Cheating is prohibited and is defined as any form of cheating not allowed by the institution.",
+    "category": "CircularDefinition",
+    "is_adversarial": true,
+    "human_accepted": false
+  },
+  {
+    "text": "Misrepresentation is a violation that occurs when an action is misrepresented as a misrepresentation under these guidelines.",
+    "category": "CircularDefinition",
+    "is_adversarial": true,
+    "human_accepted": false
+  }
+]

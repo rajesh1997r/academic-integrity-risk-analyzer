@@ -1,0 +1,282 @@
+{
+  "source_doc": "harvard_ai_guidelines.pdf.pdf",
+  "total_clauses": 16,
+  "flagged_count": 9,
+  "annotations": [
+    {
+      "clause_id": "d3f2faa0-2b1d-4dd1-b005-853988f67b2a",
+      "clause_text": "Review content before publishing or sharing AI-generated content can be inaccurate, misleading, or entirely fabricated (sometimes called \u201challucinations\u201d) or may contain copyrighted material.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause advises reviewing AI-generated content but does not specify any requirements or consequences for failing to do so, leaving a gap in enforcement. It does not define what constitutes adequate review or what actions should be taken if inaccuracies or copyrighted material are found.",
+      "cited_text": "Review content before publishing or sharing AI-generated content",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "8d3ac2af-624d-440c-bde7-2196e41fb9de",
+      "clause_text": "You are responsible for any content that you publish or share that includes AI-generated material.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause does not define what constitutes 'AI-generated material,' leaving a gap where students might exploit AI tools for certain tasks without clear guidelines on what is permissible. This could lead to inconsistent enforcement.",
+      "cited_text": "AI-generated material",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "620db25b-7531-41e2-a28e-e61ae5b59a32",
+      "clause_text": "Adhere to local academic and administrative policies Review your School or Unit\u2019s local policies around the use of generative AI.",
+      "risk_category": "ScopeConflict",
+      "secondary_category": null,
+      "reasoning": "The clause suggests that different schools or units may have different policies regarding the use of generative AI, which could lead to inconsistencies in enforcement and expectations across the university. This creates a risk where students in different programs might be subject to different standards for the same behavior.",
+      "cited_text": "Review your School or Unit\u2019s local policies around the use of generative AI.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "03c6a06d-472a-467b-819e-acc3bca64c4f",
+      "clause_text": "Many Schools have developed or updated policies around the use of generative AI in the classroom.",
+      "risk_category": "ScopeConflict",
+      "secondary_category": null,
+      "reasoning": "The clause indicates that different Schools within the university may have varying policies regarding the use of generative AI, which could lead to inconsistencies in enforcement and expectations for students across different programs or courses.",
+      "cited_text": "Many Schools have developed or updated policies",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "5c4943b7-11df-4b1d-8ad4-7979d9837a1a",
+      "clause_text": "You can find links to local resources on the University\u2019s generative AI website.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a straightforward informational statement directing students to resources. It does not contain any rules or prohibitions that could create enforcement issues.",
+      "cited_text": "You can find links to local resources on the University\u2019s generative AI website.",
+      "confidence": 0.95,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "808b2378-cce8-448c-8e31-acd9323bc5ad",
+      "clause_text": "Faculty should be clear with students they\u2019re teaching and advising about their policies on permitted uses, if any, of generative AI in classes and on academic work.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard policy statement encouraging faculty to communicate their policies on AI use. It does not create an enforcement problem or ambiguity, as it is advisory rather than prescriptive.",
+      "cited_text": "Faculty should be clear with students they\u2019re teaching and advising about their policies on permitted uses, if any, of generative AI in classes and on academic work.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a5c97697-1da6-4dee-a5e8-447b8dcc7935",
+      "clause_text": "Students are also encouraged to ask their instructors for clarification about these policies as needed.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard procedural statement encouraging students to seek clarification, and does not present any enforcement or interpretative issues.",
+      "cited_text": "Students are also encouraged to ask their instructors for clarification about these policies as needed.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c8a92720-2458-4ff1-8f07-95050010c9ba",
+      "clause_text": "Be alert for phishing Generative AI has made it easier for malicious actors to create sophisticated phishing emails and \u201cdeepfakes\u201d (i.e., video or audio intended to convincingly mimic a person\u2019s voice or physical appearance without their consent) at a far greater scale.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is an advisory statement about the risks of phishing and deepfakes due to generative AI. It does not impose any specific rules or enforcement actions, so there is no risk of ambiguity or enforcement issues.",
+      "cited_text": "Be alert for phishing Generative AI has made it easier for malicious actors to create sophisticated phishing emails and \u201cdeepfakes\u201d",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "b5444617-6055-44a0-b9c9-3b563c4cce71",
+      "clause_text": "Continue to follow security best practices and report suspicious messages to phishing@harvard.edu.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard procedural statement advising students to follow security best practices and report suspicious messages. It does not present any ambiguity, undefined terms, enforcement gaps, or other risks that would affect enforcement or student fairness.",
+      "cited_text": "Continue to follow security best practices and report suspicious messages to phishing@harvard.edu.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "5d8fea26-709f-499e-b6d6-1c43d698a0e3",
+      "clause_text": "Use approved tools for Harvard work HUIT and School IT providers have procured a range of generative AI tools with important contractual protections for use in Harvard work.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause refers to 'approved tools' and 'generative AI tools' without defining what these specifically include. A reasonable student may not know which tools are considered approved or what constitutes a generative AI tool in this context.",
+      "cited_text": "approved tools",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "8e367fbb-fd98-427c-b21b-7e70516efd45",
+      "clause_text": "These include security and privacy protections that ensure the tools are appropriate for use with certain types of confidential data, and assurances that the data entered will not be used to train vendor models.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause refers to 'certain types of confidential data' without defining what these types are. This lack of definition could lead to confusion about what data is considered confidential and thus protected under this policy.",
+      "cited_text": "certain types of confidential data",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "ec9fa0a7-ee3c-4a20-8bd2-5226621a16c6",
+      "clause_text": "A list of available tools provided by HUIT can be found here.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause references 'HUIT' without defining what it stands for or how students can access the list of tools. A reasonable student may not know what 'HUIT' refers to, which is crucial for understanding the resources available.",
+      "cited_text": "HUIT",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "d5282668-6e81-464e-ac04-ff0d4492cc9e",
+      "clause_text": "More tools may be available from your School IT provider.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general informational statement about the availability of tools from the School IT provider. It does not impose any rules or requirements related to academic integrity, so it does not present an enforcement or interpretation risk.",
+      "cited_text": "More tools may be available from your School IT provider.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6c7cc725-4b97-4405-a666-79c94dd99217",
+      "clause_text": "AI meeting assistants should not be used in Harvard meetings, with the exception of approved tools with contractual protections.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause refers to 'approved tools with contractual protections' without defining what constitutes an 'approved tool' or what 'contractual protections' entail. This lack of definition could lead to confusion about which AI meeting assistants are permissible.",
+      "cited_text": "approved tools with contractual protections",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "2e1e14d0-a90a-49a5-babc-70225fc2670e",
+      "clause_text": "Consult the AI Assistant Guidelines for more information and how to manage unwanted AI assistants in meetings.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause references 'AI Assistant Guidelines' without providing a definition or location for these guidelines. A reasonable student may not know where to find these guidelines or what they entail, which is crucial for understanding how to manage unwanted AI assistants.",
+      "cited_text": "AI Assistant Guidelines",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "61fce8ff-cbe2-4411-bba9-41719926259c",
+      "clause_text": "Admin login Copyright \u00a9 2026 The President and Fellows of Harvard College Accessibility Digital Accessibility Report Copyright Infringement Info Practices",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause appears to be a standard footer or administrative note rather than a policy statement related to academic integrity. It does not contain any enforceable rules or definitions that could create an enforcement problem.",
+      "cited_text": "Admin login Copyright \u00a9 2026 The President and Fellows of Harvard College",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    }
+  ],
+  "contradictions": [
+    {
+      "clause_a": {
+        "id": "1807efff-c0b7-4e66-b085-f665a407600a",
+        "text": "Information shared with generative AI tools using default settings is not private and could expose proprietary or sensitive information to unauthorized parties.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 1,
+        "position_index": 3,
+        "word_count": 22
+      },
+      "clause_b": {
+        "id": "1d179235-026a-4996-96a5-9dcb2895abec",
+        "text": "These include security and privacy protections that ensure the tools are appropriate for use with certain types of confidential data, and assurances that the data entered will not be used to train vendor models.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 2,
+        "position_index": 16,
+        "word_count": 34
+      },
+      "contradiction_type": "PermissionConflict",
+      "explanation": "Clause A suggests that information shared with generative AI tools is not private, while Clause B implies that there are privacy protections ensuring the tools are appropriate for confidential data.",
+      "scope_explains_conflict": false
+    },
+    {
+      "clause_a": {
+        "id": "1807efff-c0b7-4e66-b085-f665a407600a",
+        "text": "Information shared with generative AI tools using default settings is not private and could expose proprietary or sensitive information to unauthorized parties.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 1,
+        "position_index": 3,
+        "word_count": 22
+      },
+      "clause_b": {
+        "id": "8df4743b-9e3e-4383-8cac-e8199aefa608",
+        "text": "These include security and privacy protections that ensure the tools are appropriate for use with certain types of confidential data, and assurances that the data entered will not be used to train vendor models.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 2,
+        "position_index": 16,
+        "word_count": 34
+      },
+      "contradiction_type": "PermissionConflict",
+      "explanation": "Clause A suggests that information shared with generative AI tools is not private, while Clause B claims there are privacy protections ensuring the tools are appropriate for confidential data.",
+      "scope_explains_conflict": false
+    },
+    {
+      "clause_a": {
+        "id": "1d179235-026a-4996-96a5-9dcb2895abec",
+        "text": "These include security and privacy protections that ensure the tools are appropriate for use with certain types of confidential data, and assurances that the data entered will not be used to train vendor models.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 2,
+        "position_index": 16,
+        "word_count": 34
+      },
+      "clause_b": {
+        "id": "48da55ee-efd8-4903-9cb9-2513bd9f423e",
+        "text": "Information shared with generative AI tools using default settings is not private and could expose proprietary or sensitive information to unauthorized parties.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 1,
+        "position_index": 3,
+        "word_count": 22
+      },
+      "contradiction_type": "PermissionConflict",
+      "explanation": "Clause A suggests that tools have security and privacy protections for confidential data, while Clause B warns that using default settings could expose sensitive information, implying a lack of such protections.",
+      "scope_explains_conflict": false
+    },
+    {
+      "clause_a": {
+        "id": "48da55ee-efd8-4903-9cb9-2513bd9f423e",
+        "text": "Information shared with generative AI tools using default settings is not private and could expose proprietary or sensitive information to unauthorized parties.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 1,
+        "position_index": 3,
+        "word_count": 22
+      },
+      "clause_b": {
+        "id": "8df4743b-9e3e-4383-8cac-e8199aefa608",
+        "text": "These include security and privacy protections that ensure the tools are appropriate for use with certain types of confidential data, and assurances that the data entered will not be used to train vendor models.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 2,
+        "position_index": 16,
+        "word_count": 34
+      },
+      "contradiction_type": "PermissionConflict",
+      "explanation": "Clause A suggests that information shared with generative AI tools is not private, while Clause B claims there are privacy protections ensuring the tools are appropriate for confidential data.",
+      "scope_explains_conflict": false
+    },
+    {
+      "clause_a": {
+        "id": "b53351a8-4e3e-42c8-85ba-a55579ba01cc",
+        "text": "Protect confidential data You should not enter data classified as confidential (Level 2 and above, including non-public research data, finance, HR, student records, medical information, etc.) into publicly-available generative AI tools, in accordance with the University\u2019s Information Security Policy.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 1,
+        "position_index": 2,
+        "word_count": 39
+      },
+      "clause_b": {
+        "id": "ef8c47be-5b3f-421d-afc1-bf83778253e5",
+        "text": "Level 2 and above confidential data must only be entered into generative AI tools that have been assessed and approved for such use by Harvard\u2019s Information Security and Data Privacy office.",
+        "source_doc": "harvard_ai_guidelines.pdf.pdf",
+        "page_num": 1,
+        "position_index": 4,
+        "word_count": 31
+      },
+      "contradiction_type": "PermissionConflict",
+      "explanation": "Clause A prohibits entering Level 2 and above confidential data into publicly-available generative AI tools, while Clause B allows it if the tools are approved by Harvard\u2019s Information Security and Data Privacy office.",
+      "scope_explains_conflict": false
+    }
+  ],
+  "faithfulness_score": 1.0,
+  "overall_risk_rating": "High",
+  "risk_distribution": {
+    "AIUsageLoophole": 2,
+    "ScopeConflict": 2,
+    "None": 7,
+    "UndefinedTerm": 5
+  }
+}

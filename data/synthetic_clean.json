@@ -1,0 +1,212 @@
+[
+  {
+    "text": "Students must ensure that all sources are appropriately credited in their work, though the definition of 'appropriately' may vary depending on individual department guidelines.",
+    "category": "Ambiguity",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "While collaboration is encouraged, students must avoid any form of unauthorized assistance during exams, unless otherwise permitted by the instructor's discretion.",
+    "category": "Ambiguity",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "It is the responsibility of the student to ensure they are not in violation of any academic standards, even if those standards are not explicitly outlined in the course syllabus.",
+    "category": "Ambiguity",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Submitting the same work for multiple courses is generally prohibited unless prior approval is obtained from the relevant instructors, which may or may not be granted based on the specific circumstances.",
+    "category": "Ambiguity",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Students should refrain from any actions that could be construed as dishonest, though such actions are not exhaustively listed in this document.",
+    "category": "Ambiguity",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Students are required to adhere to the principles of academic uprightness in all their scholarly endeavors.",
+    "category": "UndefinedTerm",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "It is essential that all submissions reflect the core values of educational honesty as prescribed by our institution.",
+    "category": "UndefinedTerm",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "The university expects all members to maintain the highest standards of scholarly conduct in their academic pursuits.",
+    "category": "UndefinedTerm",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Any deviation from the expected norms of intellectual responsibility will be subject to review by the appropriate university body.",
+    "category": "UndefinedTerm",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "The institution upholds a commitment to fostering an environment of scholastic integrity and expects all participants to align with this commitment.",
+    "category": "UndefinedTerm",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "The Academic Integrity Office will review cases of suspected academic misconduct; however, due to limited resources, cases older than one academic year may not be addressed.",
+    "category": "EnforcementGap",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "While the university requires all instructors to report incidents of academic dishonesty, there is currently no centralized system to track these reports, leading to potential oversight of repeat offenders.",
+    "category": "EnforcementGap",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Although policy dictates that all violations should result in a formal hearing, resource constraints mean that only the most severe cases are guaranteed a full review.",
+    "category": "EnforcementGap",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Instructors are encouraged to report all suspected academic integrity violations, but without a standardized reporting mechanism, follow-up action is inconsistently applied across departments.",
+    "category": "EnforcementGap",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "The university aims to uphold academic integrity standards; however, the lack of a dedicated compliance officer means that only a fraction of reported cases are fully investigated.",
+    "category": "EnforcementGap",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "This policy applies exclusively to coursework within the School of Arts, thereby excluding any assignments or projects undertaken through interdisciplinary programs or collaborations with other schools.",
+    "category": "ScopeConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "In cases where a student's research project is funded by both the university and an external entity, the guidelines of this policy solely govern the academic aspects, leaving financial and proprietary matters to be addressed by the external entity's regulations.",
+    "category": "ScopeConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "While this policy outlines the procedures for handling academic misconduct within undergraduate programs, graduate and postgraduate courses are subject to separate regulatory frameworks, which take precedence in case of any overlaps.",
+    "category": "ScopeConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "The policy's jurisdiction is confined to on-campus academic activities, thus not extending to online courses offered through affiliated platforms, which adhere to their independent integrity guidelines.",
+    "category": "ScopeConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Although this policy sets forth the standards for student conduct within the Faculty of Science, students enrolled in joint-degree programs must also comply with the integrity policies of the associated faculty, which may supersede this document in specific scenarios.",
+    "category": "ScopeConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Students are required to comply with all directives issued by faculty and staff, and any deliberate refusal to follow established academic protocols will be considered a conflict with university authority.",
+    "category": "AuthorityConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Any attempt by a student to undermine or challenge the legitimate decision-making roles of university officials, including faculty or administrative staff, without following proper grievance procedures, is prohibited.",
+    "category": "AuthorityConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Students must not engage in actions that intentionally disrupt or interfere with the duties of university personnel, as such behavior constitutes a breach of institutional authority.",
+    "category": "AuthorityConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "It is a violation of university policy for students to organize or participate in demonstrations that impede the normal operations of the university without prior approval from the appropriate administrative body.",
+    "category": "AuthorityConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Students who deliberately disregard or publicly challenge the policies set forth by university authorities, outside approved channels, may face disciplinary action for authority conflict.",
+    "category": "AuthorityConflict",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Students are prohibited from using AI tools to generate content unless explicitly allowed by the course instructor; any misuse by creating loopholes to bypass this directive will be considered a breach of academic integrity.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "While AI may be used for preliminary research purposes, students must ensure that all submissions reflect their own understanding and synthesis of the material, avoiding any loopholes that might allow AI to unduly influence their work.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Any attempt to use AI to circumvent plagiarism detection systems or to generate assignment content that is not original will be treated as a violation of the academic integrity policy.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "The utilization of AI-generated text should be clearly disclosed and appropriately cited; failure to do so, or attempting to exploit gaps in this requirement, will result in disciplinary action.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Students may not employ AI to complete assignments or exams unless specified by the instructor; exploiting ambiguities in this rule to gain an unfair advantage will be subject to review under academic misconduct procedures.",
+    "category": "AIUsageLoophole",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Academic dishonesty encompasses all forms of cheating, which is defined as any act of academic dishonesty.",
+    "category": "CircularDefinition",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Plagiarism is when a student commits plagiarism, involving the presentation of someone else's work as their own.",
+    "category": "CircularDefinition",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Unauthorized collaboration is defined as collaborating without authorization, which is a violation of academic integrity.",
+    "category": "CircularDefinition",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Fabrication of data is considered the fabrication of any data, which is not consistent with academic honesty.",
+    "category": "CircularDefinition",
+    "is_adversarial": false,
+    "human_accepted": false
+  },
+  {
+    "text": "Academic misconduct includes any actions that constitute academic misconduct, as outlined by university regulations.",
+    "category": "CircularDefinition",
+    "is_adversarial": false,
+    "human_accepted": false
+  }
+]
