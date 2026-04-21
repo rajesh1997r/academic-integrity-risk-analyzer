@@ -96,12 +96,14 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="AIRA API", version="1.0.0", lifespan=lifespan)
 
+_extra_origin = os.getenv("FRONTEND_URL", "")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:3000",
-        os.getenv("FRONTEND_URL", "https://aira.vercel.app"),
+        "https://academic-integrity-risk-analyzer.vercel.app",
+        *([_extra_origin] if _extra_origin else []),
     ],
     allow_credentials=True,
     allow_methods=["*"],
