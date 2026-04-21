@@ -238,8 +238,18 @@ function AboutTab() {
   )
 }
 
+function tabFromHash() {
+  const hash = window.location.hash.replace('#', '').toLowerCase()
+  return TABS.find((t) => t.toLowerCase() === hash) || 'Demo'
+}
+
 export default function App() {
-  const [activeTab, setActiveTab] = useState('Demo')
+  const [activeTab, setActiveTab] = useState(tabFromHash)
+
+  const switchTab = (tab) => {
+    setActiveTab(tab)
+    window.location.hash = tab.toLowerCase()
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -253,7 +263,7 @@ export default function App() {
             {TABS.map((tab) => (
               <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
+                onClick={() => switchTab(tab)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   activeTab === tab
                     ? 'bg-indigo-600 text-white'
