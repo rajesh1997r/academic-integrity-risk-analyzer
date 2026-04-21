@@ -21,12 +21,29 @@ export default function EvaluationDashboard() {
   }, [])
 
   if (loading) return <p className="text-gray-500 text-sm py-8 text-center">Loading evaluation data…</p>
-  if (error) return <p className="text-red-500 text-sm py-8 text-center">{error}</p>
+  if (error) return (
+    <div className="max-w-xl mx-auto py-12 text-center space-y-4">
+      <div className="text-4xl">📊</div>
+      <h3 className="text-lg font-semibold text-gray-800">No evaluation results yet</h3>
+      <p className="text-sm text-gray-500">To populate this tab, complete these three steps:</p>
+      <ol className="text-sm text-left bg-white border border-gray-200 rounded-xl p-5 space-y-3 shadow-sm">
+        <li className="flex gap-3"><span className="font-bold text-indigo-600 w-5 flex-shrink-0">1.</span><span>Open <code className="bg-gray-100 px-1 rounded">data/ground_truth_template.json</code>, replace each <code className="bg-gray-100 px-1 rounded">__YOUR_LABEL_HERE__</code> with the correct risk category, and save as <code className="bg-gray-100 px-1 rounded">data/ground_truth.json</code>.</span></li>
+        <li className="flex gap-3"><span className="font-bold text-indigo-600 w-5 flex-shrink-0">2.</span><span>Run <code className="bg-gray-100 px-1 rounded">python -m backend.evaluator</code> from the project root. This classifies each annotated clause and writes a results file.</span></li>
+        <li className="flex gap-3"><span className="font-bold text-indigo-600 w-5 flex-shrink-0">3.</span><span>Refresh this page. The confusion matrix, accuracy, and faithfulness scores will appear.</span></li>
+      </ol>
+    </div>
+  )
 
-  const { accuracy, faithfulness_score, hallucination_rate, precision_per_category, recall_per_category, confusion_matrix } = data
+  const { accuracy, faithfulness_score, hallucination_rate, precision_per_category, recall_per_category, confusion_matrix, sample, sample_note } = data
 
   return (
     <div className="space-y-6">
+      {sample && (
+        <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800 flex gap-2">
+          <span>⚠️</span>
+          <span><strong>Sample data</strong> — {sample_note}</span>
+        </div>
+      )}
       <div className="grid grid-cols-3 gap-4">
         <MetricCard label="Accuracy" value={`${(accuracy * 100).toFixed(1)}%`} />
         <MetricCard label="Faithfulness" value={`${(faithfulness_score * 100).toFixed(1)}%`} />
