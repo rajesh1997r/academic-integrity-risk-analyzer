@@ -1,0 +1,12 @@
+{
+  "job_id": "ftjob-WBr0yrqedovd1i4b90tsYcwo",
+  "base_model": "gpt-4o-mini-2024-07-18",
+  "status": "succeeded",
+  "training_file": "file-NaB78eCC7RyFANA4fKMmyp",
+  "validation_file": "file-8iquw58Jy2vKzRf4EMubtA",
+  "training_examples": 68,
+  "validation_examples": 18,
+  "fine_tuned_model": "ft:gpt-4o-mini-2024-07-18:personal:aira:DXBLUexI",
+  "finished_at": 1776800806,
+  "trained_tokens": 131106
+}

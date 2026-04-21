@@ -1,0 +1,18 @@
+{
+  "base_model": {
+    "name": "gpt-4o",
+    "accuracy": 0.8627,
+    "correct": 44,
+    "total": 51
+  },
+  "finetuned_model": {
+    "name": "ft:gpt-4o-mini-2024-07-18:personal:aira:DXBLUexI",
+    "base": "gpt-4o-mini-2024-07-18",
+    "accuracy": 0.8039,
+    "correct": 41,
+    "total": 51
+  },
+  "accuracy_delta": -0.0588,
+  "training_examples": 68,
+  "note": "Fine-tuned gpt-4o-mini is faster and ~20x cheaper per token. Accuracy delta measures the cost of the cheaper model."
+}
