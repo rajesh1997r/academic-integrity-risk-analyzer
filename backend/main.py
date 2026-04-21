@@ -52,7 +52,7 @@ def _run_pipeline(pdf_path: str, source_name: str) -> AuditReport:
             ),
         )
 
-    annotations = classify_batch(clauses)
+    annotations = classify_batch(clauses, model="ft:gpt-4o-mini-2024-07-18:personal:aira:DXBLUexI")
 
     for annotation in annotations:
         sim = score_annotation(annotation)
