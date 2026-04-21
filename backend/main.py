@@ -168,3 +168,21 @@ def evaluation():
         raise HTTPException(status_code=404, detail="No evaluation results found.")
     with open(result_files[0]) as f:
         return json.load(f)
+
+
+@app.get("/finetune/status")
+def finetune_status():
+    from backend.finetune import load_status
+    meta = load_status()
+    if meta is None:
+        raise HTTPException(status_code=404, detail="No fine-tuning job found.")
+    return meta
+
+
+@app.get("/finetune/compare")
+def finetune_compare():
+    from backend.finetune import load_comparison
+    result = load_comparison()
+    if result is None:
+        raise HTTPException(status_code=404, detail="No comparison results found. Run: python -m backend.finetune --compare")
+    return result

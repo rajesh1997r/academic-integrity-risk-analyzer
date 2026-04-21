@@ -65,12 +65,12 @@ def _get_client() -> OpenAI:
     return _client
 
 
-def classify_clause(clause: Clause) -> RiskAnnotation:
+def classify_clause(clause: Clause, model: str = "gpt-4o") -> RiskAnnotation:
     client = _get_client()
     for attempt in range(4):
         try:
             response = client.chat.completions.create(
-                model="gpt-4o",
+                model=model,
                 temperature=0,
                 response_format={"type": "json_object"},
                 messages=[
@@ -108,9 +108,9 @@ def classify_clause(clause: Clause) -> RiskAnnotation:
     )
 
 
-def classify_batch(clauses: list[Clause]) -> list[RiskAnnotation]:
+def classify_batch(clauses: list[Clause], model: str = "gpt-4o") -> list[RiskAnnotation]:
     annotations = []
     for clause in clauses:
-        annotation = classify_clause(clause)
+        annotation = classify_clause(clause, model=model)
         annotations.append(annotation)
     return annotations

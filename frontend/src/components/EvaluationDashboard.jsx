@@ -8,6 +8,94 @@ const CATEGORIES = [
   'AuthorityConflict', 'AIUsageLoophole', 'CircularDefinition', 'None',
 ]
 
+function FineTuneSection() {
+  const [job, setJob] = useState(null)
+  const [compare, setCompare] = useState(null)
+
+  useEffect(() => {
+    axios.get(`${API}/finetune/status`).then((r) => setJob(r.data)).catch(() => {})
+    axios.get(`${API}/finetune/compare`).then((r) => setCompare(r.data)).catch(() => {})
+  }, [])
+
+  const statusColor = {
+    succeeded: 'bg-green-100 text-green-800',
+    running: 'bg-blue-100 text-blue-800',
+    validating_files: 'bg-blue-100 text-blue-800',
+    queued: 'bg-yellow-100 text-yellow-800',
+    failed: 'bg-red-100 text-red-800',
+    cancelled: 'bg-gray-100 text-gray-700',
+  }
+
+  return (
+    <div className="bg-white rounded-lg border border-gray-200 p-5 space-y-4">
+      <h3 className="text-sm font-semibold text-gray-700">Fine-Tuning — gpt-4o-mini on AIRA Dataset</h3>
+
+      {/* Training data stats (always shown) */}
+      <div className="grid grid-cols-3 gap-3 text-xs">
+        {[
+          { label: 'Ground Truth Clauses', value: '51', sub: 'human-annotated (NEU)' },
+          { label: 'Synthetic Clean', value: '35', sub: 'GPT-4o generated, 7 categories' },
+          { label: 'Train / Val Split', value: '69 / 17', sub: '80 / 20 split' },
+        ].map(({ label, value, sub }) => (
+          <div key={label} className="bg-gray-50 rounded-lg p-3">
+            <p className="font-semibold text-gray-800 text-base">{value}</p>
+            <p className="font-medium text-gray-700 mt-0.5">{label}</p>
+            <p className="text-gray-400 mt-0.5">{sub}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Job status */}
+      {job ? (
+        <div className="flex flex-wrap items-center gap-3 text-sm">
+          <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${statusColor[job.status] ?? 'bg-gray-100 text-gray-700'}`}>
+            {job.status}
+          </span>
+          <span className="text-gray-500">Job: <code className="text-gray-700">{job.job_id}</code></span>
+          {job.fine_tuned_model && (
+            <span className="text-gray-500">Model: <code className="text-gray-700 break-all">{job.fine_tuned_model}</code></span>
+          )}
+          {job.trained_tokens && (
+            <span className="text-gray-500">{job.trained_tokens.toLocaleString()} tokens trained</span>
+          )}
+        </div>
+      ) : (
+        <div className="text-xs text-gray-400 bg-gray-50 rounded-lg p-3 space-y-1">
+          <p className="font-medium text-gray-600">Job not submitted yet</p>
+          <p>1. <code>python -m backend.finetune --prepare</code> — build training JSONL (free)</p>
+          <p>2. <code>python -m backend.finetune --submit</code> — upload + start job (~$0.50)</p>
+          <p>3. <code>python -m backend.finetune --status</code> — poll until succeeded</p>
+          <p>4. <code>python -m backend.finetune --compare</code> — run accuracy comparison</p>
+        </div>
+      )}
+
+      {/* Comparison results */}
+      {compare && (
+        <div>
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Model Comparison ({compare.total_clauses} clauses)</p>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-indigo-50 rounded-lg p-3">
+              <p className="text-xs text-indigo-500 font-medium mb-1">GPT-4o Base</p>
+              <p className="text-2xl font-bold text-indigo-800">{(compare.base_model.accuracy * 100).toFixed(1)}%</p>
+              <p className="text-xs text-indigo-400">{compare.base_model.correct}/{compare.base_model.total} correct</p>
+            </div>
+            <div className="bg-violet-50 rounded-lg p-3">
+              <p className="text-xs text-violet-500 font-medium mb-1">Fine-tuned gpt-4o-mini</p>
+              <p className="text-2xl font-bold text-violet-800">{(compare.finetuned_model.accuracy * 100).toFixed(1)}%</p>
+              <p className="text-xs text-violet-400">{compare.finetuned_model.correct}/{compare.finetuned_model.total} correct</p>
+            </div>
+          </div>
+          <p className="text-xs text-gray-400 mt-2">
+            Delta: <span className={compare.accuracy_delta >= 0 ? 'text-green-600 font-medium' : 'text-red-500 font-medium'}>
+              {compare.accuracy_delta >= 0 ? '+' : ''}{(compare.accuracy_delta * 100).toFixed(1)}%
+            </span> — {compare.note}
+          </p>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function EvaluationDashboard() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -110,6 +198,8 @@ export default function EvaluationDashboard() {
           </table>
         </div>
       )}
+
+      <FineTuneSection />
     </div>
   )
 }
