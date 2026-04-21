@@ -11,7 +11,7 @@ from backend.models import Clause
 # Patterns that indicate noise lines (TOC entries, headers, footers, nav)
 _NOISE_PATTERNS = [
     re.compile(r"^\s*\d+\s*$"),                      # lone page numbers
-    re.compile(r"^\s*\.{3,}\s*\d+\s*$"),             # TOC dots + page number
+    re.compile(r"\.{3,}\s*\d+\s*$"),                  # TOC dots + page number (anywhere)
     re.compile(r"(?i)^\s*(table of contents|contents)\s*$"),
     re.compile(r"(?i)^\s*(continued on next page|page \d+ of \d+)\s*$"),
     re.compile(r"(?i)^\s*(last updated|revised|effective date)"),
