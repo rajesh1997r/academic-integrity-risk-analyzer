@@ -1,0 +1,108 @@
+{
+  "accuracy": 0.902,
+  "precision_per_category": {
+    "Ambiguity": 1.0,
+    "UndefinedTerm": 1.0,
+    "EnforcementGap": 1.0,
+    "ScopeConflict": 0.0,
+    "AuthorityConflict": 0.6666666666666666,
+    "AIUsageLoophole": 1.0,
+    "CircularDefinition": 1.0,
+    "None": 0.90625
+  },
+  "recall_per_category": {
+    "Ambiguity": 0.6,
+    "UndefinedTerm": 0.5,
+    "EnforcementGap": 0.875,
+    "ScopeConflict": 0.0,
+    "AuthorityConflict": 1.0,
+    "AIUsageLoophole": 1.0,
+    "CircularDefinition": 1.0,
+    "None": 0.9666666666666667
+  },
+  "confusion_matrix": {
+    "Ambiguity": {
+      "Ambiguity": 3,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 2
+    },
+    "UndefinedTerm": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 1,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 1
+    },
+    "EnforcementGap": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 7,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 1,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 0
+    },
+    "ScopeConflict": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 0
+    },
+    "AuthorityConflict": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 4,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 0
+    },
+    "AIUsageLoophole": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 1,
+      "CircularDefinition": 0,
+      "None": 0
+    },
+    "CircularDefinition": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 1,
+      "None": 0
+    },
+    "None": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 1,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 29
+    }
+  },
+  "faithfulness_score": 1.0,
+  "hallucination_rate": 0.0,
+  "run_timestamp": "2026-04-21T10:39:52.888235+00:00"
+}
