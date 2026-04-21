@@ -121,6 +121,34 @@ python -m backend.synthetic
 
 ---
 
+## Fine-Tuning
+
+AIRA fine-tunes `gpt-4o-mini-2024-07-18` on the annotated dataset as a cheaper, faster inference alternative to GPT-4o.
+
+**Training data:** 68 train / 18 val examples from `data/ground_truth.json` (51 human-annotated NEU clauses) + `data/synthetic_clean.json` (35 GPT-4o generated clauses), 80/20 split.
+
+**Results:**
+
+| Model | Accuracy | Cost |
+|---|---|---|
+| GPT-4o (base) | **86.3%** (44/51) | ~$0.005 / clause |
+| ft:gpt-4o-mini (fine-tuned) | **80.4%** (41/51) | ~$0.0002 / clause |
+| Delta | -5.9% | **~25x cheaper** |
+
+Fine-tuned model ID: `ft:gpt-4o-mini-2024-07-18:personal:aira:DXBLUexI`
+
+**Run the pipeline:**
+```bash
+python -m backend.finetune --prepare   # build JSONL (free)
+python -m backend.finetune --submit    # upload + start job (~$0.50)
+python -m backend.finetune --status    # poll until succeeded
+python -m backend.finetune --compare   # accuracy comparison vs GPT-4o base
+```
+
+Results saved to `data/finetune_job.json` and `data/finetune_comparison.json`, served at `GET /finetune/status` and `GET /finetune/compare`.
+
+---
+
 ## API Endpoints
 
 | Endpoint | Description |
@@ -130,6 +158,8 @@ python -m backend.synthetic
 | `GET /demo/harvard` | Pre-computed Harvard analysis (no API cost) |
 | `POST /analyze` | Upload PDF → AuditReport (200-clause cap) |
 | `GET /evaluation` | Latest evaluation metrics JSON |
+| `GET /finetune/status` | Fine-tuning job metadata and model ID |
+| `GET /finetune/compare` | GPT-4o vs fine-tuned model accuracy comparison |
 
 ---
 

@@ -226,7 +226,7 @@ function AboutTab() {
       <div className="text-center text-xs text-gray-400 pt-4 border-t border-gray-100">
         Built for INFO 7375 Generative AI Engineering · Northeastern University · Spring 2026 ·{' '}
         <a
-          href="https://github.com/rajesh-s/academic-integrity-risk-analyzer"
+          href="https://github.com/rajesh1997r/academic-integrity-risk-analyzer"
           className="text-indigo-400 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
