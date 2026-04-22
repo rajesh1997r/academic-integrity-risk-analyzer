@@ -505,16 +505,6 @@ function Header({ activeTab, switchTab }) {
           ))}
         </nav>
 
-        {/* CTA */}
-        <button
-          onClick={() => switchTab('Upload')}
-          className="hidden md:inline-flex shrink-0 items-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-sm"
-        >
-          Analyze Policy
-          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-          </svg>
-        </button>
 
       </div>
     </header>
@@ -613,13 +603,28 @@ export default function App() {
         {activeTab === 'Demo'       && <DemoView />}
         {activeTab === 'Upload'     && <UploadView />}
         {activeTab === 'Evaluation' && (
-          <div className="max-w-7xl mx-auto px-6 md:px-10 py-10">
-            <div className="mb-8">
-              <p className="text-xs font-semibold tracking-widest uppercase text-indigo-600 mb-2">Model Performance</p>
-              <h1 className="text-2xl font-extrabold tracking-tight text-slate-900">Evaluation Dashboard</h1>
-              <p className="text-sm text-slate-500 mt-1">Classification accuracy, faithfulness scoring, and fine-tuning results.</p>
+          <div>
+            <section className="bg-slate-950 line-grid relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-950/50 via-transparent to-transparent pointer-events-none" />
+              <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-14 md:py-16 animate-fade-in-up">
+                <p className="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-4">
+                  Model Performance
+                </p>
+                <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
+                  Evaluation{' '}
+                  <span className="bg-gradient-to-r from-violet-300 to-indigo-300 bg-clip-text text-transparent">
+                    Dashboard
+                  </span>
+                </h1>
+                <p className="text-base text-slate-400 max-w-xl leading-relaxed">
+                  Classification accuracy, faithfulness scoring, and fine-tuning comparison between
+                  GPT-4o base and the fine-tuned gpt-4o-mini model.
+                </p>
+              </div>
+            </section>
+            <div className="max-w-7xl mx-auto px-6 md:px-10 py-10">
+              <EvaluationDashboard />
             </div>
-            <EvaluationDashboard />
           </div>
         )}
         {activeTab === 'About' && <AboutTab onNavigate={switchTab} />}

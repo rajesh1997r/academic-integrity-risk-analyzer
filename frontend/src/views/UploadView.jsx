@@ -94,31 +94,37 @@ export default function UploadView() {
   return (
     <div>
       {/* ── Page header ── */}
-      <div className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-12">
-          <p className="text-xs font-semibold tracking-widest uppercase text-indigo-600 mb-3">Policy Analyzer</p>
-          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 mb-3">
-            Analyze Your Policy
-          </h1>
-          <p className="text-base text-slate-500 max-w-xl leading-relaxed">
-            Upload any university academic integrity PDF to receive a full risk audit powered by GPT-4o.
-            Results include risk category, cited text, reasoning, and faithfulness score per clause.
+      <section className="bg-slate-950 line-grid relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/50 via-transparent to-transparent pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-14 md:py-16 animate-fade-in-up">
+          <p className="text-xs font-semibold tracking-widest uppercase text-indigo-400 mb-4">
+            Policy Analyzer
           </p>
-          <div className="mt-5 flex flex-wrap gap-4 text-sm text-slate-500">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
+            Analyze Your{' '}
+            <span className="bg-gradient-to-r from-indigo-300 to-violet-300 bg-clip-text text-transparent">
+              Policy
+            </span>
+          </h1>
+          <p className="text-base text-slate-400 max-w-xl leading-relaxed mb-7">
+            Upload any university academic integrity PDF to receive a full risk audit powered by GPT-4o.
+            Every finding cites the exact source text with a faithfulness score.
+          </p>
+          <div className="flex flex-wrap gap-5 text-sm text-slate-400">
             {[
               'PDF files only',
               '10 MB maximum',
               '200 clause cap',
               '30–60 second analysis',
             ].map((f) => (
-              <span key={f} className="inline-flex items-center gap-1.5">
-                <CheckIcon className="w-3.5 h-3.5 text-indigo-500" />
+              <span key={f} className="inline-flex items-center gap-2">
+                <CheckIcon className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
                 {f}
               </span>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* ── Main content ── */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-10">
