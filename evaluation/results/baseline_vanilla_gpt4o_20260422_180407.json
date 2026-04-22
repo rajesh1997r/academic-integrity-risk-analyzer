@@ -1,0 +1,368 @@
+{
+  "model": "gpt-4o",
+  "condition": "vanilla_baseline",
+  "prompt_type": "minimal \u2014 category names only, no definitions, no citation requirement",
+  "accuracy": 0.5882,
+  "correct": 30,
+  "total": 51,
+  "precision_per_category": {
+    "Ambiguity": 0.5,
+    "UndefinedTerm": 0.0,
+    "EnforcementGap": 0.0,
+    "ScopeConflict": 0.0,
+    "AuthorityConflict": 0.0,
+    "AIUsageLoophole": 0.0,
+    "CircularDefinition": 0.0,
+    "None": 0.641
+  },
+  "recall_per_category": {
+    "Ambiguity": 1.0,
+    "UndefinedTerm": 0.0,
+    "EnforcementGap": 0.0,
+    "ScopeConflict": 0.0,
+    "AuthorityConflict": 0.0,
+    "AIUsageLoophole": 0.0,
+    "CircularDefinition": 0.0,
+    "None": 0.8333
+  },
+  "confusion_matrix": {
+    "Ambiguity": {
+      "Ambiguity": 5,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 0
+    },
+    "UndefinedTerm": {
+      "Ambiguity": 1,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 1
+    },
+    "EnforcementGap": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 8
+    },
+    "ScopeConflict": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 0
+    },
+    "AuthorityConflict": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 4
+    },
+    "AIUsageLoophole": {
+      "Ambiguity": 0,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 1
+    },
+    "CircularDefinition": {
+      "Ambiguity": 1,
+      "UndefinedTerm": 0,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 0
+    },
+    "None": {
+      "Ambiguity": 3,
+      "UndefinedTerm": 2,
+      "EnforcementGap": 0,
+      "ScopeConflict": 0,
+      "AuthorityConflict": 0,
+      "AIUsageLoophole": 0,
+      "CircularDefinition": 0,
+      "None": 25
+    }
+  },
+  "run_timestamp": "2026-04-22T18:04:07.508452+00:00",
+  "raw_predictions": [
+    {
+      "text": "The Policy A commitment to the principles of academic integrity is essential to the mission of Northeastern University.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "The promotion of independent and original scholarship ensures that students derive the most from their educational experience and their pursuit of knowledge.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Academic dishonesty violates the most fundamental values of an intellectual community and undermines the achievements of the entire University.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "As members of the academic community, students must become familiar with their rights and responsibilities.",
+      "true": "None",
+      "predicted": "UndefinedTerm"
+    },
+    {
+      "text": "In each course, they are responsible for knowing the requirements and restrictions regarding research and writing, examinations of whatever kind, collaborative work, the use of study aids, the appropriateness of assistance, and other issues.",
+      "true": "Ambiguity",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "Students are responsible for learning the conventions of documentation and acknowledgment of sources in their fields.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Northeastern University expects students to complete all examinations, tests, papers, creative projects, and assignments of any kind according to the highest ethical standards, as set forth either explicitly or implicitly in this Code or by the direction of instructors.",
+      "true": "Ambiguity",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "The following is a broad overview, but not an all-encompassing definition, of what constitutes a violation of academic integrity.",
+      "true": "None",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "Cheating: The University defines cheating as using or attempting to use unauthorized materials, information, or study aids in any academic exercise.",
+      "true": "UndefinedTerm",
+      "predicted": "None"
+    },
+    {
+      "text": "When completing any academic assignment, a student shall rely on their own mastery of the subject.",
+      "true": "None",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "Examples include, but are not limited to: Unauthorized use of aids such as but not limited to notes, text, the Internet, artificial intelligence, chatbots, cell phones, etc. to complete any academic assignment.",
+      "true": "AIUsageLoophole",
+      "predicted": "None"
+    },
+    {
+      "text": "Copying from another student\u2019s current or past academic work.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Handing in the same academic material, in part or in total, for more than one course without explicit permission from the instructor(s) .",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Intentionally viewing a test before it is administered.",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Storing notes on paper, or in a portable electronic device for use during an examination.",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Fabrication: The University defines fabrication as falsification, misrepresentation, or invention of any information, data, or citation in an academic exercise.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Examples include, but are not limited to: Inventing data, facts, or sources for an academic assignment.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Altering the results of a lab experiment or survey.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Citing a source in a bibliography that was not used.",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Stating an opinion as a scientifically proven fact.",
+      "true": "Ambiguity",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "Plagiarism: The University defines plagiarism as using as one\u2019s own the words, ideas, data, code, or other original academic material of another without providing proper citation or attribution.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Plagiarism can apply to any assignment, either final or drafted copies, and it can occur either accidentally or deliberately.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Claiming that one has \u201cforgotten\u201d to document ideas or material taken from another source does not exempt one from plagiarizing.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "The following sources require citation: Word-for-word quotations from a source, including another student\u2019s work.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Paraphrasing (using the ideas of others in your own words).",
+      "true": "None",
+      "predicted": "UndefinedTerm"
+    },
+    {
+      "text": "Audio, video, digital, or live exchanges of ideas, dialogue, or information.",
+      "true": "Ambiguity",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "When recycling or reusing one\u2019s own specific words from previously published texts.",
+      "true": "UndefinedTerm",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "Students unclear as to whether or not a source requires citation should speak with their professor or consult the Writing Center in 412 Holmes Hall.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Unauthorized Collaboration: The University defines unauthorized collaboration as instances when students submit individual academic works that are substantially similar to one another.",
+      "true": "Ambiguity",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "While several students may have the same source material, any analysis, interpretation, or reporting of data required by an assignment must be each individual\u2019s independent work unless the instructor has explicitly granted permission for group work.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Examples include, but are not limited to: Submitting work that closely matches that of another student, even when the work is to be original to the student handing in the assignment.",
+      "true": "None",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "Sharing a take-home examination, case write-up, lab report, or any other assignment with a peer or on any non-personal portfolio website, such as but not exclusive to Chegg, CourseHero, Quizlet, etc., without express permission from the instructor.",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Participation in Academically Dishonest Activities: The University defines participation in academically dishonest activities as any action taken by a student with the intention of gaining an unfair advantage over other students.",
+      "true": "CircularDefinition",
+      "predicted": "Ambiguity"
+    },
+    {
+      "text": "Misrepresenting oneself or one\u2019s circumstances to an instructor.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Selling, loaning, or otherwise distributing materials intended for the purpose of cheating, plagiarism, or other academically dishonest acts.",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Destroying, altering, stealing, or forging another student\u2019s work, library materials, laboratory materials, academic records, course syllabi, or examination/course grades.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Intentionally missing an examination or assignment deadline to gain an unfair advantage.",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Forging information or signatures on official University documents such as but not limited to attendance logs, resumes, cover letters, honesty statements, etc.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Facilitating Academic Dishonesty: The University defines facilitating academic dishonesty as intentionally or knowingly helping or contributing to the violation of any provision of this policy.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Examples include, but are not limited to: Doing academic work for another student.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Making available previously used academic work for another individual who intends to resubmit the work for credit.",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Obligation to Uphold Academic Integrity: All members of the Northeastern University community have a role in upholding the Academic Integrity Policy.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "Any member of the community who witnesses a violation of this policy should report it to the appropriate faculty member or the Office of Student Conduct & Conflict Resolution (OSCCR).",
+      "true": "AuthorityConflict",
+      "predicted": "None"
+    },
+    {
+      "text": "All instructors are required to refer to Northeastern\u2019s Academic Integrity Policy in their course syllabi.",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "The Director of OSCCR will review all complaints submitted against a student to determine whether sufficient evidence for a violation of the Academic Integrity Policy exists .",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "If the Director determines that the evidence of a potential violation is sufficient, the case will be assigned to a staff member within OSCCR .",
+      "true": "AuthorityConflict",
+      "predicted": "None"
+    },
+    {
+      "text": "An instructor who believes that a student made an unintentional mistake should note that belief in an Academic Integrity report .",
+      "true": "None",
+      "predicted": "None"
+    },
+    {
+      "text": "The Director of OSCCR, or designee, will review the report along with supplemental documents provided and any prior student conduct history to determine if an administrative hearing is necessary or if an \u201cInformation Only\u201d educational reminder notice is appropriate to increase learning and awareness of campus resources .",
+      "true": "AuthorityConflict",
+      "predicted": "None"
+    },
+    {
+      "text": "The faculty member is advised to speak with any student they intend to report for an alleged violation of the Code Student of Conduct .",
+      "true": "EnforcementGap",
+      "predicted": "None"
+    },
+    {
+      "text": "Sanctions: Hearing Officers and the Student Conduct Board have discretion to impose sanctions for a Responsible",
+      "true": "AuthorityConflict",
+      "predicted": "None"
+    },
+    {
+      "text": "osccr@northeastern.edu Location 204 Ell Hall Microsoft Teams or Zoom appointments available Recent Posts Be a #smarthusky Request a Classroom Presentation Protect Your Information Arlington Boston Burlington Charlotte London Miami Nahant Oakland Portland Seattle Silicon Valley Toronto Vancouver Emergency Information | Privacy Policy | Accessibility | \u00a9 2026 Northeastern University Cookie Preferences",
+      "true": "None",
+      "predicted": "None"
+    }
+  ]
+}
