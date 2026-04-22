@@ -1,476 +1,304 @@
-"""Generate AIRA architecture diagram — outputs docs/architecture.png"""
+"""Generate AIRA architecture diagram — clean, readable version.
+Output: docs/architecture.png
+"""
 from __future__ import annotations
 from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+from matplotlib.patches import FancyBboxPatch
 
 Path("docs").mkdir(exist_ok=True)
 
-# ── Palette ──────────────────────────────────────────────────────────────────
-C = {
-    "bg":        "#0f172a",   # slate-950
-    "panel":     "#1e293b",   # slate-800
-    "border":    "#334155",   # slate-700
-    "indigo":    "#6366f1",   # indigo-500
-    "indigo_dk": "#4338ca",   # indigo-700
-    "violet":    "#7c3aed",   # violet-700
-    "teal":      "#0d9488",   # teal-600
-    "emerald":   "#059669",   # emerald-600
-    "amber":     "#d97706",   # amber-600
-    "red":       "#dc2626",   # red-600
-    "slate4":    "#94a3b8",   # slate-400
-    "slate3":    "#cbd5e1",   # slate-300
-    "white":     "#f8fafc",
-}
+# ── Colours ───────────────────────────────────────────────────────────────────
+BG      = "#0f172a"
+PANEL   = "#1e293b"
+BORDER  = "#334155"
+WHITE   = "#f1f5f9"
+MUTED   = "#94a3b8"
+INDIGO  = "#818cf8"
+VIOLET  = "#a78bfa"
+TEAL    = "#2dd4bf"
+EMERALD = "#34d399"
+AMBER   = "#fbbf24"
+RED     = "#f87171"
+PINK    = "#f472b6"
 
-fig = plt.figure(figsize=(20, 26), facecolor=C["bg"])
-ax = fig.add_axes([0, 0, 1, 1])
-ax.set_xlim(0, 20)
-ax.set_ylim(0, 26)
+fig = plt.figure(figsize=(22, 17), facecolor=BG)
+ax  = fig.add_axes([0.03, 0.02, 0.94, 0.94])
+ax.set_xlim(0, 22)
+ax.set_ylim(0, 17)
 ax.axis("off")
-ax.set_facecolor(C["bg"])
+ax.set_facecolor(BG)
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
-def box(ax, x, y, w, h, fc, ec, radius=0.3, lw=1.5, alpha=1.0):
-    p = FancyBboxPatch(
-        (x, y), w, h,
-        boxstyle=f"round,pad=0,rounding_size={radius}",
-        facecolor=fc, edgecolor=ec, linewidth=lw, alpha=alpha, zorder=3,
-    )
+# ── Primitives ────────────────────────────────────────────────────────────────
+def rect(x, y, w, h, fc, ec, lw=1.8, r=0.25, alpha=1.0):
+    p = FancyBboxPatch((x, y), w, h,
+                       boxstyle=f"round,pad=0,rounding_size={r}",
+                       facecolor=fc, edgecolor=ec, linewidth=lw,
+                       alpha=alpha, zorder=3)
     ax.add_patch(p)
-    return p
+
+def txt(x, y, s, size=10, color=WHITE, bold=False, ha="center", va="center"):
+    ax.text(x, y, s, fontsize=size, color=color,
+            fontweight="bold" if bold else "normal",
+            ha=ha, va=va, zorder=5, fontfamily="DejaVu Sans")
+
+def arrow_h(x1, x2, y, color=MUTED, lw=2):
+    ax.annotate("", xy=(x2, y), xytext=(x1, y),
+                arrowprops=dict(arrowstyle="-|>", color=color,
+                                lw=lw, mutation_scale=16), zorder=4)
+
+def arrow_v(x, y1, y2, color=MUTED, lw=2):
+    ax.annotate("", xy=(x, y2), xytext=(x, y1),
+                arrowprops=dict(arrowstyle="-|>", color=color,
+                                lw=lw, mutation_scale=16), zorder=4)
+
+def section_bar(x, y, w, label, color):
+    rect(x, y, w, 0.52, fc=color + "44", ec=color, lw=1.5, r=0.15)
+    txt(x + w/2, y + 0.26, label, size=10, color=color, bold=True)
+
+def divider(y):
+    ax.plot([0, 22], [y, y], color=BORDER, lw=0.8, zorder=2)
 
 
-def label(ax, x, y, text, size=9, color=C["white"], weight="normal",
-          ha="center", va="center", zorder=5):
-    ax.text(x, y, text, fontsize=size, color=color, fontweight=weight,
-            ha=ha, va=va, zorder=zorder,
-            fontfamily="DejaVu Sans")
-
-
-def arrow(ax, x1, y1, x2, y2, color=C["slate4"], lw=1.5,
-          arrowstyle="-|>", mutation_scale=14):
-    ax.annotate(
-        "", xy=(x2, y2), xytext=(x1, y1),
-        arrowprops=dict(
-            arrowstyle=arrowstyle,
-            color=color,
-            lw=lw,
-            mutation_scale=mutation_scale,
-        ),
-        zorder=4,
-    )
-
-
-def section_header(ax, x, y, w, text, color):
-    box(ax, x, y, w, 0.55, fc=color, ec=color, radius=0.15)
-    label(ax, x + w / 2, y + 0.275, text, size=9, weight="bold",
-          color=C["white"])
-
-
-# ═══════════════════════════════════════════════════════════════════════════════
+# ═════════════════════════════════════════════════════════════════════════════
 # TITLE
-# ═══════════════════════════════════════════════════════════════════════════════
-label(ax, 10, 25.4, "AIRA — System Architecture",
-      size=20, weight="bold", color=C["white"])
-label(ax, 10, 25.0, "Academic Integrity Risk Analyzer  ·  INFO 7375 Generative AI Engineering",
-      size=11, color=C["slate4"])
-
-# divider
-ax.plot([0.8, 19.2], [24.7, 24.7], color=C["border"], lw=1, zorder=3)
+# ═════════════════════════════════════════════════════════════════════════════
+txt(11, 16.55, "AIRA  —  Academic Integrity Risk Analyzer", size=17, bold=True)
+txt(11, 16.1, "System Architecture   |   INFO 7375 Generative AI Engineering   |   Northeastern University",
+    size=10, color=MUTED)
+divider(15.78)
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# SECTION 1 — Deployment Topology  (y: 22 – 24.4)
-# ═══════════════════════════════════════════════════════════════════════════════
-section_header(ax, 0.8, 24.15, 18.4, "① DEPLOYMENT TOPOLOGY", C["indigo_dk"])
+# ═════════════════════════════════════════════════════════════════════════════
+# SECTION 1 — Deployment  (y 13.5 – 15.6)
+# ═════════════════════════════════════════════════════════════════════════════
+section_bar(0, 15.25, 22, "SECTION 1  —  DEPLOYMENT TOPOLOGY", INDIGO)
 
-# outer container
-box(ax, 0.8, 22.05, 18.4, 1.9, fc=C["panel"], ec=C["border"], radius=0.4, lw=1)
+BOX_Y, BOX_H = 13.4, 1.6
+BOXES_DEPLOY = [
+    (0.4,  4.0, "User Browser",        "academic-integrity-risk-\nanalyzer.vercel.app", "#1e293b", INDIGO),
+    (5.4,  4.0, "Vercel  (Frontend)",  "React SPA  |  Vite + Tailwind\nAbout  Demo  Upload  Eval", "#1a1f3a", "#818cf8"),
+    (10.4, 4.0, "Render  (Backend)",   "FastAPI  |  Python 3.11\naira-api.onrender.com", "#0f2218", EMERALD),
+    (15.4, 6.0, "OpenAI  API",         "GPT-4o  |  gpt-4o-mini (fine-tuned)\ntext-embedding-3-small", "#1c1030", VIOLET),
+]
 
-# --- User browser ---
-box(ax, 1.2, 22.35, 3.6, 1.3, fc="#1a2744", ec=C["indigo"], radius=0.25, lw=1.5)
-label(ax, 3.0, 23.2, "[ User ] Browser", size=9.5, weight="bold", color=C["slate3"])
-label(ax, 3.0, 22.9, "https://academic-integrity-", size=7.5, color=C["slate4"])
-label(ax, 3.0, 22.65, "risk-analyzer.vercel.app", size=7.5, color=C["slate4"])
+for (bx, bw, title, sub, fc, ec) in BOXES_DEPLOY:
+    rect(bx, BOX_Y, bw, BOX_H, fc=fc, ec=ec, lw=2)
+    txt(bx + bw/2, BOX_Y + BOX_H - 0.42, title, size=11, bold=True, color=ec)
+    # horizontal divider inside box
+    ax.plot([bx + 0.2, bx + bw - 0.2], [BOX_Y + 0.9, BOX_Y + 0.9],
+            color=BORDER, lw=0.8, zorder=4)
+    txt(bx + bw/2, BOX_Y + 0.44, sub, size=8.5, color=MUTED)
 
-# --- Vercel ---
-box(ax, 6.0, 22.35, 3.8, 1.3, fc="#1a1f3a", ec="#818cf8", radius=0.25, lw=1.5)
-label(ax, 7.9, 23.25, "▲ Vercel CDN", size=9.5, weight="bold", color="#a5b4fc")
-label(ax, 7.9, 22.95, "React SPA (Vite + Tailwind)", size=7.5, color=C["slate4"])
-label(ax, 7.9, 22.68, "About · Demo · Upload · Eval", size=7.5, color=C["slate4"])
-
-# --- Render ---
-box(ax, 11.0, 22.35, 4.0, 1.3, fc="#1a2c1a", ec=C["emerald"], radius=0.25, lw=1.5)
-label(ax, 13.0, 23.25, "⚙  Render (Free Tier)", size=9.5, weight="bold", color="#6ee7b7")
-label(ax, 13.0, 22.95, "FastAPI  ·  Python 3.11", size=7.5, color=C["slate4"])
-label(ax, 13.0, 22.68, "aira-api.onrender.com", size=7.5, color=C["slate4"])
-
-# --- OpenAI ---
-box(ax, 16.2, 22.35, 2.6, 1.3, fc="#261c2c", ec=C["violet"], radius=0.25, lw=1.5)
-label(ax, 17.5, 23.25, "[ AI ] OpenAI", size=9.5, weight="bold", color="#c4b5fd")
-label(ax, 17.5, 22.95, "GPT-4o", size=7.5, color=C["slate4"])
-label(ax, 17.5, 22.68, "text-emb-3-small", size=7.5, color=C["slate4"])
-
-# arrows
-arrow(ax, 4.8, 23.0, 6.0, 23.0, color=C["indigo"], lw=1.8)
-arrow(ax, 9.8, 23.0, 11.0, 23.0, color=C["indigo"], lw=1.8)
-label(ax, 5.4, 23.2, "HTTPS", size=7, color=C["slate4"])
-label(ax, 10.4, 23.2, "REST", size=7, color=C["slate4"])
-arrow(ax, 15.0, 23.0, 16.2, 23.0, color=C["violet"], lw=1.8)
-label(ax, 15.6, 23.2, "API", size=7, color=C["slate4"])
+# arrows between deploy boxes
+MIDPOINTS = [(4.4, 5.4), (9.4, 10.4), (14.4, 15.4)]
+LABELS    = ["HTTPS", "REST", "API calls"]
+for (x1, x2), lbl in zip(MIDPOINTS, LABELS):
+    arrow_h(x1, x2, BOX_Y + BOX_H/2, color=INDIGO, lw=2)
+    txt((x1+x2)/2, BOX_Y + BOX_H/2 + 0.25, lbl, size=8.5, color=INDIGO)
 
 # cold-start note
-label(ax, 10, 22.18, "⚠  Render free tier sleeps after 15 min inactivity — hit /health before demo",
-      size=7.5, color=C["amber"])
+txt(11, BOX_Y - 0.28,
+    "Note: Render free tier sleeps after 15 min inactivity  —  hit  /health  before demo",
+    size=8.5, color=AMBER)
+
+divider(13.0)
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# SECTION 2 — Pipeline Data Flow  (y: 14.5 – 21.8)
-# ═══════════════════════════════════════════════════════════════════════════════
-section_header(ax, 0.8, 21.7, 18.4, "② PIPELINE DATA FLOW", C["teal"])
+# ═════════════════════════════════════════════════════════════════════════════
+# SECTION 2 — Pipeline  (y 7.8 – 12.8)
+# ═════════════════════════════════════════════════════════════════════════════
+section_bar(0, 12.55, 22, "SECTION 2  —  PIPELINE DATA FLOW  (POST /analyze)", TEAL)
 
-# background panel
-box(ax, 0.8, 14.7, 18.4, 6.8, fc=C["panel"], ec=C["border"], radius=0.4, lw=1)
+# ── Layout constants ──────────────────────────────────────────────────────────
+PY   = 10.6    # box bottom-left y
+PH   = 1.6     # box height
+CY   = PY + PH / 2  # center y for arrows
 
-PIPE_COLS = [2.0, 5.6, 9.2, 12.8]
-PIPE_Y    = 17.3
-BOX_W     = 3.0
-BOX_H     = 5.2
-ARROW_Y   = PIPE_Y + BOX_H / 2
+# ── PDF input ────────────────────────────────────────────────────────────────
+rect(0.3, PY + 0.35, 1.3, 0.9, fc=PANEL, ec=BORDER, lw=1.2, r=0.15)
+txt(0.95, CY, "PDF\nUpload", size=9, color=MUTED)
+arrow_h(1.6, 2.2, CY, color=TEAL, lw=2)
 
+# ── Stage boxes ───────────────────────────────────────────────────────────────
+# (x,   w,    title,                 subtitle,                     badge_txt,              badge_c,  ec,     fc)
 STAGES = [
-    {
-        "title": "① ingestion.py",
-        "color": C["indigo"],
-        "inputs": ["PDF bytes (upload)", "or file path"],
-        "outputs": ["List[Clause]"],
-        "details": [
-            "pdfplumber extraction",
-            "noise filter regex",
-            "sentence-boundary split",
-            "min 8 words / clause",
-        ],
-        "badge": "No API calls",
-        "badge_c": C["emerald"],
-    },
-    {
-        "title": "② classifier.py",
-        "color": "#e879f9",
-        "inputs": ["List[Clause]"],
-        "outputs": ["List[RiskAnnotation]"],
-        "details": [
-            "GPT-4o  temp=0",
-            "json_object output",
-            "8-category taxonomy",
-            "cited_text enforced",
-            "4× retry on rate limit",
-        ],
-        "badge": "~1 API call / clause",
-        "badge_c": C["violet"],
-    },
-    {
-        "title": "③ alignment.py",
-        "color": C["teal"],
-        "inputs": ["List[RiskAnnotation]"],
-        "outputs": ["faithfulness_score", "low_conf flags"],
-        "details": [
-            "verbatim substring check",
-            "cosine sim fallback",
-            "threshold = 0.65",
-            "flags low-conf annots",
-        ],
-        "badge": "No extra API calls",
-        "badge_c": C["emerald"],
-    },
-    {
-        "title": "④ contradiction.py",
-        "color": C["amber"],
-        "inputs": ["List[Clause]", "+ embeddings"],
-        "outputs": ["List[Contradiction]"],
-        "details": [
-            "cosine sim ≥ 0.4",
-            "top 30 pairs only",
-            "GPT-4o pair check",
-            "scope filter applied",
-        ],
-        "badge": "≤ 30 API calls",
-        "badge_c": C["amber"],
-    },
+    (2.2,  3.8, "ingestion.py",       "PDF  ->  List[Clause]",      "No API calls",         EMERALD,  INDIGO, "#141e35"),
+    (6.5,  3.8, "classifier.py",      "Clause  ->  RiskAnnotation", "1 GPT-4o call/clause", PINK,     PINK,   "#2a0e28"),
+    (10.8, 3.8, "alignment  +  contradiction",
+                                       "Faithfulness  &  Contradiction detection",
+                                                                     "Up to 30 GPT-4o calls",AMBER,    TEAL,   "#082020"),
+    (15.1, 6.5, "AuditReport",        "Final JSON response to frontend",
+                                                                     "",                     None,     EMERALD,"#082418"),
 ]
 
-for i, (x, stage) in enumerate(zip(PIPE_COLS, STAGES)):
-    ec = stage["color"]
-    # main box
-    box(ax, x, PIPE_Y, BOX_W, BOX_H, fc="#0f1a2e", ec=ec, radius=0.3, lw=2)
-
-    # title bar
-    box(ax, x, PIPE_Y + BOX_H - 0.65, BOX_W, 0.65,
-        fc=ec + "33", ec=ec, radius=0.2, lw=1.5)
-    label(ax, x + BOX_W / 2, PIPE_Y + BOX_H - 0.32,
-          stage["title"], size=8.5, weight="bold", color=ec)
-
+for (sx, sw, stitle, ssub, sbadge, sbc, sec, sfc) in STAGES:
+    rect(sx, PY, sw, PH, fc=sfc, ec=sec, lw=2)
+    # coloured title strip at top — white text on solid colour
+    rect(sx, PY + PH - 0.52, sw, 0.52, fc=sec + "cc", ec=sec, lw=0, r=0.18)
+    txt(sx + sw/2, PY + PH - 0.26, stitle, size=10, bold=True, color=WHITE)
+    # subtitle
+    txt(sx + sw/2, PY + 0.68, ssub, size=9, color=MUTED)
     # badge
-    bc = stage["badge_c"]
-    box(ax, x + 0.15, PIPE_Y + BOX_H - 1.15, BOX_W - 0.3, 0.38,
-        fc=bc + "22", ec=bc, radius=0.1, lw=1)
-    label(ax, x + BOX_W / 2, PIPE_Y + BOX_H - 0.97,
-          stage["badge"], size=7, color=bc)
+    if sbadge:
+        rect(sx + 0.2, PY + 0.14, sw - 0.4, 0.36, fc=sbc + "33", ec=sbc, lw=1.2, r=0.1)
+        txt(sx + sw/2, PY + 0.32, sbadge, size=8.5, color=sbc)
 
-    # inputs label
-    label(ax, x + BOX_W / 2, PIPE_Y + BOX_H - 1.55,
-          "IN", size=6.5, color=C["slate4"], weight="bold")
-    for j, inp in enumerate(stage["inputs"]):
-        label(ax, x + BOX_W / 2, PIPE_Y + BOX_H - 1.82 - j * 0.22,
-              inp, size=7, color=C["slate3"])
+# AuditReport fields
+txt(15.1 + 6.5/2, PY + 1.0,
+    "annotations  |  contradictions",
+    size=8, color=MUTED)
+txt(15.1 + 6.5/2, PY + 0.72,
+    "faithfulness_score  |  risk_distribution",
+    size=8, color=MUTED)
 
-    # divider
-    ax.plot([x + 0.2, x + BOX_W - 0.2],
-            [PIPE_Y + BOX_H - 2.35, PIPE_Y + BOX_H - 2.35],
-            color=C["border"], lw=0.8, zorder=4)
+# ── Arrows between stages ─────────────────────────────────────────────────────
+arrow_h(6.0, 6.5, CY, color=TEAL, lw=2.5)
+arrow_h(10.6, 10.8, CY, color=TEAL, lw=2.5)
+arrow_h(14.6, 15.1, CY, color=EMERALD, lw=2.5)
 
-    # details
-    for j, det in enumerate(stage["details"]):
-        label(ax, x + 0.35, PIPE_Y + BOX_H - 2.65 - j * 0.32,
-              f"• {det}", size=7.2, color=C["slate4"], ha="left")
+# ── ChromaDB feeds classifier (from below) ───────────────────────────────────
+rect(6.5, 9.2, 3.8, 0.75, fc="#141e35", ec=INDIGO, lw=1.8, r=0.2)
+txt(8.4, 9.575, "ChromaDB   (pre-built vector index)", size=9, bold=True, color=INDIGO)
+arrow_v(8.4, 9.95, PY, color=INDIGO, lw=2)
+txt(8.82, 10.25, "embeddings", size=8, color=INDIGO)
 
-    # outputs label
-    label(ax, x + BOX_W / 2, PIPE_Y + 0.55,
-          "OUT", size=6.5, color=C["slate4"], weight="bold")
-    for j, out in enumerate(stage["outputs"]):
-        label(ax, x + BOX_W / 2, PIPE_Y + 0.3 - j * 0.2,
-              out, size=7, color=ec)
-
-    # inter-stage arrows (except after last)
-    if i < len(STAGES) - 1:
-        arrow(ax, x + BOX_W, ARROW_Y, x + BOX_W + 0.6, ARROW_Y,
-              color=C["slate4"], lw=2, mutation_scale=16)
-
-# PDF input arrow (before stage 1)
-arrow(ax, 0.8, ARROW_Y, PIPE_COLS[0], ARROW_Y,
-      color=C["slate3"], lw=2, mutation_scale=16)
-label(ax, 1.4, ARROW_Y + 0.28, "PDF", size=8, color=C["slate3"], weight="bold")
-
-# AuditReport assembly box
-box(ax, 7.2, 15.05, 5.6, 1.35, fc="#0f2028", ec=C["teal"], radius=0.25, lw=2)
-label(ax, 10.0, 15.98, "AuditReport  (models.py)", size=9.5, weight="bold",
-      color=C["teal"])
-fields = "source_doc · total_clauses · flagged_count · annotations · contradictions · faithfulness_score · overall_risk_rating · risk_distribution"
-label(ax, 10.0, 15.65, fields, size=7, color=C["slate4"])
-label(ax, 10.0, 15.35, "→ JSON response → FastAPI → React frontend", size=7.5,
-      color=C["slate3"])
-
-# arrows down to AuditReport
-for cx in [3.5, 7.1, 10.7, 14.3]:
-    arrow(ax, cx, PIPE_Y, cx, 16.4, color=C["teal"], lw=1.2, mutation_scale=10)
-
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# SECTION 3 — Storage & External Services  (y: 11.3 – 14.3)
-# ═══════════════════════════════════════════════════════════════════════════════
-section_header(ax, 0.8, 14.35, 18.4, "③ STORAGE & EXTERNAL SERVICES", C["indigo_dk"])
-
-box(ax, 0.8, 11.3, 18.4, 2.85, fc=C["panel"], ec=C["border"], radius=0.4, lw=1)
-
-STORE_BOXES = [
-    {"x": 1.2, "w": 3.8, "title": "ChromaDB", "sub": "In-process vector store",
-     "lines": ["Pre-built index committed to repo",
-               "3 collections: NEU · Harvard · MIT",
-               "text-embedding-3-small",
-               "Zero embedding cost at runtime"],
-     "ec": "#818cf8", "fc": "#1a1f3a"},
-    {"x": 5.5, "w": 3.8, "title": "demo_output.json", "sub": "Pre-computed NEU analysis",
-     "lines": ["51 clauses · 21 flagged",
-               "Served by GET /demo",
-               "Zero API calls at demo time",
-               "Cold-start mitigation"],
-     "ec": C["emerald"], "fc": "#0f2218"},
-    {"x": 9.8, "w": 3.8, "title": "data/ground_truth.json", "sub": "51 manually annotated clauses",
-     "lines": ["NEU policy · human labels",
-               "Used by evaluator.py",
-               "Single-annotator (limitation)",
-               "90.2% AIRA accuracy"],
-     "ec": C["amber"], "fc": "#261c0a"},
-    {"x": 14.1, "w": 4.7, "title": "Fine-tuned Model", "sub": "ft:gpt-4o-mini · DXBLUexI",
-     "lines": ["80.4% accuracy · ~20× cheaper",
-               "Trained on 86 examples",
-               "Default for POST /analyze",
-               "GPT-4o used for demo + eval"],
-     "ec": C["violet"], "fc": "#1a0a26"},
+# ── Detail bullets ────────────────────────────────────────────────────────────
+BULLETS = [
+    (2.2,  INDIGO, ["pdfplumber extraction",
+                    "noise filter (headers/TOC/nav)",
+                    "sentence-boundary splitting",
+                    "min 8 words per clause"]),
+    (6.5,  PINK,   ["GPT-4o  |  temperature = 0",
+                    "JSON schema enforced (json_object)",
+                    "cited_text field required",
+                    "4x retry on rate limit"]),
+    (10.8, TEAL,   ["alignment: verbatim substring check",
+                    "alignment: cosine sim fallback (0.65)",
+                    "contradiction: cosine sim pairs >= 0.4",
+                    "contradiction: top 30 pairs, scope-filtered"]),
+    (15.1, EMERALD,["source_doc  |  total_clauses",
+                    "flagged_count  |  annotations[]",
+                    "faithfulness_score  |  risk_rating",
+                    "risk_distribution  |  contradictions[]"]),
 ]
 
-for s in STORE_BOXES:
-    box(ax, s["x"], 11.55, s["w"], 2.35, fc=s["fc"], ec=s["ec"],
-        radius=0.2, lw=1.5)
-    label(ax, s["x"] + s["w"] / 2, 13.6, s["title"],
-          size=8.5, weight="bold", color=s["ec"])
-    label(ax, s["x"] + s["w"] / 2, 13.3, s["sub"],
-          size=7, color=C["slate4"])
-    ax.plot([s["x"] + 0.15, s["x"] + s["w"] - 0.15], [13.1, 13.1],
-            color=C["border"], lw=0.8, zorder=4)
-    for j, line in enumerate(s["lines"]):
-        label(ax, s["x"] + 0.3, 12.85 - j * 0.28, f"• {line}",
-              size=7, color=C["slate4"], ha="left")
+for (bx, ec, lines) in BULLETS:
+    for j, line in enumerate(lines):
+        txt(bx + 0.2, 9.05 - j * 0.33, "• " + line,
+            size=8, color=MUTED, ha="left")
+
+divider(7.75)
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# SECTION 4 — API Endpoints  (y: 7.0 – 11.0)
-# ═══════════════════════════════════════════════════════════════════════════════
-section_header(ax, 0.8, 11.0, 18.4, "④ API ENDPOINTS  (FastAPI — Render)", C["teal"])
+# ═════════════════════════════════════════════════════════════════════════════
+# SECTION 3 — Evaluation Results  (y 0.5 – 7.35)
+# ═════════════════════════════════════════════════════════════════════════════
+section_bar(0, 7.3, 22, "SECTION 3  —  EVALUATION RESULTS  (51-clause NEU ground truth)", EMERALD)
 
-box(ax, 0.8, 7.0, 18.4, 3.85, fc=C["panel"], ec=C["border"], radius=0.4, lw=1)
+# ── Accuracy comparison bars (left column) ────────────────────────────────────
+txt(1.0, 6.9, "Classification Accuracy  —  4 Conditions", size=11,
+    bold=True, color=WHITE, ha="left")
 
-ENDPOINTS = [
-    ("GET",  "/health",          "Liveness check + index status",                C["emerald"]),
-    ("GET",  "/demo",            "Pre-computed NEU AuditReport — zero API cost",  C["indigo"]),
-    ("GET",  "/demo/harvard",    "Pre-computed Harvard AuditReport",              C["indigo"]),
-    ("POST", "/analyze",         "PDF upload → full pipeline → AuditReport JSON", "#f472b6"),
-    ("GET",  "/evaluation",      "Latest evaluation/results/*.json",              C["amber"]),
-    ("GET",  "/finetune/status", "Fine-tune job metadata (static JSON)",          C["violet"]),
-    ("GET",  "/finetune/compare","Base vs. fine-tuned accuracy comparison",       C["violet"]),
+ACCURACY_ROWS = [
+    ("Vanilla GPT-4o   (no structure, category names only)", 0.588, RED),
+    ("Fine-tuned gpt-4o-mini   (AIRA prompt + fine-tuned)", 0.804, AMBER),
+    ("GPT-4o base   (AIRA structured prompt, base model)",   0.863, INDIGO),
+    ("AIRA Full Pipeline   (structured prompt, full eval)",  0.902, EMERALD),
 ]
 
-col_w = 18.4 / 2
-for i, (method, path, desc, mc) in enumerate(ENDPOINTS):
-    row = i // 2
-    col = i % 2
-    bx = 0.8 + col * col_w + 0.15
-    by = 10.65 - row * 1.1
-    bw = col_w - 0.3
+BAR_X0   = 1.0
+BAR_MAXW = 8.5
+BAR_H    = 0.5
+BAR_GAP  = 0.82
+BAR_TOP  = 6.45
 
-    box(ax, bx, by, bw, 0.82, fc="#0f1a2e", ec=mc + "66", radius=0.15, lw=1)
+for i, (name, val, c) in enumerate(ACCURACY_ROWS):
+    by = BAR_TOP - i * BAR_GAP
+    # track
+    rect(BAR_X0, by, BAR_MAXW, BAR_H, fc=PANEL, ec=BORDER, lw=0.8, r=0.1)
+    # fill
+    rect(BAR_X0, by, BAR_MAXW * val, BAR_H, fc=c + "55", ec=c, lw=1.5, r=0.1)
+    # name
+    txt(BAR_X0 - 0.1, by + BAR_H/2, name, size=8.5, color=WHITE, ha="right")
+    # value
+    txt(BAR_X0 + BAR_MAXW * val + 0.15, by + BAR_H/2,
+        f"{val:.1%}", size=10, bold=True, color=c, ha="left")
 
-    method_c = C["emerald"] if method == "GET" else "#f472b6"
-    box(ax, bx + 0.1, by + 0.22, 0.65, 0.38,
-        fc=method_c + "22", ec=method_c, radius=0.08, lw=1)
-    label(ax, bx + 0.42, by + 0.41, method, size=6.5, weight="bold", color=method_c)
+# key insight callout
+rect(1.0, 3.0, 8.5, 0.62, fc=INDIGO + "22", ec=INDIGO, lw=1.5)
+txt(5.25, 3.31,
+    "Structured prompting alone adds  +27.5 pp  (58.8%  ->  86.3%)",
+    size=9.5, bold=True, color=INDIGO)
 
-    label(ax, bx + 0.9, by + 0.58, path, size=8, weight="bold",
-          color=mc, ha="left")
-    label(ax, bx + 0.9, by + 0.28, desc, size=7, color=C["slate4"], ha="left")
+# ── Per-category table (right column) ─────────────────────────────────────────
+TABLE_X = 11.5
+txt(TABLE_X, 6.9, "Per-Category  (AIRA Full Pipeline)", size=11,
+    bold=True, color=WHITE, ha="left")
 
+# header row
+rect(TABLE_X, 6.42, 10.0, 0.38, fc=PANEL, ec=BORDER, lw=1, r=0.1)
+txt(TABLE_X + 3.6, 6.61, "Category",   size=9, bold=True, color=MUTED, ha="left")
+txt(TABLE_X + 7.1, 6.61, "Precision",  size=9, bold=True, color=MUTED)
+txt(TABLE_X + 8.8, 6.61, "Recall",     size=9, bold=True, color=MUTED)
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# SECTION 5 — Evaluation & Results  (y: 2.0 – 6.7)
-# ═══════════════════════════════════════════════════════════════════════════════
-section_header(ax, 0.8, 6.7, 18.4, "⑤ EVALUATION RESULTS", C["emerald"])
-
-box(ax, 0.8, 2.0, 18.4, 4.55, fc=C["panel"], ec=C["border"], radius=0.4, lw=1)
-
-# Accuracy bars
-BARS = [
-    ("Vanilla GPT-4o",             0.588, C["red"]),
-    ("Fine-tuned gpt-4o-mini",     0.804, C["amber"]),
-    ("GPT-4o (AIRA prompt, base)", 0.863, C["indigo"]),
-    ("AIRA Full Pipeline",         0.902, C["emerald"]),
+CAT_DATA = [
+    ("AIUsageLoophole",    1.00, 1.00, TEAL),
+    ("CircularDefinition", 1.00, 1.00, TEAL),
+    ("EnforcementGap",     1.00, 0.875, EMERALD),
+    ("AuthorityConflict",  0.667, 1.00, INDIGO),
+    ("Ambiguity",          1.00, 0.60, AMBER),
+    ("UndefinedTerm",      1.00, 0.50, AMBER),
+    ("None",               0.906, 0.967, MUTED),
+    ("ScopeConflict",      0.00, 0.00, RED),
 ]
 
-bar_x0 = 1.2
-bar_y0 = 5.9
-bar_max_w = 5.5
-bar_h = 0.42
-bar_gap = 0.62
+ROW_H   = 0.44
+ROW_TOP = 6.02
 
-label(ax, 1.2, 6.45, "Classification Accuracy (51-clause NEU ground truth)",
-      size=8.5, weight="bold", color=C["slate3"], ha="left")
+for i, (cat, p, r, c) in enumerate(CAT_DATA):
+    ry = ROW_TOP - i * ROW_H
+    bg = PANEL if i % 2 == 0 else BG
+    rect(TABLE_X, ry, 10.0, ROW_H, fc=bg, ec=BORDER + "66", lw=0.5, r=0.05)
 
-for i, (name, val, c) in enumerate(BARS):
-    by = bar_y0 - i * bar_gap
-    # background track
-    box(ax, bar_x0, by, bar_max_w, bar_h,
-        fc="#0f172a", ec=C["border"], radius=0.1, lw=0.8)
-    # filled bar
-    bw = bar_max_w * val
-    box(ax, bar_x0, by, bw, bar_h,
-        fc=c + "55", ec=c, radius=0.1, lw=1.5)
-    # label
-    label(ax, bar_x0 - 0.1, by + bar_h / 2, name,
-          size=7.5, color=C["slate3"], ha="right")
-    label(ax, bar_x0 + bw + 0.12, by + bar_h / 2,
-          f"{val:.1%}", size=8, weight="bold", color=c, ha="left")
+    # colour swatch
+    rect(TABLE_X + 0.1, ry + 0.1, 0.22, 0.24, fc=c, ec=c, lw=0, r=0.04)
+    txt(TABLE_X + 0.5, ry + ROW_H/2, cat, size=9, color=WHITE, ha="left")
 
-# Per-category table
-TABLE_X = 8.0
-TABLE_Y = 6.42
+    # precision bar (mini)
+    bx = TABLE_X + 6.2
+    rect(bx, ry + 0.1, 1.4, 0.24, fc=BORDER, ec=BORDER, lw=0, r=0.04)
+    if p > 0:
+        rect(bx, ry + 0.1, 1.4 * p, 0.24, fc=c, ec=c, lw=0, r=0.04)
+    txt(bx + 1.55, ry + ROW_H/2, f"{p:.0%}" if p > 0 else "—",
+        size=9, color=c, ha="left")
 
-label(ax, TABLE_X, TABLE_Y, "Per-Category (AIRA Full Pipeline)",
-      size=8.5, weight="bold", color=C["slate3"], ha="left")
+    # recall bar (mini)
+    bx2 = TABLE_X + 8.2
+    rect(bx2, ry + 0.1, 1.4, 0.24, fc=BORDER, ec=BORDER, lw=0, r=0.04)
+    if r > 0:
+        rect(bx2, ry + 0.1, 1.4 * r, 0.24, fc=c, ec=c, lw=0, r=0.04)
+    txt(bx2 + 1.55, ry + ROW_H/2, f"{r:.0%}" if r > 0 else "—",
+        size=9, color=c, ha="left")
 
-CATS = [
-    ("AIUsageLoophole",  1.00, 1.00, C["teal"]),
-    ("CircularDefinition", 1.00, 1.00, C["teal"]),
-    ("EnforcementGap",   1.00, 0.875, C["indigo"]),
-    ("AuthorityConflict",0.667, 1.00, C["indigo"]),
-    ("Ambiguity",        1.00, 0.60, C["amber"]),
-    ("UndefinedTerm",    1.00, 0.50, C["amber"]),
-    ("None",             0.906, 0.967, C["slate4"]),
-    ("ScopeConflict",    0.00, 0.00, C["red"]),
-]
+# ScopeConflict note
+txt(TABLE_X, ROW_TOP - 8 * ROW_H - 0.1,
+    "* ScopeConflict: zero ground truth examples — requires cross-clause reasoning (known limitation)",
+    size=8, color=RED, ha="left")
 
-# header
-label(ax, TABLE_X + 2.9, TABLE_Y - 0.28, "Precision",
-      size=7, color=C["slate4"], weight="bold", ha="right")
-label(ax, TABLE_X + 4.0, TABLE_Y - 0.28, "Recall",
-      size=7, color=C["slate4"], weight="bold", ha="right")
-
-for i, (cat, p, r, c) in enumerate(CATS):
-    ry = TABLE_Y - 0.58 - i * 0.42
-    if i % 2 == 0:
-        box(ax, TABLE_X - 0.1, ry - 0.12, 4.7, 0.38,
-            fc=C["bg"], ec="none", radius=0.05, lw=0, alpha=0.5)
-    label(ax, TABLE_X, ry + 0.06, f"• {cat}", size=7.5, color=c, ha="left")
-    pval = f"{p:.0%}" if p > 0 else "—"
-    rval = f"{r:.0%}" if r > 0 else "—"
-    label(ax, TABLE_X + 2.9, ry + 0.06, pval, size=7.5, color=c, ha="right")
-    label(ax, TABLE_X + 4.0, ry + 0.06, rval, size=7.5, color=c, ha="right")
-
-# Key metrics summary
-MX = 13.5
-MY = 6.42
-label(ax, MX, MY, "Key Metrics", size=8.5, weight="bold",
-      color=C["slate3"], ha="left")
-
-METRICS = [
-    ("Overall accuracy",    "90.2%  (46/51)",           C["emerald"]),
-    ("Faithfulness score",  "100%  (verbatim citations)", C["emerald"]),
-    ("Hallucination rate",  "0.0%  (adversarial set)*",  C["amber"]),
-    ("Vanilla baseline",    "58.8%  → +27.5pp from structure", C["indigo"]),
-    ("Fine-tuned mini",     "80.4%  · ~20× cheaper",    C["violet"]),
-    ("Worst category",      "ScopeConflict  0% P / 0% R", C["red"]),
-]
-
-for i, (k, v, c) in enumerate(METRICS):
-    my = MY - 0.6 - i * 0.55
-    box(ax, MX - 0.1, my - 0.1, 6.4, 0.42,
-        fc=c + "11", ec=c + "44", radius=0.1, lw=0.8)
-    label(ax, MX + 0.05, my + 0.1, k + ":", size=7.5,
-          color=C["slate4"], ha="left")
-    label(ax, MX + 0.05, my - 0.16, v, size=8, weight="bold",
-          color=c, ha="left")
-
-label(ax, MX, MY - 3.9,
-      "* adversarial human review gate (human_accepted) not completed",
-      size=6.5, color=C["amber"], ha="left")
+# ── Footer ────────────────────────────────────────────────────────────────────
+divider(0.55)
+txt(11, 0.32,
+    "github.com/rajesh1997r/academic-integrity-risk-analyzer   |   "
+    "academic-integrity-risk-analyzer.vercel.app",
+    size=8.5, color=INDIGO)
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# Footer
-# ═══════════════════════════════════════════════════════════════════════════════
-ax.plot([0.8, 19.2], [1.75, 1.75], color=C["border"], lw=0.8, zorder=3)
-label(ax, 10, 1.45,
-      "INFO 7375 Generative AI Engineering  ·  Northeastern University  ·  Spring 2026",
-      size=8, color=C["slate4"])
-label(ax, 10, 1.1,
-      "github.com/rajesh1997r/academic-integrity-risk-analyzer  ·  "
-      "academic-integrity-risk-analyzer.vercel.app",
-      size=7.5, color=C["indigo"])
-
-
-# ─── Save ─────────────────────────────────────────────────────────────────────
+# ── Save ──────────────────────────────────────────────────────────────────────
 out = Path("docs/architecture.png")
 fig.savefig(out, dpi=150, bbox_inches="tight",
-            facecolor=C["bg"], edgecolor="none")
-print(f"Saved → {out}  ({out.stat().st_size // 1024} KB)")
+            facecolor=BG, edgecolor="none")
+print(f"Saved -> {out}  ({out.stat().st_size // 1024} KB)")
 plt.close(fig)
