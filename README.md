@@ -8,19 +8,58 @@ Built for **INFO 7375 Generative AI Engineering** · Northeastern University · 
 
 ---
 
-## Results
+## Architecture
 
-| Metric | Score |
-|---|---|
-| Classification accuracy | **90.2%** (51-clause NEU ground truth) |
-| Faithfulness | **100%** — every cited_text is a verbatim substring of its clause |
-| Hallucination rate | **0.0%** — no adversarial clauses mislabeled as None |
-| AIUsageLoophole | **100% precision / 100% recall** |
-| EnforcementGap | **100% precision / 87.5% recall** |
+![AIRA System Architecture](docs/architecture.png)
 
 ---
 
-## Architecture
+## Results
+
+### Baseline Comparison (51-clause NEU ground truth)
+
+| Condition | Model | Accuracy | Notes |
+|---|---|---|---|
+| Vanilla GPT-4o | GPT-4o (no structure) | **58.8%** | Category names only — collapses to Ambiguity/None |
+| Fine-tuned mini | gpt-4o-mini (fine-tuned) | **80.4%** | AIRA structured prompt, fine-tuned model |
+| GPT-4o structured | GPT-4o (AIRA prompt) | **86.3%** | Full structured prompt, base model |
+| **AIRA Full Pipeline** | **GPT-4o** | **90.2%** | Full structured prompt + eval run |
+
+**Structured prompting alone adds +27.5 percentage points** (58.8% → 86.3%). Taxonomy definitions and chain-of-thought enforcement — not model size — drive the accuracy gain.
+
+### Per-Category (AIRA Full Pipeline)
+
+| Category | Precision | Recall |
+|---|---|---|
+| AIUsageLoophole | 100% | 100% |
+| CircularDefinition | 100% | 100% |
+| EnforcementGap | 100% | 87.5% |
+| AuthorityConflict | 67% | 100% |
+| Ambiguity | 100% | 60% |
+| UndefinedTerm | 100% | 50% |
+| None | 91% | 97% |
+| ScopeConflict | 0% | 0% — known blind spot (single-clause architecture limitation) |
+
+### Other Metrics
+
+| Metric | Score |
+|---|---|
+| Faithfulness | **100%** — every `cited_text` is a verbatim substring of its clause |
+| Hallucination rate | **0.0%** — adversarial synthetic clauses (note: human review gate pending) |
+
+---
+
+## Documentation
+
+| Document | Description |
+|---|---|
+| [SYSTEM_DESIGN_DOCUMENT.md](SYSTEM_DESIGN_DOCUMENT.md) | Full SDD — architecture, component design, API spec, design decisions, boondoggle score |
+| [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md) | IMRaD research paper — methods, results, baseline comparison, limitations |
+| [docs/architecture.png](docs/architecture.png) | System architecture diagram |
+
+---
+
+## Pipeline
 
 ```
 PDF → ingestion.py → List[Clause]
@@ -54,7 +93,7 @@ PDF → ingestion.py → List[Clause]
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env        # add OPENAI_API_KEY=sk-...
+cp .env.example .env        # add your OPENAI_API_KEY
 ```
 
 PDFs used (place in `data/policies/`):
@@ -105,11 +144,17 @@ Tests use `unittest.mock` to patch `_get_client` — no API key or PDFs needed f
 
 ## Evaluation
 
-**Ground truth annotation** (done — `data/ground_truth.json`, 51 NEU clauses):
+**Run the AIRA classifier against ground truth:**
 ```bash
 python -m backend.evaluator
 # Results → evaluation/results/run_<timestamp>.json
 # Served at GET /evaluation
+```
+
+**Run the vanilla baseline (no structured prompt):**
+```bash
+python -m backend.baseline
+# Results → evaluation/results/baseline_vanilla_gpt4o_<timestamp>.json
 ```
 
 **Synthetic data** (35 clean + 21 adversarial clauses):
@@ -123,17 +168,19 @@ python -m backend.synthetic
 
 ## Fine-Tuning
 
-AIRA fine-tunes `gpt-4o-mini-2024-07-18` on the annotated dataset as a cheaper, faster inference alternative to GPT-4o.
+AIRA fine-tunes `gpt-4o-mini-2024-07-18` on the annotated dataset as a cheaper inference alternative.
 
-**Training data:** 68 train / 18 val examples from `data/ground_truth.json` (51 human-annotated NEU clauses) + `data/synthetic_clean.json` (35 GPT-4o generated clauses), 80/20 split.
+**Training data:** 69 train / 17 val examples from ground truth (51 human-annotated NEU clauses) + synthetic clean set, 80/20 split.
 
 **Results:**
 
-| Model | Accuracy | Cost |
+| Model | Accuracy | Cost per clause |
 |---|---|---|
-| GPT-4o (base) | **86.3%** (44/51) | ~$0.005 / clause |
-| ft:gpt-4o-mini (fine-tuned) | **80.4%** (41/51) | ~$0.0002 / clause |
-| Delta | -5.9% | **~25x cheaper** |
+| GPT-4o with AIRA structured prompt | **86.3%** (44/51) | ~$0.005 |
+| ft:gpt-4o-mini (fine-tuned on AIRA data) | **80.4%** (41/51) | ~$0.0002 |
+| Delta | −5.9% | **~25× cheaper** |
+
+Note: both rows use AIRA's structured prompt. The vanilla GPT-4o baseline (no prompt structure) is 58.8% — see results table above.
 
 Fine-tuned model ID: `ft:gpt-4o-mini-2024-07-18:personal:aira:DXBLUexI`
 
@@ -144,8 +191,6 @@ python -m backend.finetune --submit    # upload + start job (~$0.50)
 python -m backend.finetune --status    # poll until succeeded
 python -m backend.finetune --compare   # accuracy comparison vs GPT-4o base
 ```
-
-Results saved to `data/finetune_job.json` and `data/finetune_comparison.json`, served at `GET /finetune/status` and `GET /finetune/compare`.
 
 ---
 
@@ -168,7 +213,7 @@ Results saved to `data/finetune_job.json` and `data/finetune_comparison.json`, s
 ### Render (backend)
 1. Connect GitHub repo on [render.com](https://render.com)
 2. Start command: `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
-3. Python version: set `PYTHON_VERSION=3.11.0` in env vars
+3. Set `PYTHON_VERSION=3.11.0` in env vars
 4. Add `OPENAI_API_KEY` in env vars
 
 ### Vercel (frontend)
