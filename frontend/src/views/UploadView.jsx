@@ -97,6 +97,15 @@ export default function UploadView() {
       <section className="bg-slate-950 line-grid relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/50 via-transparent to-transparent pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-14 md:py-16 animate-fade-in-up">
+          <button
+            onClick={() => history.back()}
+            className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300 transition-colors mb-6 group"
+          >
+            <svg className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>
+            Back
+          </button>
           <p className="text-xs font-semibold tracking-widest uppercase text-indigo-400 mb-4">
             Policy Analyzer
           </p>
