@@ -201,10 +201,10 @@ function AboutTab({ onNavigate }) {
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="mb-8">
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-amber-300 bg-amber-900/40 border border-amber-700/50 rounded-full px-3 py-1.5 mb-4">
-              Grading Guide · INFO 7375
+              Get Started · INFO 7375
             </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-white">How to evaluate this project</h2>
-            <p className="mt-2 text-slate-400 text-sm">Four steps to see all four course competencies demonstrated live.</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-white">How to run this project</h2>
+            <p className="mt-2 text-slate-400 text-sm">Four steps to explore everything AIRA can do — no setup needed.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="rounded-xl border border-indigo-800/60 bg-indigo-900/40 p-5">
