@@ -139,10 +139,11 @@ export default function UploadView() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-10">
 
         {/* Sample policies */}
-        <div className="mb-8">
-          <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-4">
-            Sample Policies
-          </p>
+        <div className="mb-6">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center shrink-0">1</span>
+            <p className="text-sm font-semibold text-slate-700">Click a sample policy to analyze it instantly</p>
+          </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {SAMPLES.map((s) => (
               <button
@@ -169,7 +170,18 @@ export default function UploadView() {
           </div>
         </div>
 
+        {/* OR divider */}
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex-1 h-px bg-slate-200" />
+          <span className="text-xs font-semibold text-slate-400 tracking-widest uppercase">or</span>
+          <div className="flex-1 h-px bg-slate-200" />
+        </div>
+
         {/* Upload zone */}
+        <div className="flex items-center gap-3 mb-4">
+          <span className="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center shrink-0">2</span>
+          <p className="text-sm font-semibold text-slate-700">Upload your own university policy PDF</p>
+        </div>
         <div
           className={`border-2 border-dashed rounded-2xl p-12 text-center mb-8 cursor-pointer transition-all duration-200 ${
             dragging
