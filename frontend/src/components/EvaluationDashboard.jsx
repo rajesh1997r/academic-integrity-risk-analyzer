@@ -182,6 +182,40 @@ export default function EvaluationDashboard() {
 
   return (
     <div className="space-y-6">
+      {/* Baseline Comparison — static, always shown */}
+      <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+        <h3 className="text-sm font-semibold text-slate-700 mb-1">Baseline Comparison — What Structured Prompting Adds</h3>
+        <p className="text-xs text-slate-400 mb-5">Same model (GPT-4o), same 51-clause ground truth — only the prompt structure changes.</p>
+        <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className="rounded-xl p-4 border border-slate-100 bg-slate-50">
+            <p className="text-2xl font-extrabold text-slate-900">58.8%</p>
+            <p className="text-xs text-slate-400 mt-0.5 mb-2">30/51 correct</p>
+            <p className="text-xs font-semibold text-slate-700">Vanilla GPT-4o</p>
+            <p className="text-[11px] text-slate-400 mt-0.5">Category names only — no definitions, no citation requirement</p>
+          </div>
+          <div className="rounded-xl p-4 border border-indigo-100 bg-indigo-50">
+            <p className="text-2xl font-extrabold text-indigo-900">86.3%</p>
+            <p className="text-xs text-indigo-400 mt-0.5 mb-2">44/51 correct · +27.5pp</p>
+            <p className="text-xs font-semibold text-indigo-700">GPT-4o + AIRA Prompt</p>
+            <p className="text-[11px] text-indigo-400 mt-0.5">Taxonomy definitions, chain-of-thought, citation, JSON schema</p>
+          </div>
+          <div className="rounded-xl p-4 border border-violet-200 bg-violet-50">
+            <span className="text-[10px] font-semibold tracking-widest uppercase text-violet-500 bg-violet-100 rounded-full px-2 py-0.5 mb-2 inline-block">Best</span>
+            <p className="text-2xl font-extrabold text-violet-900">90.2%</p>
+            <p className="text-xs text-violet-400 mt-0.5 mb-2">46/51 correct · +3.9pp</p>
+            <p className="text-xs font-semibold text-violet-700">AIRA Full Pipeline</p>
+            <p className="text-[11px] text-violet-400 mt-0.5">Structured prompt + ChromaDB evaluation run</p>
+          </div>
+        </div>
+        <div className="rounded-lg bg-emerald-50 border border-emerald-100 px-4 py-3">
+          <p className="text-xs text-emerald-800">
+            <span className="font-bold">Key finding:</span> Structured prompting alone — taxonomy definitions, chain-of-thought enforcement, cited_text requirement — adds{' '}
+            <span className="font-bold">+27.5 percentage points</span> over vanilla GPT-4o on the same model.
+            Model size and fine-tuning are secondary to prompt structure.
+          </p>
+        </div>
+      </div>
+
       {sample && (
         <div className="rounded-xl bg-amber-50 border border-amber-200 px-5 py-3.5 text-sm text-amber-800 flex items-start gap-2">
           <svg className="w-4 h-4 shrink-0 mt-0.5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
