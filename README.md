@@ -4,7 +4,8 @@ Audits university academic integrity policy PDFs for ambiguity, contradictions, 
 
 Built for **INFO 7375 Generative AI Engineering** · Northeastern University · Spring 2026
 
-**Live:** https://academic-integrity-risk-analyzer.vercel.app
+**Live demo:** https://academic-integrity-risk-analyzer.vercel.app  
+**GitHub:** https://github.com/rajesh1997r/academic-integrity-risk-analyzer
 
 ---
 
@@ -45,7 +46,7 @@ Built for **INFO 7375 Generative AI Engineering** · Northeastern University · 
 | Metric | Score |
 |---|---|
 | Faithfulness | **100%** — every `cited_text` is a verbatim substring of its clause |
-| Hallucination rate | **0.0%** — adversarial synthetic clauses (note: human review gate pending) |
+| Hallucination rate | **0.0%** — tested on 21 adversarial synthetic clauses |
 
 ---
 
@@ -84,16 +85,105 @@ PDF → ingestion.py → List[Clause]
 ## Local Setup
 
 ### Prerequisites
-- Python 3.11+
-- Node 20+
-- OpenAI API key
 
-### Backend
+- Python 3.11+
+- Node.js 20+
+- An OpenAI API key (`sk-...`)
+
+### 1. Clone the repository
 
 ```bash
-python -m venv .venv && source .venv/bin/activate
+git clone https://github.com/rajesh1997r/academic-integrity-risk-analyzer.git
+cd academic-integrity-risk-analyzer
+```
+
+### 2. Backend
+
+**Create and activate a virtual environment:**
+
+```bash
+python -m venv .venv
+source .venv/bin/activate          # macOS / Linux
+# .venv\Scripts\activate           # Windows
+```
+
+**Install dependencies:**
+
+```bash
 pip install -r requirements.txt
-cp .env.example .env        # add your OPENAI_API_KEY
+```
+
+**Add your OpenAI API key:**
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and replace `sk-...` with your actual key:
+
+```
+OPENAI_API_KEY=sk-your-key-here
+```
+
+**Start the API server:**
+
+```bash
+uvicorn backend.main:app --reload
+# Running at http://localhost:8000
+```
+
+> **Note:** The ChromaDB index (`chroma_db/`) and pre-computed demo outputs (`demo_output.json`, `demo_harvard.json`) are already committed to the repo — you do **not** need to rebuild them. The API is ready to use immediately after `uvicorn` starts.
+
+### 3. Frontend
+
+Open a second terminal window:
+
+```bash
+cd frontend
+npm install
+```
+
+**Create the frontend environment file:**
+
+```bash
+echo "VITE_API_URL=http://localhost:8000" > .env.local
+```
+
+**Start the dev server:**
+
+```bash
+npm run dev
+# Running at http://localhost:5173
+```
+
+### 4. Open the app
+
+- Frontend: http://localhost:5173
+- API docs: http://localhost:8000/docs
+
+The **Demo tab** loads instantly (pre-computed). The **Upload tab** calls your local API and requires the OpenAI key.
+
+---
+
+### Tests
+
+```bash
+pytest tests/ -v
+```
+
+46 tests across models, ingestion, alignment, and classifier. Uses `unittest.mock` — no API key or PDF files needed.
+
+---
+
+## Starting From Scratch (optional — already done)
+
+These steps are only needed if you are rebuilding the index or regenerating demo data. Skip if you cloned the repo — everything is already built.
+
+**Rebuild the ChromaDB vector index** (costs ~$0.01 in embeddings, run once):
+
+```bash
+python build_index.py
+# Embeds all PDFs in data/policies/ → chroma_db/
 ```
 
 PDFs used (place in `data/policies/`):
@@ -104,60 +194,34 @@ PDFs used (place in `data/policies/`):
 | `harvard_ai_guidelines.pdf.pdf` | 16 | AI-focused |
 | `mit_handbook.pdf.pdf` | 385 | Volume testing |
 
-**Build ChromaDB index** (run once, commit `chroma_db/`):
-```bash
-python build_index.py
-```
+**Regenerate pre-computed demo outputs:**
 
-**Start the API:**
-```bash
-uvicorn backend.main:app --reload
-# http://localhost:8000
-```
-
-**Pre-compute demo outputs:**
 ```bash
 python generate_demo.py           # NEU → demo_output.json
 python generate_demo.py harvard   # Harvard → demo_harvard.json
 ```
 
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-# http://localhost:5173
-```
-
-Set `VITE_API_URL=http://localhost:8000` in `frontend/.env.local`.
-
-### Tests
-
-```bash
-pytest tests/ -v
-```
-
-Tests use `unittest.mock` to patch `_get_client` — no API key or PDFs needed for CI.
-
 ---
 
 ## Evaluation
 
-**Run the AIRA classifier against ground truth:**
+**Run the AIRA classifier against ground truth (51 NEU clauses):**
+
 ```bash
 python -m backend.evaluator
 # Results → evaluation/results/run_<timestamp>.json
 # Served at GET /evaluation
 ```
 
-**Run the vanilla baseline (no structured prompt):**
+**Run the vanilla baseline (no structured prompt — 58.8%):**
+
 ```bash
 python -m backend.baseline
 # Results → evaluation/results/baseline_vanilla_gpt4o_<timestamp>.json
 ```
 
-**Synthetic data** (35 clean + 21 adversarial clauses):
+**Generate synthetic clauses** (35 clean + 21 adversarial):
+
 ```bash
 python -m backend.synthetic
 # Review data/synthetic_clean.json and data/synthetic_adversarial.json
@@ -185,8 +249,9 @@ Note: both rows use AIRA's structured prompt. The vanilla GPT-4o baseline (no pr
 Fine-tuned model ID: `ft:gpt-4o-mini-2024-07-18:personal:aira:DXBLUexI`
 
 **Run the pipeline:**
+
 ```bash
-python -m backend.finetune --prepare   # build JSONL (free)
+python -m backend.finetune --prepare   # build training JSONL (free)
 python -m backend.finetune --submit    # upload + start job (~$0.50)
 python -m backend.finetune --status    # poll until succeeded
 python -m backend.finetune --compare   # accuracy comparison vs GPT-4o base
@@ -206,21 +271,30 @@ python -m backend.finetune --compare   # accuracy comparison vs GPT-4o base
 | `GET /finetune/status` | Fine-tuning job metadata and model ID |
 | `GET /finetune/compare` | GPT-4o vs fine-tuned model accuracy comparison |
 
+Full interactive API docs available at `/docs` when running locally.
+
 ---
 
 ## Deployment
 
 ### Render (backend)
+
 1. Connect GitHub repo on [render.com](https://render.com)
-2. Start command: `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
-3. Set `PYTHON_VERSION=3.11.0` in env vars
-4. Add `OPENAI_API_KEY` in env vars
+2. **Root directory:** leave blank (repo root)
+3. **Start command:** `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
+4. **Environment variables:**
+   - `PYTHON_VERSION` = `3.11.0`
+   - `OPENAI_API_KEY` = your key
+   - `FRONTEND_URL` = your Vercel URL (for CORS)
 
 ### Vercel (frontend)
-1. Import repo on [vercel.com](https://vercel.com), set root directory to `frontend/`
-2. Add env var: `VITE_API_URL=https://your-render-url.onrender.com`
 
-**Before demo:** Hit `/health` at least 60 seconds before presenting — Render free tier sleeps after 15 min inactivity.
+1. Import repo on [vercel.com](https://vercel.com)
+2. **Root directory:** `frontend`
+3. **Environment variables:**
+   - `VITE_API_URL` = your Render URL (e.g. `https://academic-integrity-risk-analyzer.onrender.com`)
+
+**Before demo:** Hit `GET /health` at least 60 seconds before presenting — Render free tier sleeps after 15 min inactivity.
 
 ---
 
