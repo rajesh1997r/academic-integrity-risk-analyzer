@@ -33,7 +33,7 @@ def _compute_risk_distribution(annotations) -> dict[str, int]:
 
 
 def _overall_risk_rating(flagged_ratio: float, faithfulness: float) -> str:
-    if flagged_ratio > 0.4 or faithfulness < 0.5:
+    if flagged_ratio >= 0.5 or faithfulness < 0.5:
         return "High"
     if flagged_ratio > 0.2 or faithfulness < 0.65:
         return "Medium"

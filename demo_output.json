@@ -516,7 +516,7 @@
   ],
   "contradictions": [],
   "faithfulness_score": 1.0,
-  "overall_risk_rating": "High",
+  "overall_risk_rating": "Medium",
   "risk_distribution": {
     "None": 30,
     "Ambiguity": 4,
