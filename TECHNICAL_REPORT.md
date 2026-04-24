@@ -2,7 +2,6 @@
 
 **Rajesh Kumar Rama Reddy**
 INFO 7375 — Generative AI Engineering
-Khoury College of Computer Sciences, Northeastern University
 Spring 2026
 
 ---
