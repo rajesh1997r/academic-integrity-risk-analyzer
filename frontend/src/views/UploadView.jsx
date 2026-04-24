@@ -9,10 +9,10 @@ const API = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 const MAX_BYTES = 10 * 1024 * 1024
 
 const SAMPLES = [
-  { name: 'Stanford',  file: 'stanford_integrity.pdf',  clauses: 34, note: 'AI threshold undefined' },
-  { name: 'UChicago',  file: 'uchicago_integrity.pdf',  clauses: 38, note: 'Definition updates w/o notice' },
-  { name: 'CMU',       file: 'cmu_integrity.pdf',       clauses: 41, note: 'AI vs. computational tool gap' },
-  { name: 'Columbia',  file: 'columbia_integrity.pdf',  clauses: 44, note: 'Voice assistant loophole' },
+  { name: 'Stanford',  endpoint: 'stanford',  clauses: 34, note: 'AI threshold undefined' },
+  { name: 'UChicago',  endpoint: 'uchicago',  clauses: 38, note: 'Definition updates w/o notice' },
+  { name: 'CMU',       endpoint: 'cmu',       clauses: 41, note: 'AI vs. computational tool gap' },
+  { name: 'Columbia',  endpoint: 'columbia',  clauses: 44, note: 'Voice assistant loophole' },
 ]
 
 function UploadIcon({ className }) {
@@ -79,11 +79,10 @@ export default function UploadView() {
   const runSample = async (sample) => {
     setLoadingSample(sample.name)
     setError(null)
+    setReport(null)
     try {
-      const res = await fetch(`/samples/${sample.file}`)
-      const blob = await res.blob()
-      const file = new File([blob], sample.file, { type: 'application/pdf' })
-      await handleFile(file)
+      const res = await axios.get(`${API}/demo/${sample.endpoint}`)
+      setReport(res.data)
     } catch {
       setError(`Failed to load sample: ${sample.name}`)
     } finally {

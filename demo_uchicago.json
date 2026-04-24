@@ -1,0 +1,399 @@
+{
+  "source_doc": "uchicago_integrity.pdf",
+  "total_clauses": 38,
+  "flagged_count": 21,
+  "annotations": [
+    {
+      "clause_id": "6e2b9d7b-f14e-4686-8229-f85e515189ae",
+      "clause_text": "Effective Autumn Quarter 2024 University of Chicago Academic Integrity Policy and Procedures University of Chicago I.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause appears to be an introductory statement indicating the effective date and institution name. It does not contain any specific rules or definitions that could create an enforcement problem.",
+      "cited_text": "Effective Autumn Quarter 2024 University of Chicago Academic Integrity Policy and Procedures University of Chicago I.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "433d2835-6927-415b-b7bc-c22e4971a672",
+      "clause_text": "Statement of Principles The University of Chicago holds academic integrity to be fundamental to the scholarly enterprise.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement of principles and does not contain any specific rules or definitions that could lead to enforcement issues. It serves as an introductory statement rather than a policy with actionable components.",
+      "cited_text": "The University of Chicago holds academic integrity to be fundamental to the scholarly enterprise.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c09b5f26-f9cc-40ce-a06a-115f055321b7",
+      "clause_text": "Honest inquiry, rigorous citation, and independent intellectual effort are not merely rules but constitutive values of this institution.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement of values and does not contain specific rules or terms that could lead to enforcement issues. It serves as an introductory or motivational statement rather than a directive policy.",
+      "cited_text": "Honest inquiry, rigorous citation, and independent intellectual effort are not merely rules but constitutive values of this institution.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a9a721a0-47d0-473d-be3b-74016ef71dd1",
+      "clause_text": "This policy applies to all students enrolled in degree programs, certificate programs, and non-degree coursework offered through any division or professional school of the University.",
+      "risk_category": "ScopeConflict",
+      "secondary_category": null,
+      "reasoning": "The clause explicitly applies to students in degree programs, certificate programs, and non-degree coursework, but it does not mention students involved in other university activities such as research assistants or those auditing courses, creating a potential inconsistency in application.",
+      "cited_text": "This policy applies to all students enrolled in degree programs, certificate programs, and non-degree coursework",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "34bc14aa-f6b3-426e-827e-aa4ea414ff44",
+      "clause_text": "Enforcement of this policy is a shared responsibility.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause states that enforcement is a shared responsibility but does not specify which offices or persons are responsible, potentially leading to confusion or conflict over who has the authority to enforce the policy.",
+      "cited_text": "Enforcement of this policy is a shared responsibility.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "d84898d8-c0d2-43a8-8793-380235f9b858",
+      "clause_text": "Instructors, teaching assistants, department chairs, and academic deans all bear obligations to report and act on suspected violations.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause assigns overlapping responsibilities to multiple roles without clarifying who has the final authority or how conflicts between these roles should be resolved, potentially leading to inconsistent enforcement or disputes over jurisdiction.",
+      "cited_text": "Instructors, teaching assistants, department chairs, and academic deans all bear obligations to report and act on suspected violations.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "9601add4-e7bf-41f4-9c6d-af4d3a1d3ee2",
+      "clause_text": "Failure to report a known violation may itself constitute a breach of community standards.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause implies an obligation to report violations but does not provide a mechanism for how such failures to report would be detected or enforced, creating a gap in practical enforcement.",
+      "cited_text": "Failure to report a known violation may itself constitute a breach of community standards.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "08a33a08-acc5-47cc-a7b8-f187ba3c0f3e",
+      "clause_text": "Definitions Academic dishonesty includes cheating, plagiarism, fabrication, and any other conduct that misrepresents the origin, extent, or nature of a student's academic work.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a broad definition of academic dishonesty that includes commonly understood terms like cheating and plagiarism. It does not introduce any specific terms or concepts that require further definition or create ambiguity in enforcement.",
+      "cited_text": "Academic dishonesty includes cheating, plagiarism, fabrication, and any other conduct that misrepresents the origin, extent, or nature of a student's academic work.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f3f4a4e9-27ce-45b3-ad16-5482c771b0bc",
+      "clause_text": "Cheating means using or attempting to use unauthorized resources or assistance during an academic exercise.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a clear definition of cheating that aligns with standard academic integrity policies. It does not introduce ambiguity or enforcement issues, as 'unauthorized resources or assistance' is a commonly understood concept in academic settings.",
+      "cited_text": "using or attempting to use unauthorized resources or assistance",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "ba84fb7b-7239-4c88-b93f-3a42c0cea724",
+      "clause_text": "Resources are unauthorized if they are not explicitly permitted by the instructor.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The clause is ambiguous because it does not specify how or when instructors must communicate which resources are permitted, leading to potential confusion about whether a resource is authorized if not explicitly mentioned.",
+      "cited_text": "Resources are unauthorized if they are not explicitly permitted by the instructor.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "59f74b42-0a93-455c-842e-1280fa74abe5",
+      "clause_text": "Plagiarism is the unattributed use of another's ideas, words, data, code, images, or other creative or intellectual output.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a clear definition of plagiarism by listing specific types of work that must not be used without attribution. It does not present any ambiguity or enforcement issues.",
+      "cited_text": "Plagiarism is the unattributed use of another's ideas, words, data, code, images, or other creative or intellectual output.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "34c672ad-aa5c-48d3-8f15-d4a2b59a7367",
+      "clause_text": "Attribution is required regardless of the source: published works, unpublished works, internet sources, peer work, or outputs of automated systems. 'Automated systems' as used in this policy includes, without limitation, AI language models, code autocomplete systems, paraphrasing tools, and translation software.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly defines 'automated systems' and specifies the requirement for attribution across various sources, including AI tools. There is no ambiguity or enforcement issue present.",
+      "cited_text": "Attribution is required regardless of the source: published works, unpublished works, internet sources, peer work, or outputs of automated systems.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "2a977485-a559-42a7-8a82-287fa2795dd7",
+      "clause_text": "This definition may be updated without notice as technology evolves.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause allows for updates to the definition without specifying who has the authority to make these updates, leading to potential conflicts or confusion over who can change the policy.",
+      "cited_text": "This definition may be updated without notice",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "273697d9-a744-4b8a-a36e-f8eb16870b94",
+      "clause_text": "Fabrication means reporting data, results, or sources that do not exist or were not consulted.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a clear definition of fabrication in the context of academic integrity, specifying that it involves reporting data, results, or sources that are fictitious or unconsulted. There is no ambiguity or enforcement issue present.",
+      "cited_text": "Fabrication means reporting data, results, or sources that do not exist or were not consulted.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "fe0138dd-111d-4787-bc8b-95b8bb74816f",
+      "clause_text": "Artificial Intelligence Policy Generative artificial intelligence tools may be used in coursework only when the instructor has granted explicit written permission.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause does not specify what constitutes 'generative artificial intelligence tools,' leaving room for students to use AI tools that they do not consider 'generative' without permission. This creates an exploitable gap in enforcement.",
+      "cited_text": "generative artificial intelligence tools",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6e327040-66a9-432c-bfd9-0afd83467cf4",
+      "clause_text": "Students who receive permission to use AI tools must maintain a log of all AI interactions relevant to the submission and make that log available to the instructor upon request.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause requires students to maintain a log of AI interactions, but there is no mechanism described for verifying the accuracy or completeness of these logs. Without a way to audit or cross-check the logs, enforcement of this requirement is not feasible.",
+      "cited_text": "must maintain a log of all AI interactions relevant to the submission",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "22e580b4-0f62-426c-9659-8c003a1851ea",
+      "clause_text": "The log format is not specified by this policy.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause mentions 'log format' but does not define what constitutes an acceptable format. This could lead to confusion among students and faculty about what is required, potentially affecting compliance and enforcement.",
+      "cited_text": "The log format is not specified by this policy.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "9e72a34e-82cd-4cbf-9b69-fea52b49e64a",
+      "clause_text": "Even where AI use is permitted, students remain responsible for the accuracy, integrity, and academic quality of submitted work.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause permits AI use but does not specify what constitutes permissible AI use or how students should ensure the accuracy and integrity of AI-generated content. This creates a potential loophole where students might rely on AI without clear guidelines on maintaining academic standards.",
+      "cited_text": "Even where AI use is permitted, students remain responsible for the accuracy, integrity, and academic quality of submitted work.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "871fddee-c481-4768-a7b1-0853d51d15be",
+      "clause_text": "Submission of AI-generated content that contains factual errors, unsupported claims, or fabricated citations is a violation of this policy irrespective of permitted tool use.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits AI-generated content with factual errors, unsupported claims, or fabricated citations but does not address AI-assisted content that may contain the same issues. This creates a loophole where students could use AI tools to assist in generating content without directly submitting AI-generated text, potentially bypassing the policy.",
+      "cited_text": "Submission of AI-generated content",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "694edcc6-7f7c-4f40-8fcb-02e87801ea92",
+      "clause_text": "AI detection software may be used to flag suspected AI-assisted submissions.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause allows for the use of AI detection software but does not specify how flagged submissions will be further investigated or verified, creating a gap in the enforcement process.",
+      "cited_text": "AI detection software may be used to flag suspected AI-assisted submissions.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a487dec0-b9b4-4383-87e7-ed25589702ed",
+      "clause_text": "A positive result from detection software creates a rebuttable presumption of policy violation but is not, standing alone, conclusive proof of misconduct.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause relies on detection software to create a presumption of violation but does not specify how students can effectively rebut this presumption or what evidence would be considered sufficient to counter the software's findings. This creates a gap in enforcement as students may not know how to challenge the presumption.",
+      "cited_text": "rebuttable presumption of policy violation",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "97780996-679b-47d2-afdb-4d4e02a1167f",
+      "clause_text": "Effective Autumn Quarter 2024 University of Chicago threshold sensitivity settings for such software are not disclosed.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause indicates that the threshold sensitivity settings for software are not disclosed, which means there is no way for students or faculty to understand how the software determines violations. This lack of transparency creates an enforcement gap as it is impossible to verify or contest the software's decisions.",
+      "cited_text": "threshold sensitivity settings for such software are not disclosed",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "8eab541f-b156-47ef-90d2-f8e16389b8fd",
+      "clause_text": "Courses designated as 'AI-integrated' may require the use of specific AI tools as part of the learning objectives.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The term 'AI-integrated' is not defined, and it is central to understanding which courses require specific AI tools. Without a clear definition, students may not know which courses fall under this designation, leading to confusion about course requirements.",
+      "cited_text": "'AI-integrated'",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a9a78a79-7d15-43e2-9ade-3b97d4ccc385",
+      "clause_text": "In such courses, the course syllabus governs permissible use and supersedes this policy to the extent of any conflict.",
+      "risk_category": "ScopeConflict",
+      "secondary_category": null,
+      "reasoning": "This clause creates a potential inconsistency by allowing course syllabi to override the general academic integrity policy, which could lead to different standards being applied across courses. This could be exploited by students to justify actions that are permissible in one course but not in others.",
+      "cited_text": "the course syllabus governs permissible use and supersedes this policy",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "e8d2e777-a9e0-42f5-b881-7cec8f4d2367",
+      "clause_text": "Investigation Procedures When an instructor suspects a violation, the instructor shall notify the student and the Dean of Students office simultaneously.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause requires the instructor to notify both the student and the Dean of Students office simultaneously, but it does not clarify who has the authority to lead the investigation or make the final decision on the violation. This could lead to conflicting actions or decisions between the instructor and the Dean of Students office.",
+      "cited_text": "the instructor shall notify the student and the Dean of Students office simultaneously",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "524976ea-136f-447b-bf9d-c856ff966533",
+      "clause_text": "The instructor shall not impose a grade penalty prior to the completion of the formal review process.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause implies that the instructor has the authority to impose a grade penalty after the formal review process, but it does not specify who conducts the formal review or who has the final authority to decide on the penalty. This could lead to conflicts if multiple parties believe they have the authority to make the final decision.",
+      "cited_text": "The instructor shall not impose a grade penalty prior to the completion of the formal review process.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6ecbdf58-4176-45c0-9fbb-e0dc75745910",
+      "clause_text": "The Dean of Students office will appoint an Academic Integrity Officer to conduct a preliminary assessment within ten (10) business days of receiving the report.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the responsibility of the Dean of Students office to appoint an Academic Integrity Officer and specifies a timeline for conducting a preliminary assessment. There is no ambiguity or enforcement issue present.",
+      "cited_text": "The Dean of Students office will appoint an Academic Integrity Officer to conduct a preliminary assessment within ten (10) business days of receiving the report.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "58ca1a91-fa2d-42c6-9871-ef2764b00e3f",
+      "clause_text": "If the preliminary assessment supports a finding of probable cause, the matter will be referred to an Academic Integrity Hearing Panel.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the procedure following a preliminary assessment that supports a finding of probable cause. It specifies the next step in the process, which is referral to an Academic Integrity Hearing Panel, without introducing any ambiguity or enforcement issues.",
+      "cited_text": "If the preliminary assessment supports a finding of probable cause, the matter will be referred to an Academic Integrity Hearing Panel.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "e63c1907-378a-4024-861a-4f591bd32259",
+      "clause_text": "The Panel consists of three faculty members drawn from a standing roster.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a straightforward procedural statement about the composition of a panel and does not present any ambiguity, enforcement issues, or other risks related to academic integrity enforcement.",
+      "cited_text": "The Panel consists of three faculty members drawn from a standing roster.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "0a9a0551-8c6f-4c4a-9352-09bb94864041",
+      "clause_text": "Student representation on the Panel is advisory and non-voting.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly states the role of student representation on the Panel as advisory and non-voting, which does not present any ambiguity or enforcement issue.",
+      "cited_text": "Student representation on the Panel is advisory and non-voting.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f7906f45-b9ce-4ae4-9b29-583fbe177580",
+      "clause_text": "Hearings shall be conducted in a manner that protects the privacy of both the accused student and any witnesses.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a standard policy statement ensuring privacy during hearings. It does not present any ambiguity, undefined terms, or enforcement issues that would affect the integrity of the process.",
+      "cited_text": "Hearings shall be conducted in a manner that protects the privacy of both the accused student and any witnesses.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "62d508ac-337d-49fe-abb8-5ea739781a14",
+      "clause_text": "Recordings of hearings are retained by the Dean of Students office and are not accessible to the parties except upon order of a reviewing authority.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause does not specify who the 'reviewing authority' is, which could lead to confusion or disputes over who has the power to grant access to the recordings. This lack of clarity could result in inconsistent enforcement or delays in the appeals process.",
+      "cited_text": "order of a reviewing authority",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c930d8c9-0dae-4d01-92ea-3b9a35f42c2e",
+      "clause_text": "Sanctions imposed by the Hearing Panel may include: written warning, required completion of an academic integrity module, grade penalty, course failure, transcript notation, suspension, or expulsion.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the range of sanctions that may be imposed by the Hearing Panel, without any ambiguity or enforcement issues. The sanctions listed are standard and commonly understood in academic settings.",
+      "cited_text": "Sanctions imposed by the Hearing Panel may include: written warning, required completion of an academic integrity module, grade penalty, course failure, transcript notation, suspension, or expulsion.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "e9e98e52-5987-46c9-884b-5c0bc4897354",
+      "clause_text": "Special Circumstances Group projects present particular challenges for attribution.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a general statement acknowledging the challenges of attribution in group projects. It does not introduce any specific enforcement or definitional issues.",
+      "cited_text": "Group projects present particular challenges for attribution.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "30d853fd-3f64-41ac-9f73-39047b968f64",
+      "clause_text": "Each student in a group project is jointly and severally responsible for the integrity of the entire submission unless a documented division of labor has been approved in advance by the instructor.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause requires a documented division of labor to exempt students from joint responsibility, but it does not specify how this documentation should be submitted, approved, or verified by the instructor, creating a gap in enforcement.",
+      "cited_text": "unless a documented division of labor has been approved in advance by the instructor",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "2c15e0b8-f698-4855-9832-5f331d8bb70f",
+      "clause_text": "Resubmission of prior work for new credit is prohibited without advance written approval.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that resubmission of prior work requires advance written approval, which is a straightforward policy with no apparent ambiguity or enforcement issues.",
+      "cited_text": "Resubmission of prior work for new credit is prohibited without advance written approval.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f407747e-2167-4723-8b2f-2eaf38f926e3",
+      "clause_text": "Students who wish to build on prior work must disclose this to the instructor and receive explicit permission before submission.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly outlines the requirement for students to disclose and seek permission to build on prior work. There is no ambiguity or enforcement issue present, as the responsibility is placed on the student to communicate with the instructor.",
+      "cited_text": "Students who wish to build on prior work must disclose this to the instructor and receive explicit permission before submission.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "0598e4cc-75b7-4c99-8b1b-d958bc3a3924",
+      "clause_text": "Collaboration with individuals outside the University - including online tutoring services, professional editors, and AI tool operators - is subject to the same attribution requirements as collaboration within the University community.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause mentions 'AI tool operators' but does not specify what constitutes an AI tool or operator, leaving a gap in understanding what AI-related activities require attribution. This could lead to students exploiting AI tools without proper attribution due to lack of clarity.",
+      "cited_text": "AI tool operators",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    }
+  ],
+  "contradictions": [],
+  "faithfulness_score": 1.0,
+  "overall_risk_rating": "High",
+  "risk_distribution": {
+    "None": 17,
+    "ScopeConflict": 2,
+    "AuthorityConflict": 6,
+    "EnforcementGap": 6,
+    "Ambiguity": 1,
+    "AIUsageLoophole": 4,
+    "UndefinedTerm": 2
+  }
+}

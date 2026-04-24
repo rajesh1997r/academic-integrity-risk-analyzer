@@ -27,6 +27,26 @@ TARGETS = {
         "collection": "neu_integrity",
         "output": "demo_output.json",
     },
+    "stanford": {
+        "pdf": "data/policies/stanford_integrity.pdf",
+        "collection": "stanford",
+        "output": "demo_stanford.json",
+    },
+    "uchicago": {
+        "pdf": "data/policies/uchicago_integrity.pdf",
+        "collection": "uchicago",
+        "output": "demo_uchicago.json",
+    },
+    "cmu": {
+        "pdf": "data/policies/cmu_integrity.pdf",
+        "collection": "cmu",
+        "output": "demo_cmu.json",
+    },
+    "columbia": {
+        "pdf": "data/policies/columbia_integrity.pdf",
+        "collection": "columbia",
+        "output": "demo_columbia.json",
+    },
     "harvard": {
         "pdf": "data/policies/harvard_ai_guidelines.pdf.pdf",
         "collection": "harvard_ai",
@@ -78,7 +98,7 @@ def main(target_key: str = "neu") -> None:
         annotations=annotations,
         contradictions=contradictions,
         faithfulness_score=round(faithfulness, 4),
-        overall_risk_rating="High" if ratio > 0.4 else "Medium" if ratio > 0.2 else "Low",
+        overall_risk_rating="High" if ratio >= 0.5 else "Medium" if ratio > 0.2 else "Low",
         risk_distribution=dist,
     )
 

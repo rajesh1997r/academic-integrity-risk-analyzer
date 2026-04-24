@@ -20,8 +20,12 @@ from backend.ingestion import extract_clauses
 from backend.models import AuditReport
 
 CLAUSE_CAP = 200
-DEMO_PATH = Path("demo_output.json")
+DEMO_PATH         = Path("demo_output.json")
 DEMO_HARVARD_PATH = Path("demo_harvard.json")
+DEMO_STANFORD_PATH  = Path("demo_stanford.json")
+DEMO_UCHICAGO_PATH  = Path("demo_uchicago.json")
+DEMO_CMU_PATH       = Path("demo_cmu.json")
+DEMO_COLUMBIA_PATH  = Path("demo_columbia.json")
 EVAL_PATH = Path("evaluation/results")
 
 
@@ -135,6 +139,38 @@ def demo_harvard():
             detail="Harvard demo not yet generated. Run: python generate_demo.py harvard",
         )
     with open(DEMO_HARVARD_PATH) as f:
+        return json.load(f)
+
+
+@app.get("/demo/stanford")
+def demo_stanford():
+    if not DEMO_STANFORD_PATH.exists():
+        raise HTTPException(status_code=503, detail="Run: python generate_demo.py stanford")
+    with open(DEMO_STANFORD_PATH) as f:
+        return json.load(f)
+
+
+@app.get("/demo/uchicago")
+def demo_uchicago():
+    if not DEMO_UCHICAGO_PATH.exists():
+        raise HTTPException(status_code=503, detail="Run: python generate_demo.py uchicago")
+    with open(DEMO_UCHICAGO_PATH) as f:
+        return json.load(f)
+
+
+@app.get("/demo/cmu")
+def demo_cmu():
+    if not DEMO_CMU_PATH.exists():
+        raise HTTPException(status_code=503, detail="Run: python generate_demo.py cmu")
+    with open(DEMO_CMU_PATH) as f:
+        return json.load(f)
+
+
+@app.get("/demo/columbia")
+def demo_columbia():
+    if not DEMO_COLUMBIA_PATH.exists():
+        raise HTTPException(status_code=503, detail="Run: python generate_demo.py columbia")
+    with open(DEMO_COLUMBIA_PATH) as f:
         return json.load(f)
 
 

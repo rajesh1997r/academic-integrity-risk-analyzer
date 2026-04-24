@@ -1,0 +1,359 @@
+{
+  "source_doc": "stanford_integrity.pdf",
+  "total_clauses": 34,
+  "flagged_count": 11,
+  "annotations": [
+    {
+      "clause_id": "5256f6a3-9689-4708-8893-7e1efb7ea7db",
+      "clause_text": "August 2024 Edition Stanford University Honor Code and Academic Integrity Policy Stanford University 1.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause appears to be an introductory or procedural statement, likely indicating the edition and context of the policy document. It does not contain any specific rules or definitions that could create enforcement issues.",
+      "cited_text": "August 2024 Edition Stanford University Honor Code and Academic Integrity Policy Stanford University 1.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "13d161bd-5e6a-43bd-9ff8-15804cf9e8d0",
+      "clause_text": "Preamble Stanford University is committed to the highest standards of academic integrity.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This is a standard introductory statement expressing the university's commitment to academic integrity. It does not contain any specific rules or terms that could create enforcement issues.",
+      "cited_text": "Stanford University is committed to the highest standards of academic integrity.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "d83b2ff9-6a0a-477f-98f0-6ff485ef9e4a",
+      "clause_text": "All members of the Stanford community - students, faculty, and staff - are expected to uphold these principles in every academic endeavor.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a general statement of expectation and does not contain any specific terms or conditions that could lead to enforcement issues. It serves as an introductory or guiding principle rather than a rule with direct consequences.",
+      "cited_text": "All members of the Stanford community - students, faculty, and staff - are expected to uphold these principles in every academic endeavor.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f0a19678-1ca1-4971-aa60-5e795294b49c",
+      "clause_text": "The Stanford Honor Code applies to all coursework submitted for academic credit, including examinations, papers, problem sets, programming assignments, and any other evaluative materials as determined by the instructor.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard, clear policy statement that broadly defines the scope of the Honor Code's applicability to coursework. It does not present any ambiguity, undefined terms, enforcement gaps, or other risks that would affect enforcement or student fairness.",
+      "cited_text": "The Stanford Honor Code applies to all coursework submitted for academic credit",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "7d2dfb03-3ef2-4d44-9bb8-b387cf0542cf",
+      "clause_text": "Violations of this policy will be adjudicated by the Stanford Office of Community Standards in accordance with procedures outlined in the Student Conduct Process handbook.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly assigns the responsibility for adjudicating violations to a specific office and references a handbook for procedures, which is a standard practice in policy enforcement.",
+      "cited_text": "Violations of this policy will be adjudicated by the Stanford Office of Community Standards",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "ee9e222b-e812-4140-a8cd-a500bd39dfcf",
+      "clause_text": "Sanctions may include, but are not limited to, course failure, suspension, or permanent separation from the university. 2.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard statement about potential sanctions for violations. It does not present any ambiguity, undefined terms, or enforcement issues. The phrase 'may include, but are not limited to' is commonly understood to allow flexibility in sanctions.",
+      "cited_text": "Sanctions may include, but are not limited to, course failure, suspension, or permanent separation from the university.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a1e0177c-473a-4b90-921e-6a4a52ae2262",
+      "clause_text": "Prohibited Conduct Cheating is defined as the use of unauthorized materials, information, or study aids in any academic exercise.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly defines cheating in terms of using unauthorized materials, information, or study aids. The terms used are standard in academic integrity policies and do not present any ambiguity or enforcement issues.",
+      "cited_text": "use of unauthorized materials, information, or study aids",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "22ae89c1-6ba0-4be0-ac03-def49ede71e8",
+      "clause_text": "Students are responsible for understanding what constitutes authorized materials in each course context.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The term 'authorized materials' is central to the rule's application but is not defined, and a reasonable student may not be able to determine what it means in practice without specific guidance from each course or instructor.",
+      "cited_text": "authorized materials",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "30c75ddc-1c04-40ab-86aa-9b4eee8e5bc9",
+      "clause_text": "Plagiarism includes representing another's work, words, or ideas as one's own without appropriate attribution, whether from published sources, online repositories, peers, or any automated system.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly defines plagiarism in a comprehensive manner, covering various sources including automated systems. It does not present any ambiguity or enforcement issues.",
+      "cited_text": "Plagiarism includes representing another's work, words, or ideas as one's own without appropriate attribution, whether from published sources, online repositories, peers, or any automated system.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a2ab4475-1184-4a1d-9e16-45bc87c8d303",
+      "clause_text": "Fabrication refers to the falsification or invention of any information or citation in an academic exercise.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly defines fabrication in the context of academic integrity, using commonly understood terms without introducing ambiguity or undefined technical terms. It does not present any enforcement or authority issues.",
+      "cited_text": "Fabrication refers to the falsification or invention of any information or citation in an academic exercise.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "647cb1f9-a228-4a24-93ae-c3d5453857d5",
+      "clause_text": "Facilitating academic dishonesty includes knowingly helping or attempting to help another individual commit a violation of this policy.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly defines facilitating academic dishonesty as knowingly helping or attempting to help another individual commit a violation. It does not present any ambiguity or enforcement issues, as the terms used are standard and widely understood in academic contexts.",
+      "cited_text": "knowingly helping or attempting to help another individual commit a violation of this policy",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a60066b2-402f-4341-ad65-629a3ad03db1",
+      "clause_text": "Multiple submission is the submission of work previously submitted for credit in another course without prior written approval from the current course instructor. 3.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly defines what constitutes multiple submission and the requirement for prior written approval from the current course instructor. There is no ambiguity or enforcement issue present.",
+      "cited_text": "Multiple submission is the submission of work previously submitted for credit in another course without prior written approval from the current course instructor.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "0f5b60c6-73e9-420d-a6ce-0bad609b1674",
+      "clause_text": "Artificial Intelligence and Automated Tools The use of artificial intelligence tools, including large language models, generative AI platforms, and automated writing assistants, is governed by individual course policies established by the instructor of record.",
+      "risk_category": "ScopeConflict",
+      "secondary_category": null,
+      "reasoning": "The clause allows each instructor to set their own policy regarding AI tools, which could lead to inconsistent rules across courses. This inconsistency can be exploited by students who may use AI tools in one course where it is allowed and apply the same work in another course where it is prohibited.",
+      "cited_text": "governed by individual course policies established by the instructor of record",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "7d14ce06-853f-4073-bed4-bedd28263054",
+      "clause_text": "In the absence of explicit instructor guidance, students should assume that AI-assisted work is subject to the same attribution requirements as any other external source.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause assumes students will know what constitutes 'AI-assisted work' without providing a definition, leaving room for students to exploit this by claiming ignorance or misunderstanding of what AI tools require attribution.",
+      "cited_text": "AI-assisted work",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "5985dc54-48a9-4131-ad07-28ef4037ee95",
+      "clause_text": "Work substantially generated by an AI system without meaningful student transformation may constitute plagiarism.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause leaves a gap by not defining what constitutes 'meaningful student transformation,' allowing students to argue that minimal changes to AI-generated work are sufficient to avoid plagiarism charges.",
+      "cited_text": "meaningful student transformation",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "0148b835-4004-4d3e-878e-9a04555c23ff",
+      "clause_text": "Students who use AI tools to brainstorm, outline, or refine their own work are encouraged - but not required - to disclose such use in a brief author's note.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause encourages but does not require disclosure of AI tool use, creating a loophole where students can use AI extensively without any obligation to report it, potentially undermining transparency and accountability in academic work.",
+      "cited_text": "encouraged - but not required - to disclose",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "2b318b87-3fbb-4d1a-bea1-ba97bb4a1b63",
+      "clause_text": "The threshold for 'substantial' AI contribution is not defined and will be assessed case-by-case by the course instructor.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The term 'substantial' is central to determining whether AI contribution is permissible, yet it is not defined. This leaves students without a clear understanding of what level of AI use is acceptable, potentially leading to inconsistent enforcement across different instructors.",
+      "cited_text": "'substantial' AI contribution",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3ef83555-69e1-4704-b0a8-46a6005b8d16",
+      "clause_text": "AI-generated code submitted as original student work in computer science courses is prohibited unless the assignment explicitly designates AI assistance as permitted.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause prohibits AI-generated code but does not address AI-assisted code, such as code that is partially generated by AI and then modified by the student. This creates a loophole where students might use AI tools to assist in generating code without it being considered 'AI-generated' under this policy.",
+      "cited_text": "AI-generated code submitted as original student work",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "1d89efd3-f3af-4481-94ce-c99e7f0d8624",
+      "clause_text": "Detection of AI-generated code may rely on automated tools whose accuracy is not guaranteed.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "The clause acknowledges reliance on automated tools for detecting AI-generated code but also admits that their accuracy is not guaranteed. This creates a risk that violations may go undetected or be falsely identified, as there is no reliable mechanism to ensure accurate enforcement.",
+      "cited_text": "Detection of AI-generated code may rely on automated tools whose accuracy is not guaranteed.",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "924a6c8a-71b0-4d1a-b402-f6bf623efe26",
+      "clause_text": "August 2024 Edition Stanford University Oral examinations or viva voce assessments may be used to verify authorship of submitted AI-assisted work at instructor discretion. 4.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause allows for oral examinations to verify authorship of AI-assisted work but does not define what constitutes 'AI-assisted work,' leaving a gap in understanding what types of AI usage would trigger such assessments.",
+      "cited_text": "AI-assisted work",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "39bf4d96-1730-4a5e-bd51-c8b669d83fe4",
+      "clause_text": "Collaboration Policy Unless an assignment is explicitly designated as a group project, all work submitted must represent the student's independent effort.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly distinguishes between individual and group assignments, specifying that only explicitly designated group projects allow collaboration. There is no ambiguity or enforcement issue present.",
+      "cited_text": "Unless an assignment is explicitly designated as a group project",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "63cb7416-11ce-4aa2-8c63-be6bd1b4be0f",
+      "clause_text": "Discussion of course material with peers is encouraged.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard encouragement of peer discussion and does not present any enforcement or interpretative issues. It is clear and straightforward in its intent.",
+      "cited_text": "Discussion of course material with peers is encouraged.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "0dcd0b64-e4ce-4f0e-bbf3-3c8d95a528b6",
+      "clause_text": "However, students must ensure that submitted work is produced independently and reflects their own understanding, even when collaboration in the learning process has occurred.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that while collaboration is allowed in the learning process, the final submitted work must be independently produced and reflect the student's own understanding. There is no ambiguity or enforcement issue present in this statement.",
+      "cited_text": "students must ensure that submitted work is produced independently and reflects their own understanding",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6f48699a-9ef3-4c57-bed9-57f24d3e6542",
+      "clause_text": "What constitutes impermissible collaboration versus acceptable peer discussion is determined by the course instructor.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The clause leaves the determination of 'impermissible collaboration versus acceptable peer discussion' entirely to the course instructor, which could lead to inconsistent interpretations across different courses. This ambiguity could result in students being unfairly penalized or not penalized based on subjective instructor judgment.",
+      "cited_text": "impermissible collaboration versus acceptable peer discussion",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "08980b12-968c-498e-9d0c-d5ec7fa5db71",
+      "clause_text": "When in doubt, students should seek clarification before collaborating.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard advisory statement encouraging students to seek clarification. It does not impose a rule or requirement that could lead to enforcement issues.",
+      "cited_text": "When in doubt, students should seek clarification before collaborating.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "cbf50d45-5a63-4ee0-a732-81230fa2452a",
+      "clause_text": "Remote collaboration - including collaboration via online forums, messaging platforms, or code-sharing repositories - is subject to the same standards as in-person collaboration. 5.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that remote collaboration is held to the same standards as in-person collaboration, without introducing any ambiguity or enforcement issues. It does not rely on undefined terms or create any authority conflicts.",
+      "cited_text": "Remote collaboration - including collaboration via online forums, messaging platforms, or code-sharing repositories - is subject to the same standards as in-person collaboration.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f73cd70a-42ae-4683-b893-a8b671218a2c",
+      "clause_text": "Reporting and Adjudication Faculty members who suspect a violation must report the incident to the Office of Community Standards within a reasonable time after discovery.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly outlines the responsibility of faculty members to report suspected violations to a specific office within a reasonable timeframe. There is no ambiguity or enforcement issue present in this directive.",
+      "cited_text": "Faculty members who suspect a violation must report the incident to the Office of Community Standards within a reasonable time after discovery.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "62468c40-0e30-485e-ac39-03581acaf1bf",
+      "clause_text": "No specific deadline is mandated by this policy.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause is a straightforward statement indicating that the policy does not impose a deadline. It does not create any enforcement or interpretative issues.",
+      "cited_text": "No specific deadline is mandated by this policy.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "ce58af62-d365-4581-8676-a1b6fd0612a9",
+      "clause_text": "Students accused of academic misconduct will be notified in writing and afforded the opportunity to respond before any final determination is made.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the procedure for notifying students and allowing them to respond to accusations of academic misconduct. It does not present any ambiguity, undefined terms, or enforcement issues.",
+      "cited_text": "Students accused of academic misconduct will be notified in writing and afforded the opportunity to respond before any final determination is made.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3af4b92e-8b24-4afa-a63f-a2eeddf05174",
+      "clause_text": "The Office of Community Standards may impose interim measures, including grade withholding, pending resolution of a reported violation.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause gives the Office of Community Standards the authority to impose interim measures like grade withholding, but it does not clarify if this authority overlaps with or contradicts the authority of academic departments or faculty who typically manage grades. This could lead to conflicts in decision-making authority.",
+      "cited_text": "The Office of Community Standards may impose interim measures, including grade withholding",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "2427d081-4404-43f4-b724-40bb392bcb40",
+      "clause_text": "Appeals of misconduct findings may be submitted to the Academic Appeals Panel within thirty (30) days of the written decision.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the process and timeframe for submitting appeals of misconduct findings. There is no ambiguity or enforcement issue present in the language.",
+      "cited_text": "Appeals of misconduct findings may be submitted to the Academic Appeals Panel within thirty (30) days of the written decision.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "1673bb7e-9c57-4ba8-aaf2-fe9afbbb35dc",
+      "clause_text": "The Panel's determination is final and not subject to further internal review. 6.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly states that the Panel's decision is final and not open to further internal review, which is a standard procedural statement. It does not present any ambiguity or enforcement issues.",
+      "cited_text": "The Panel's determination is final and not subject to further internal review.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "4f7f49f9-5f35-4951-89a2-19deb4a6acb4",
+      "clause_text": "Citation and Attribution All sources of ideas, data, analysis, or language incorporated into submitted work must be cited according to the citation format specified by the instructor or, in the absence of such specification, according to the disciplinary norm of the relevant field.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly outlines the requirement for citation and attribution, specifying that the format should follow either the instructor's specification or the disciplinary norm. This provides sufficient guidance for students to understand their obligations.",
+      "cited_text": "All sources of ideas, data, analysis, or language incorporated into submitted work must be cited according to the citation format specified by the instructor or, in the absence of such specification, according to the disciplinary norm of the relevant field.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "0334906e-a477-47ed-a3e6-b18ff01d99dd",
+      "clause_text": "Self-citation - the attribution of a student's own previously submitted or published work - is required when that work is incorporated into a new submission.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that students must attribute their own previously submitted or published work when it is used in a new submission. There is no ambiguity or enforcement issue present in this straightforward requirement.",
+      "cited_text": "Self-citation - the attribution of a student's own previously submitted or published work - is required when that work is incorporated into a new submission.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    }
+  ],
+  "contradictions": [],
+  "faithfulness_score": 1.0,
+  "overall_risk_rating": "Medium",
+  "risk_distribution": {
+    "None": 23,
+    "UndefinedTerm": 2,
+    "ScopeConflict": 1,
+    "AIUsageLoophole": 5,
+    "EnforcementGap": 1,
+    "Ambiguity": 1,
+    "AuthorityConflict": 1
+  }
+}

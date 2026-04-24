@@ -1,0 +1,459 @@
+{
+  "source_doc": "columbia_integrity.pdf",
+  "total_clauses": 44,
+  "flagged_count": 18,
+  "annotations": [
+    {
+      "clause_id": "ab077a0d-54e9-4a12-af3c-8232a9577a38",
+      "clause_text": "Adopted by University Senate, September 2024 Columbia University Academic Integrity and Community Standards Policy Columbia University Part A: Foundations Columbia University's commitment to academic integrity derives from its mission as a research university: knowledge is advanced only through honest inquiry, transparent methodology, and rigorous attribution.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is an introductory statement outlining the university's commitment to academic integrity. It does not contain any specific rules or definitions that could create enforcement issues.",
+      "cited_text": "Columbia University's commitment to academic integrity derives from its mission as a research university: knowledge is advanced only through honest inquiry, transparent methodology, and rigorous attribution.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3b656d7c-ec76-4709-b493-80985ff180f2",
+      "clause_text": "This policy covers all academic work submitted in courses offered by Columbia University, including work submitted through third-party platforms, online portals, or submission systems operated by publishers or external vendors.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states the scope of the policy, covering all academic work submitted in courses offered by the university, regardless of the submission platform. There is no ambiguity or enforcement issue present.",
+      "cited_text": "This policy covers all academic work submitted in courses offered by Columbia University, including work submitted through third-party platforms, online portals, or submission systems operated by publishers or external vendors.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "97cfee97-1644-49fa-895c-1ebe87240c1c",
+      "clause_text": "This policy applies to all students regardless of degree level, residency status, or enrollment modality.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that the policy applies to all students without exception, covering various categories such as degree level, residency status, and enrollment modality. There is no ambiguity or enforcement issue present.",
+      "cited_text": "This policy applies to all students regardless of degree level, residency status, or enrollment modality.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "92b514b5-d938-4e71-9fb3-90395fb8582e",
+      "clause_text": "Students enrolled in joint degree programs are also subject to the policies of their partner institutions and, in case of conflict, must comply with the stricter requirement.",
+      "risk_category": "ScopeConflict",
+      "secondary_category": null,
+      "reasoning": "The clause creates a potential inconsistency by applying different standards to students in joint degree programs compared to those in single-institution programs. This could lead to confusion or unfair treatment if the partner institution's policies are significantly different.",
+      "cited_text": "Students enrolled in joint degree programs are also subject to the policies of their partner institutions and, in case of conflict, must comply with the stricter requirement.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f375a81f-accc-405d-87f3-2ce9cb7f8c34",
+      "clause_text": "Part B: Core Obligations Students must ensure that all submitted work is their own original work unless the assignment expressly permits collaboration or the use of external sources.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states the requirement for originality in student work and provides an exception for collaboration or use of external sources when expressly permitted. There is no ambiguity or enforcement issue present.",
+      "cited_text": "Students must ensure that all submitted work is their own original work unless the assignment expressly permits collaboration or the use of external sources.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f7d6b98b-c06d-40ea-a5dc-630d66426c52",
+      "clause_text": "All sources - primary, secondary, tertiary, and indirect - must be cited.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that all types of sources must be cited, which is a standard academic requirement. There is no ambiguity or enforcement issue present in this statement.",
+      "cited_text": "All sources - primary, secondary, tertiary, and indirect - must be cited.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "198d7bb3-922f-430a-896a-b079813be223",
+      "clause_text": "An indirect source is one not consulted directly but referenced through another source.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause provides a clear definition of what constitutes an indirect source. It does not present any ambiguity or enforcement issues as it straightforwardly explains the concept.",
+      "cited_text": "An indirect source is one not consulted directly but referenced through another source.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "3b188a24-fcc5-4b01-aea5-bf0351c25041",
+      "clause_text": "The appropriate level of attribution for indirect sources is governed by disciplinary convention and instructor guidance.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The clause relies on 'disciplinary convention and instructor guidance' to determine the level of attribution for indirect sources, which can vary significantly between disciplines and instructors. This creates a genuine risk of contradictory interpretations, as students may receive conflicting advice on what constitutes appropriate attribution.",
+      "cited_text": "appropriate level of attribution for indirect sources is governed by disciplinary convention and instructor guidance",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6d46121e-f8dc-4a32-a90b-faeb295660fa",
+      "clause_text": "Students are responsible for understanding the academic integrity expectations of each course.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard statement emphasizing student responsibility. It does not present any ambiguity, undefined terms, or enforcement issues.",
+      "cited_text": "Students are responsible for understanding the academic integrity expectations of each course.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "63e6f807-f607-4772-95bb-474344a47da0",
+      "clause_text": "Claiming ignorance of a specific prohibition is not a defense to a violation, provided the prohibition was communicated in the course syllabus or by the instructor.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that ignorance of a prohibition is not a defense if it was communicated in the syllabus or by the instructor. This is a standard policy statement that does not present any ambiguity or enforcement issues.",
+      "cited_text": "Claiming ignorance of a specific prohibition is not a defense to a violation, provided the prohibition was communicated in the course syllabus or by the instructor.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "e9a4ef39-5fe1-4dac-a94e-43c6ab7d20e3",
+      "clause_text": "Work submitted in one course may not be submitted for credit in another course without the explicit written consent of both instructors.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states the requirement for explicit written consent from both instructors, which is a straightforward condition. There is no ambiguity or enforcement issue present in this clause.",
+      "cited_text": "Work submitted in one course may not be submitted for credit in another course without the explicit written consent of both instructors.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "43dbff98-76e1-473a-8975-f1fde9ca5c13",
+      "clause_text": "This prohibition applies to partial submissions and substantially similar work.",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The phrase 'substantially similar work' is open to interpretation, as it is unclear what degree of similarity constitutes a violation. This could lead to inconsistent enforcement where similar cases are judged differently.",
+      "cited_text": "substantially similar work",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a0799a1f-fc4a-4ec0-aec4-e883242ef8ca",
+      "clause_text": "Part C: AI Usage and Generative Technology Columbia University recognizes that generative AI tools, including large language models, image generators, code synthesis tools, and multimodal systems, represent a qualitative shift in the means by which academic work can be produced.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is an introductory statement acknowledging the existence and impact of generative AI tools. It does not contain any specific rules or prohibitions that could create enforcement issues.",
+      "cited_text": "Columbia University recognizes that generative AI tools, including large language models, image generators, code synthesis tools, and multimodal systems, represent a qualitative shift in the means by which academic work can be produced.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "4c21799f-915d-4fee-91bd-e3d69bfd1696",
+      "clause_text": "The university adopts a course-level governance model for AI use: the instructor of each course has authority to permit, restrict, or require specific AI tool use, provided such policies are communicated to students in the course syllabus no later than the first meeting of the course.",
+      "risk_category": "ScopeConflict",
+      "secondary_category": null,
+      "reasoning": "The clause allows each instructor to set their own AI policies, which could lead to inconsistencies across courses. This creates a situation where students in different courses may be subject to different rules regarding AI use, potentially leading to confusion and unfairness.",
+      "cited_text": "the instructor of each course has authority to permit, restrict, or require specific AI tool use",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "e23b4430-a183-460f-90e8-1e5d8e801d55",
+      "clause_text": "Where an instructor has not provided an explicit AI use policy by the first class meeting, the default is that all AI-assisted work must be attributed.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause requires AI-assisted work to be attributed but does not define what constitutes 'AI-assisted work.' This leaves a gap where students might use AI tools in ways they believe do not require attribution, leading to inconsistent enforcement.",
+      "cited_text": "AI-assisted work",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c620f4ba-7529-449a-b008-4742b91fdba2",
+      "clause_text": "Attribution means identifying the tool used, the nature of the interaction, and the extent of the AI's contribution to the final work product.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause requires students to identify 'the tool used' and 'the nature of the interaction,' but does not define what constitutes a 'tool' or how to determine 'the nature of the interaction.' This lack of definition could lead to inconsistent interpretations and enforcement.",
+      "cited_text": "the tool used, the nature of the interaction",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "19977671-770e-4277-af8d-f59044642d33",
+      "clause_text": "Attribution of AI use is required but does not, by itself, render AI-assisted work compliant.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause requires attribution of AI use but does not specify what constitutes compliant AI-assisted work, leaving a gap where students might attribute AI use without understanding or meeting other compliance requirements.",
+      "cited_text": "Attribution of AI use is required but does not, by itself, render AI-assisted work compliant.",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "24229e4f-dfaa-4574-86b9-80c197307cd0",
+      "clause_text": "Instructors may determine that attributed AI-generated work fails to meet the learning objectives of an assignment and may assign reduced or no credit Page 1",
+      "risk_category": "Ambiguity",
+      "secondary_category": null,
+      "reasoning": "The clause allows instructors to determine if AI-generated work meets learning objectives, but it is ambiguous what criteria should be used to make this determination. This could lead to inconsistent enforcement across different instructors and assignments.",
+      "cited_text": "attributed AI-generated work fails to meet the learning objectives",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "4a8b176b-1874-4820-b16a-6a127dd2d1f0",
+      "clause_text": "Adopted by University Senate, September 2024 Columbia University accordingly.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a procedural statement indicating the adoption of a policy by the University Senate. It does not contain any specific rules or terms that could create an enforcement problem.",
+      "cited_text": "Adopted by University Senate, September 2024 Columbia University accordingly.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "a4f11fb0-8570-480b-befb-fbde3724eb1d",
+      "clause_text": "The university does not endorse or certify any specific AI detection tool.",
+      "risk_category": "EnforcementGap",
+      "secondary_category": null,
+      "reasoning": "By not endorsing or certifying any specific AI detection tool, the university creates a situation where there is no standardized method for detecting AI-generated content. This lack of endorsement could lead to inconsistent enforcement of policies related to AI use, as different faculty members might use different tools with varying accuracy.",
+      "cited_text": "The university does not endorse or certify any specific AI detection tool.",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "39e54a51-a00e-4437-b59d-7d684fae8f44",
+      "clause_text": "Instructors who rely on AI detection tools must disclose this practice in the course syllabus.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly states that instructors must disclose the use of AI detection tools in the syllabus. There is no ambiguity or enforcement issue as it is a straightforward requirement for transparency.",
+      "cited_text": "Instructors who rely on AI detection tools must disclose this practice in the course syllabus.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "70e15d15-2f40-46ae-9bad-3ebe3c56dc45",
+      "clause_text": "Detection tool outputs may be used as one factor in an integrity review but may not be the sole basis for a finding of violation.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that detection tool outputs can be used as part of an integrity review but cannot be the only evidence for a violation. This provides a balanced approach to using technology in academic integrity cases and does not present any enforcement or interpretation issues.",
+      "cited_text": "Detection tool outputs may be used as one factor in an integrity review but may not be the sole basis for a finding of violation.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "67b2f525-a7ce-42e1-a1b9-ebddad548a3c",
+      "clause_text": "Students who are uncertain whether a particular use of an AI tool is permissible are advised to seek advance clarification from the instructor.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause provides a clear guideline for students to seek clarification if they are unsure about the permissibility of using AI tools. It does not present any ambiguity, undefined terms, or enforcement issues.",
+      "cited_text": "Students who are uncertain whether a particular use of an AI tool is permissible are advised to seek advance clarification from the instructor.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6480763b-1875-47f5-8473-75c164c17675",
+      "clause_text": "The burden of seeking clarification rests with the student.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly assigns responsibility to the student to seek clarification, which is a standard expectation in academic policies. It does not present any ambiguity or enforcement issues.",
+      "cited_text": "The burden of seeking clarification rests with the student.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "9027f076-d402-4ef3-901c-83c0351e73d7",
+      "clause_text": "AI tools that access, retrieve, or generate information from the internet without citation are subject to the same attribution requirements as any internet source.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause does not specify what constitutes 'AI tools' or how they differ from other internet sources, potentially allowing students to exploit AI tools that do not fit the unspecified criteria. This could lead to inconsistent enforcement regarding what AI tools require citation.",
+      "cited_text": "AI tools that access, retrieve, or generate information from the internet",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "474c4a5d-4410-4de2-9c3d-f15088f845dd",
+      "clause_text": "Students are responsible for verifying the accuracy of AI-generated citations and content before submission.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause requires students to verify AI-generated content but does not specify what constitutes adequate verification. This creates a loophole where students might claim they verified content without a clear standard, making enforcement inconsistent.",
+      "cited_text": "verifying the accuracy of AI-generated citations and content",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "7a2e45be-3dc3-4179-8263-96fa80aabb21",
+      "clause_text": "Voice assistants, autocomplete features in standard productivity software, and grammar checkers are excluded from this policy unless an instructor specifically designates them as restricted.",
+      "risk_category": "AIUsageLoophole",
+      "secondary_category": null,
+      "reasoning": "The clause creates a loophole by excluding common AI tools like voice assistants and grammar checkers unless specifically restricted by an instructor. This could lead to inconsistent enforcement across courses, as students might exploit these tools inappropriately unless explicitly told otherwise.",
+      "cited_text": "Voice assistants, autocomplete features in standard productivity software, and grammar checkers are excluded from this policy unless an instructor specifically designates them as restricted.",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "bdd0753a-b71e-4fd4-a296-34722eb0077d",
+      "clause_text": "The boundary between excluded and covered tools may shift as technology develops and will be clarified by policy updates as needed.",
+      "risk_category": "UndefinedTerm",
+      "secondary_category": null,
+      "reasoning": "The clause refers to 'excluded and covered tools' without defining what these tools are or how they are categorized. This lack of definition could lead to confusion among students about which tools are permissible, especially as technology evolves.",
+      "cited_text": "excluded and covered tools",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "e1b5d347-dfc4-4388-8fc1-382bda06968b",
+      "clause_text": "Part D: Process Reports of suspected violations must be submitted to the Office of Student Conduct within thirty (30) days of the date the instructor first had reason to suspect a violation.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly outlines the timeframe for submitting reports of suspected violations, specifying both the responsible office and the deadline. There is no ambiguity or enforcement issue present.",
+      "cited_text": "Reports of suspected violations must be submitted to the Office of Student Conduct within thirty (30) days of the date the instructor first had reason to suspect a violation.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "7e5e4a46-2634-4095-ba08-13816ae8136b",
+      "clause_text": "Reports submitted after this deadline may be declined at the discretion of the Director.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause gives the Director discretion to decline late reports, but it does not specify if there are any other authorities involved in the decision-making process or if there are any guidelines the Director must follow. This could lead to inconsistent enforcement or conflicts if other offices believe they have a say in the decision.",
+      "cited_text": "at the discretion of the Director",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "8a208460-2b4b-4245-84f9-ae65454773ef",
+      "clause_text": "Upon receiving a report, the Office of Student Conduct will initiate a preliminary inquiry within seven (7) business days.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the timeline for the Office of Student Conduct to begin a preliminary inquiry after receiving a report. There is no ambiguity or enforcement issue present.",
+      "cited_text": "Upon receiving a report, the Office of Student Conduct will initiate a preliminary inquiry within seven (7) business days.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "fab6bae0-ed45-4eca-b58a-1d69b230f8a0",
+      "clause_text": "The preliminary inquiry is not adversarial; its purpose is to determine whether the report warrants a full hearing.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the purpose of the preliminary inquiry as non-adversarial and aimed at determining the necessity of a full hearing. There is no ambiguity or enforcement issue present.",
+      "cited_text": "The preliminary inquiry is not adversarial; its purpose is to determine whether the report warrants a full hearing.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "ded36aa4-afa9-4da3-b0bb-7ab1245865b4",
+      "clause_text": "Students are entitled to be accompanied by an advisor of their choosing, including an attorney, at all stages of the process.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly states that students can have an advisor, including an attorney, at all stages of the process. There is no ambiguity or enforcement issue present in this statement.",
+      "cited_text": "Students are entitled to be accompanied by an advisor of their choosing, including an attorney, at all stages of the process.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "36578568-990d-4359-87ed-b158906e0aef",
+      "clause_text": "The university's obligations do not include providing an advisor.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly states that the university is not obligated to provide an advisor, and there is no ambiguity or enforcement issue present. It is a straightforward policy statement regarding the university's responsibilities.",
+      "cited_text": "The university's obligations do not include providing an advisor.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "076270d4-930d-47c6-a452-def7a1d8cf42",
+      "clause_text": "The Hearing Board consists of three tenured faculty members and two student representatives selected by the student government.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly defines the composition of the Hearing Board, specifying the number and type of members. There is no ambiguity or enforcement issue present in this description.",
+      "cited_text": "The Hearing Board consists of three tenured faculty members and two student representatives selected by the student government.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "99c42638-296c-4ad8-88d2-781fcbb57653",
+      "clause_text": "The student representatives are voting members on questions of fact but not on questions of sanction.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause creates a potential conflict by allowing student representatives to vote on questions of fact but not on questions of sanction, which could lead to disputes over what constitutes a 'question of fact' versus a 'question of sanction'. This division of authority could result in confusion or disagreement during enforcement proceedings.",
+      "cited_text": "voting members on questions of fact but not on questions of sanction",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "cd161021-ee93-4f85-b679-61c66d77fe42",
+      "clause_text": "Findings of violation and associated sanctions are communicated in writing within five (5) business days of the hearing.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly states the timeline for communicating findings and sanctions, with no ambiguity or enforcement issues present. It is a standard procedural statement.",
+      "cited_text": "Findings of violation and associated sanctions are communicated in writing within five (5) business days of the hearing.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "f5a91248-57f0-4753-882a-0086699b37a1",
+      "clause_text": "The written decision constitutes the official record of the proceeding.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause is a standard procedural statement indicating that the written decision is the official record. It does not present any ambiguity, enforcement gap, or other risk categories.",
+      "cited_text": "The written decision constitutes the official record of the proceeding.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "c2470bc1-85d9-4cf5-bddc-9febff819ff6",
+      "clause_text": "Part E: Consequences Sanctions range from a written warning to expulsion and may include academic probation, mandatory educational programming, grade penalties, course failure, transcript notation, suspension for one or more terms, or permanent separation from the university.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "This clause clearly outlines the range of possible sanctions for violations of academic integrity, without introducing any ambiguity or enforcement issues. It does not specify enforcement mechanisms or authority, but it is a standard listing of potential consequences.",
+      "cited_text": "Sanctions range from a written warning to expulsion and may include academic probation, mandatory educational programming, grade penalties, course failure, transcript notation, suspension for one or more terms, or permanent separation from the university.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6639d452-46c2-4a04-987d-a6025ba01dfd",
+      "clause_text": "Transcript notations for violations are recorded as 'Disciplinary Failure' or 'Disciplinary Suspension' as applicable and remain on the transcript for a period determined by the Hearing Board.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause does not specify which entity or individual has the authority to determine the duration that the notations remain on the transcript, leading to potential conflicts if multiple parties claim this authority.",
+      "cited_text": "remain on the transcript for a period determined by the Hearing Board",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "6163a063-10a4-41c9-9aab-a87ea4178b2c",
+      "clause_text": "The default retention period is five years; the Board may shorten or extend this period.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause gives the Board the authority to alter the retention period, but it does not specify any criteria or process for how this decision should be made, potentially leading to arbitrary or inconsistent application.",
+      "cited_text": "the Board may shorten or extend this period",
+      "confidence": 0.8,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "eca6fdc5-2b18-422e-89e0-7476a3685814",
+      "clause_text": "Repeat violations result in presumptive escalation of sanctions.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly states that repeat violations will lead to increased sanctions. There is no ambiguity or enforcement issue present, as the clause is straightforward in its intent to escalate consequences for repeated offenses.",
+      "cited_text": "Repeat violations result in presumptive escalation of sanctions.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "236c17bf-a0dc-42d3-b7c3-b6d1e82ec1e4",
+      "clause_text": "A second substantiated violation during enrollment presumptively warrants suspension; a third warrants expulsion.",
+      "risk_category": "None",
+      "secondary_category": null,
+      "reasoning": "The clause clearly outlines the consequences for multiple violations, with no ambiguity or enforcement issues present. It specifies the actions to be taken upon a second and third violation, making it straightforward for enforcement.",
+      "cited_text": "A second substantiated violation during enrollment presumptively warrants suspension; a third warrants expulsion.",
+      "confidence": 0.9,
+      "low_confidence_flag": false
+    },
+    {
+      "clause_id": "261e5e34-e3e4-4a19-b990-f610e14b169c",
+      "clause_text": "These presumptions may be overcome by a unanimous finding of exceptional mitigating circumstances.",
+      "risk_category": "AuthorityConflict",
+      "secondary_category": null,
+      "reasoning": "The clause requires a 'unanimous finding' but does not specify which body or individuals must reach this unanimous decision, leading to potential conflicts or confusion over who has the authority to determine exceptional mitigating circumstances.",
+      "cited_text": "unanimous finding of exceptional mitigating circumstances",
+      "confidence": 0.85,
+      "low_confidence_flag": false
+    }
+  ],
+  "contradictions": [],
+  "faithfulness_score": 1.0,
+  "overall_risk_rating": "Medium",
+  "risk_distribution": {
+    "None": 26,
+    "ScopeConflict": 2,
+    "Ambiguity": 3,
+    "AIUsageLoophole": 5,
+    "UndefinedTerm": 2,
+    "EnforcementGap": 1,
+    "AuthorityConflict": 5
+  }
+}
