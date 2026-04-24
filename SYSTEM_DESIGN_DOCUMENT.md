@@ -1,7 +1,7 @@
 # AIRA — System Design Document
 **Academic Integrity Risk Analyzer**
 **INFO 7375 Generative AI Engineering — Northeastern University — Spring 2026**
-**Author:** Rajesh Ramaredddy | **Version:** 1.0 | **Date:** April 2026
+**Author:** Rajesh Kumar Rama Reddy | **Version:** 1.0 | **Date:** April 2026
 
 ---
 
