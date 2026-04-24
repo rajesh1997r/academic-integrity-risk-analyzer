@@ -66,7 +66,7 @@ def divider(y):
 # TITLE
 # ═════════════════════════════════════════════════════════════════════════════
 txt(11, 16.55, "AIRA  —  Academic Integrity Risk Analyzer", size=17, bold=True)
-txt(11, 16.1, "System Architecture   |   INFO 7375 Generative AI Engineering   |   Northeastern University",
+txt(11, 16.1, "System Architecture   |   INFO7375: Prompt Engineering and AI   |   Northeastern University",
     size=10, color=MUTED)
 divider(15.78)
 

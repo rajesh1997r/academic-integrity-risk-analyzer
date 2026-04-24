@@ -1,7 +1,7 @@
 # AIRA: Structured LLM Prompting for Academic Integrity Policy Risk Detection
 
 **Rajesh Kumar Rama Reddy**
-INFO 7375 — Generative AI Engineering
+INFO7375: Prompt Engineering and AI
 Spring 2026
 
 ---

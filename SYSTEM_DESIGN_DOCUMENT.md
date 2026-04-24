@@ -1,6 +1,6 @@
 # AIRA — System Design Document
 **Academic Integrity Risk Analyzer**
-**INFO 7375 Generative AI Engineering — Northeastern University — Spring 2026**
+**INFO7375: Prompt Engineering and AI — Northeastern University — Spring 2026**
 **Author:** Rajesh Kumar Rama Reddy | **Version:** 1.0 | **Date:** April 2026
 
 ---
@@ -40,7 +40,7 @@ seconds, at a cost below $0.50 per document.
 
 ### 2.2 Academic / Business Need
 
-AIRA is the course final project for INFO 7375 Generative AI Engineering. It must
+AIRA is the course final project for INFO7375: Prompt Engineering and AI. It must
 demonstrate four core competencies: prompt engineering, retrieval-augmented
 generation (RAG), fine-tuning, and evaluation. The system must be publicly
 deployed and operable by a professor without setup.

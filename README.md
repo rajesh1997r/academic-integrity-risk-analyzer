@@ -2,7 +2,7 @@
 
 Audits university academic integrity policy PDFs for ambiguity, contradictions, enforcement gaps, and AI-related loopholes using GPT-4o, ChromaDB RAG, and grounded faithfulness scoring.
 
-Built for **INFO 7375 Generative AI Engineering** · Northeastern University · Spring 2026
+Built for **INFO7375: Prompt Engineering and AI** · Northeastern University · Spring 2026
 
 **Live demo:** https://academic-integrity-risk-analyzer.vercel.app  
 **GitHub:** https://github.com/rajesh1997r/academic-integrity-risk-analyzer
